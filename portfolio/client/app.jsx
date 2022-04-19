@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import { ParallaxLayer, Parallax } from '@react-spring/parallax'
+import $ from 'jquery'
 
 import parseRoute from './parse-route';
 
@@ -14,9 +16,11 @@ export default function App(props) {
     }
   }
 
-  return (
+  if (hash.path === '') return (
     <>
-    <h1>What's up</h1>
+      <Parallax pages={1}>
+        <LandingPage/>
+      </Parallax>
     </>
   )
 }
