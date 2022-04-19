@@ -1,3 +1,15 @@
+.incon {
+  font-family: Inconsolata, monospace;
+}
+
+.monts {
+  font-family: Montserrat, sans-serif;
+}
+
+.pf-disp {
+  font-family: "Playfair Display", serif;
+}
+
 .white {
   color: white;
 }

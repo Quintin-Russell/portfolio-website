@@ -7,7 +7,7 @@ export default function LandingPage() {
       <ParallaxLayer
       className="bkg-1"
       >
-        <h1 className="white">Hi Hi</h1>
+        <h1 className="white incon">Hi Hi</h1>
       </ParallaxLayer>
     </>
   )
