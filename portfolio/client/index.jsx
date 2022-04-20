@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+import $ from 'jquery'
+
 import App from './app'
 
-ReactDOM.render(
-  <App />,
-  document.querySelector('#root')
-);
+const root = ReactDOM.createRoot($('#root')[0])
+root.render(<App />)
