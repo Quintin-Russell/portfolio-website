@@ -5,6 +5,7 @@ import $ from 'jquery'
 import parseRoute from './parse-route';
 
 import LandingPage from './pages/landingPage'
+import Header from './components/header'
 
 export default function App(props) {
   const [hash, setHash] = useState(parseRoute(window.location.hash))
@@ -16,11 +17,19 @@ export default function App(props) {
     }
   }
 
-  if (hash.path === '') return (
+  const landingPage = (hash.path === '')
+      ? (<>
+        <Parallax pages={1}>
+          <LandingPage/>
+        </Parallax>
+      </>)
+      : <></>
+
+  return (
     <>
-      <Parallax pages={1}>
-        <LandingPage/>
-      </Parallax>
+      <Header />
+      {landingPage}
     </>
   )
+
 }
