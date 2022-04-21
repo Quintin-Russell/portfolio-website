@@ -9,26 +9,18 @@ import Header from './components/header'
 
 export default function App(props) {
   const [hash, setHash] = useState(parseRoute(window.location.hash))
-  console.log('hash:', hash)
-
-  const loadPage = (hash) => {
-    if (hash.path === '') {
-      return <LandingPage />
-    }
-  }
 
   const landingPage = (hash.path === '')
-      ? (<>
-        <Parallax pages={1}>
+      ? (
           <LandingPage/>
-        </Parallax>
-      </>)
+          )
       : <></>
 
   return (
     <>
-      <Header />
+    <Parallax pages={1}>
       {landingPage}
+    </Parallax>
     </>
   )
 

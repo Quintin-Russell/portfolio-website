@@ -1,5 +1,6 @@
 import React from "react";
 import { ParallaxLayer } from '@react-spring/parallax'
+import Header from "../components/header";
 
 export default function LandingPage() {
   return (
@@ -7,7 +8,7 @@ export default function LandingPage() {
       <ParallaxLayer
       className="bkg-1"
       >
-        <h1 className="white incon">Hi Hi</h1>
+        <Header />
       </ParallaxLayer>
     </>
   )

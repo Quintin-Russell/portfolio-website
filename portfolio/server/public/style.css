@@ -13,3 +13,16 @@
 .white {
   color: white;
 }
+
+.fade-txt {
+  font-size: 3rem;
+  font-weight: 300;
+  background:
+    -webkit-linear-gradient(
+      left,
+      #fff,
+      #545454
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
