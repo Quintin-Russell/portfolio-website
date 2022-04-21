@@ -13,7 +13,21 @@ export default function Header() {
   return (
     <>
     <header className='flex row just-spbw'>
-      <h1 className='fade-txt incon'>{label}</h1>
+      <a href=""
+      className='no-underline'>
+       <h1 className='fade-txt incon'>{label}</h1>
+      </a>
+        <div className="row flex align-c">
+        <a href="contact"
+        className='white-underline header-a incon'>
+          Let's Talk
+        </a>
+        <a href="">
+        </a>
+        <a href="">
+        </a>
+      </div>
+
     </header>
     </>
   )

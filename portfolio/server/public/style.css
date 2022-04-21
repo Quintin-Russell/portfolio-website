@@ -15,7 +15,7 @@
 }
 
 .fade-txt {
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 300;
   background:
     -webkit-linear-gradient(
@@ -25,4 +25,21 @@
     );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.white-underline {
+  text-decoration: underline;
+  color: white;
+}
+
+.header-a {
+  font-size: 1rem;
+}
+
+.align-c {
+  align-items: center;
 }
