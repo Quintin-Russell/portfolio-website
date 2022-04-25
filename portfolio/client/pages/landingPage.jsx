@@ -6,7 +6,7 @@ export default function LandingPage() {
   return (
     <>
       <ParallaxLayer
-      className="bkg-1"
+        className='bkg-1'
       >
         <Header />
       </ParallaxLayer>
