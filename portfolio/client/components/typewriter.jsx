@@ -13,8 +13,6 @@ export default function Typewriter(props) {
   //  props.tarString[0]
  useEffect(()=> {
   const intCursor = setInterval(() => {
-    console.log('props.tarString in typewriter:', props.tarString[dispString.length])
-    console.log('dispString in typewriter:', dispString.length)
     toggleCursor(cursor => !cursor)
     if (cursor && (dispString.length !== props.tarString.length)) pushDispString(dispString += props.tarString[dispString.length])
   }, 75);
