@@ -14,6 +14,10 @@ export default {
   font-family: "Playfair Display", serif;
   `,
 
+  fade: css`
+    background: linear-gradient(to right, #000000, #0c0c0c, rgba(132, 132, 132, .50));
+  `,
+
   fadeTxt: css`
   font-size: 1.5rem;
   font-weight: 300;

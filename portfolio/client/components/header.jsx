@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <>
-    <header css={[layout.flex, layout.row, layout.justSpbw]}>
+    <header css={[style.fade, layout.flex, layout.row, layout.justSpbw]}>
       <a href=""
       css={style.noUnderline}>
        <h1 css={[style.fadeTxt, style.incon]}>{label}</h1>
@@ -35,7 +35,7 @@ export default function Header() {
           Resume
         </a>
         <div
-        css={[style.whiteUnderline, style.headerA, layout.flex, layout.alignC]}>
+        css={[style.headerA, layout.flex, layout.alignC]}>
           <VscListSelection css={style.menuIcon} />
         </div>
       </div>
