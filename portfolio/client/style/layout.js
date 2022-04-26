@@ -1,12 +1,6 @@
 import { css } from '@emotion/react'
-// import img from '../../server/public/images/background'
 
 export default {
-  bkg1: css`
-  background-image: url(../../server/public/images/background);
-  `,
-
-
 flex: css`
   display: flex;
   `,

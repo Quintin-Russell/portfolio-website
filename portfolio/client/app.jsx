@@ -10,6 +10,8 @@ import Header from './components/header'
 export default function App(props) {
   const [hash, setHash] = useState(parseRoute(window.location.hash))
 
+  $(document).title = '../server/public/images/flavicon/favicn.ico'
+
   const landingPage = (hash.path === '')
       ? (
           <LandingPage/>

@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import React, { useState } from 'react'
 import { jsx, css } from '@emotion/react'
+import { VscListSelection } from 'react-icons/vsc'
 import $ from 'jquery'
 
 import style from '../style/style'
@@ -28,10 +29,15 @@ export default function Header() {
             >
           Let's Talk
         </a>
-        <a href="">
+        <a href="https://github.com/Quintin-Russell/Quintin-Russell/blob/main/Quintin%20Russell%20Resume.pdf"
+        target="_blank"
+        css={[style.incon, style.whiteUnderline, style.headerA]}>
+          Resume
         </a>
-        <a href="">
-        </a>
+        <div
+        css={[style.whiteUnderline, style.headerA, layout.flex, layout.alignC]}>
+          <VscListSelection css={style.menuIcon} />
+        </div>
       </div>
 
     </header>
