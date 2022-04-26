@@ -48,5 +48,10 @@ export default {
   menuIcon: css`
   transform: rotate(180deg);
   font-size: 1.5rem
+  `,
+
+  typewriterLandingPage: css`
+      color: #fff;
+      font-size: 2rem;
   `
 }
