@@ -3,17 +3,13 @@ import React, { useState } from 'react'
 import { jsx, css } from '@emotion/react'
 import $ from 'jquery'
 
+import style from '../style/style'
+import layout from '../style/layout'
+
 export default function Header() {
   const [screenSize, setScreenSize] = useState(screen.width);
 
   $(window).on('resize', () => setScreenSize(screen.width))
-
-  const emotionA = css`
-  text-decoration: underline;
-  color: #fff;
-  font-family: Inconsolata, monospace;
-  font-size: 1rem;
-  `
 
   const label = (screenSize > 768)
     ? `<QUINTINRUSSELL/>`
@@ -21,14 +17,15 @@ export default function Header() {
 
   return (
     <>
-    <header className='flex row just-spbw'>
+    <header css={[layout.flex, layout.row, layout.justSpbw]}>
       <a href=""
-      className='no-underline'>
-       <h1 className='fade-txt incon'>{label}</h1>
+      css={style.noUnderline}>
+       <h1 css={[style.fadeTxt, style.incon]}>{label}</h1>
       </a>
-        <div className="row flex align-c">
+        <div css={[layout.flex, layout.row, layout.alignC]}>
         <a href="contact"
-        css={emotionA}>
+            css={[style.incon, style.whiteUnderline, style.headerA]}
+            >
           Let's Talk
         </a>
         <a href="">

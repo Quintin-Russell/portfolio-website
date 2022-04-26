@@ -1,20 +1,20 @@
-.incon {
+import { css } from '@emotion/react'
+
+export default {
+
+  incon: css`
   font-family: Inconsolata, monospace;
-}
+  `,
 
-.monts {
+  monts: css`
   font-family: Montserrat, sans-serif;
-}
+  `,
 
-.pf-disp {
+  pfDisp: css`
   font-family: "Playfair Display", serif;
-}
+  `,
 
-.white {
-  color: white;
-}
-
-.fade-txt {
+  fadeTxt: css`
   font-size: 1.5rem;
   font-weight: 300;
   background:
@@ -25,21 +25,18 @@
     );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+  `,
 
-.no-underline {
+  noUnderline: css`
   text-decoration: none;
-}
+  `,
 
-.white-underline {
+  whiteUnderline: css`
   text-decoration: underline;
-  color: #fff;
-}
+  `,
 
-.header-a {
+  headerA : css`
   font-size: 1rem;
-}
-
-.align-c {
-  align-items: center;
+  color: #fff;
+  `
 }
