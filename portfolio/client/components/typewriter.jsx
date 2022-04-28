@@ -44,15 +44,19 @@ export default function Typewriter(props) {
   return () => clearInterval(intCursor)
  }, [])
 
+ const font = (props.font === 'monts')
+  ? style.monts
+  : style.pfDisp
+
  return (
    <>
        <span></span>
        <p>
        {dispString.map((x) => <>
-         <span key={x.word} css={(x.bold === 'bold') ? [style.monts, style.typewriterLandingPage, style.bold] : [style.monts, style.typewriterLandingPage]}>{x.word} </span>
+         <span key={x.word} css={(x.bold === 'bold') ? [font, style.typewriterLandingPage, style.bold] : [font, style.typewriterLandingPage]}>{x.word} </span>
        <span> </span>
        </>)}
-         <span css={[style.monts, style.typewriterLandingPage]}>{(cursor) ?"|" :""}</span>
+         <span css={[font, style.typewriterLandingPage]}>{(cursor) ?"|" :""}</span>
         </p>
      <span></span>
    </>
