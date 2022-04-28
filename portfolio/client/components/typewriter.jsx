@@ -44,9 +44,7 @@ export default function Typewriter(props) {
   return () => clearInterval(intCursor)
  }, [])
 
- const font = (props.font === 'monts')
-  ? style.monts
-  : style.pfDisp
+ const font = (props.font) ? style[props.font] : null
 
  return (
    <>
