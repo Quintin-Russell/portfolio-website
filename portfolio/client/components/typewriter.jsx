@@ -8,14 +8,38 @@ import style from '../style/style'
 
 export default function Typewriter(props) {
  const [cursor, toggleCursor] = useState(true);
- let [dispString, pushDispString] = useState("")
-  //  (dispString, tarString) => dispString += tarString[dispString.length],
-  //  props.tarString[0]
+ let [counter, setCounter] = useState(0);
+ const [dispString, pushDispString] = useReducer(
+  (dispString, newVal) => [...dispString, newVal],
+  [])
+
+ const tarStringSplit = (props.tarString)
+    ? props.tarString.split(" ")
+    : null
+
+
  useEffect(()=> {
   const intCursor = setInterval(() => {
     toggleCursor(cursor => !cursor)
-    if (cursor && (dispString.length !== props.tarString.length)) pushDispString(dispString += props.tarString[dispString.length])
-  }, 75);
+    if (cursor && (counter !== tarStringSplit.length)) {
+      const nextWord = (props.bold.includes(tarStringSplit[counter]))
+        ? (
+          {
+            word: tarStringSplit[counter],
+            bold: 'bold'
+          }
+        )
+        : (
+          {
+            word: tarStringSplit[counter],
+            bold: 'normal'
+          }
+        )
+      pushDispString(nextWord)
+      setCounter(counter++)
+    }
+
+  }, 200);
 
   return () => clearInterval(intCursor)
  }, [])
@@ -23,12 +47,13 @@ export default function Typewriter(props) {
  return (
    <>
        <span></span>
-       <p css={[style.monts, style.typewriterLandingPage]}>
-         {dispString}
+       <p>
+       {dispString.map((x) => <>
+         <span key={x.word} css={(x.bold === 'bold') ? [style.monts, style.typewriterLandingPage, style.bold] : [style.monts, style.typewriterLandingPage]}>{x.word} </span>
+       <span> </span>
+       </>)}
          <span css={[style.monts, style.typewriterLandingPage]}>{(cursor) ?"|" :""}</span>
         </p>
-
-
      <span></span>
    </>
  )
