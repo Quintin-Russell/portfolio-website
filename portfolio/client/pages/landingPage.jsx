@@ -12,7 +12,7 @@ import style from "../style/style";
 export default function LandingPage() {
   const [firstTWCompleted, setFirstTWCompleted] = useState(null)
 
-setTimeout(() => {
+  setTimeout(() => {
       setFirstTWCompleted(true)
     }, 2500)
 
@@ -37,6 +37,9 @@ setTimeout(() => {
         className="bkg1"
       >
         <Header />
+        <div>
+
+        </div>
         <Typewriter
           font='pfDisp'
           tarString="
