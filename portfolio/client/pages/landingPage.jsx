@@ -38,7 +38,19 @@ export default function LandingPage() {
       >
         <Header />
         <div>
+          <p css={[style.incon, style.landingPgTxtSize]}>
+            <span css={style.landingPgTxt_or}>{`<`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span>
+          </p>
+          <div>
+            <p css={[style.incon, style.landingPgTxtSize]}>
+              <span css={style.landingPgTxt_bl}>{`profession =“software-engineer”`}</span>
+            </p>
+            <p css={[style.incon, style.landingPgTxtSize]}>
+              <span css={style.landingPgTxt_bl}>{`tools=[“JavaScript”, “Python”, “CSS”, “HTML”]`}</span>
+            </p>
+          </div>
 
+          <p css={[style.incon, style.landingPgTxtSize, style.landingPgTxt_or]}>{`>`}</p>
         </div>
         <Typewriter
           font='pfDisp'

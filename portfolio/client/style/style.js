@@ -35,6 +35,18 @@ export default {
   -webkit-text-fill-color: transparent;
   `,
 
+  landingPgTxtSize: css`
+  font-size: 3rem;
+  `,
+
+  landingPgTxt_or: css`
+  color: #E28D29;
+  `,
+
+  landingPgTxt_bl: css`
+  color: #5DB2B8;
+  `,
+
   noUnderline: css`
   text-decoration: none;
   `,
