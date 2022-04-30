@@ -24,5 +24,13 @@ padding: 0.25rem;
 
 margin1rem: css`
 margin: 1rem;
+`,
+
+footer: css`
+position: absolute;
+bottom: 0;
+width: 100%;
+padding: 1rem 0.5rem;
+font-size: 1.5rem;
 `
 }

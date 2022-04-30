@@ -3,7 +3,6 @@ import React, {useState,
                 useEffect} from "react";
 import { jsx, css } from '@emotion/react'
 import { ParallaxLayer } from '@react-spring/parallax'
-import $ from 'jquery'
 
 import Header from "../components/header";
 import Typewriter from "../components/typewriter";

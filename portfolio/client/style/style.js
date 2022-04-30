@@ -27,7 +27,7 @@ export default {
   `,
 
   fadeTxt: css`
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 300;
   background:
     -webkit-linear-gradient(
@@ -60,14 +60,14 @@ export default {
   `,
 
   headerA : css`
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #fff;
   padding: 0 1rem;
   `,
 
   menuIcon: css`
   transform: rotate(180deg);
-  font-size: 1.5rem
+  font-size: 2rem
   `,
 
   typewriterLandingPage: css`
