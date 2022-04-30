@@ -64,7 +64,7 @@ export default function LandingPage() {
           render2ndTW(firstTWCompleted)
         }
         <div css={[layout.margin1rem, style.incon, style.light, layout.padding25, style.landingPgTxtSize]}>
-          <span css={style.landingPgTxt_or}>{`<`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span><span css={style.landingPgTxt_or}>{`/>`}</span>
+          <span css={style.landingPgTxt_or}>{`</`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span><span css={style.landingPgTxt_or}>{`>`}</span>
         </div>
       </ParallaxLayer>
     </>
