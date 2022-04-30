@@ -14,6 +14,7 @@ export default function App(props) {
   const [hash, setHash] = useState(parseRoute(window.location.hash))
 
   $(document).title = '../server/public/images/flavicon/favicn.ico'
+  $(window).on('hashchange',() => setHash(parseRoute(window.location.hash)))
 
   const determinePage = (hash) => {
     if (hash.path === 'about') return <About />

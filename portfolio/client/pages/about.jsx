@@ -10,16 +10,22 @@ import Typewriter from "../components/typewriter";
 import style from "../style/style";
 import layout from "../style/layout"
 
-export default function About(props) {
+export default function About() {
   return (
     <>
       <ParallaxLayer className="bkg1">
+        <Typewriter
+          font='incon'
+          tarString="
+          hi, i'm quintin.
+          "
+          bold={[]}
+        />
+      </ParallaxLayer>
+      <ParallaxLayer className="bkg2">
 
       </ParallaxLayer>
-      <ParallaxLayer className="bkg1">
-
-      </ParallaxLayer>
-      <ParallaxLayer className="bkg1">
+      <ParallaxLayer className="bkg3">
 
       </ParallaxLayer>
     </>
