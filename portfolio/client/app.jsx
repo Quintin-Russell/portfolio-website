@@ -5,7 +5,7 @@ import $ from 'jquery'
 import parseRoute from './parse-route';
 
 import LandingPage from './pages/landingPage'
-import Header from './components/header'
+import Footer from "./components/footer";
 
 export default function App(props) {
   const [hash, setHash] = useState(parseRoute(window.location.hash))
@@ -20,8 +20,10 @@ export default function App(props) {
 
   return (
     <>
-    <Parallax pages={1}>
+    <Parallax
+    pages={1}>
       {landingPage}
+      <Footer />
     </Parallax>
     </>
   )
