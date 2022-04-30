@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  color: white;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+.bkg1 {
+  background-image: url("./images/background/background1.jpg");
+  background-size: cover !important;
+}

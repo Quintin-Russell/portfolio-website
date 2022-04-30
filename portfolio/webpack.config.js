@@ -21,7 +21,8 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             plugins: [
-              '@babel/plugin-transform-react-jsx'
+            '@emotion/babel-plugin',
+            '@babel/plugin-transform-react-jsx'
             ]
           }
         }
