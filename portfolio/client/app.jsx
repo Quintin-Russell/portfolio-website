@@ -12,11 +12,14 @@ export default function App(props) {
 
   $(document).title = '../server/public/images/flavicon/favicn.ico'
 
-  const landingPage = (hash.path === '')
-      ? (
-          <LandingPage/>
-          )
-      : <></>
+  const determinePage = (hash) => {
+    if (hash.path === 'about') return <About />
+    return <LandingPage />
+
+  }
+
+
+
 
   return (
     <>
