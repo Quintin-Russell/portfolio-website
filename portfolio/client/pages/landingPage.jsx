@@ -6,6 +6,7 @@ import { ParallaxLayer } from '@react-spring/parallax'
 import $ from 'jquery'
 
 import Header from "../components/header";
+import Footer from "../components/footer";
 import Typewriter from "../components/typewriter";
 import style from "../style/style";
 import layout from "../style/layout"
@@ -67,6 +68,7 @@ export default function LandingPage() {
         <div css={[layout.margin1rem, style.incon, style.light, layout.padding25, style.landingPgTxtSize]}>
           <span css={style.landingPgTxt_or}>{`<`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span><span css={style.landingPgTxt_or}>{`/>`}</span>
         </div>
+      <Footer />
       </ParallaxLayer>
     </>
   )
