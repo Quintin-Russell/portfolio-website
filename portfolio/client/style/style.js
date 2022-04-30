@@ -18,6 +18,10 @@ export default {
   font-weight: 600;
   `,
 
+  light: css`
+  font-weight: 100;
+  `,
+
   fade: css`
     background: linear-gradient(to right, #000000, #0c0c0c, rgba(132, 132, 132, .50));
   `,
@@ -68,6 +72,6 @@ export default {
 
   typewriterLandingPage: css`
       color: #fff;
-      font-size: 2rem;
+      font-size: 3rem;
   `
 }

@@ -8,6 +8,7 @@ import $ from 'jquery'
 import Header from "../components/header";
 import Typewriter from "../components/typewriter";
 import style from "../style/style";
+import layout from "../style/layout"
 
 export default function LandingPage() {
   const [firstTWCompleted, setFirstTWCompleted] = useState(null)
@@ -37,21 +38,20 @@ export default function LandingPage() {
         className="bkg1"
       >
         <Header />
-        <div>
-          <p css={[style.incon, style.landingPgTxtSize]}>
+        <div css={layout.margin1rem}>
+          <div css={[style.incon, style.light, layout.padding25, style.landingPgTxtSize]}>
             <span css={style.landingPgTxt_or}>{`<`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span>
-          </p>
-          <div>
-            <p css={[style.incon, style.landingPgTxtSize]}>
-              <span css={style.landingPgTxt_bl}>{`profession =“software-engineer”`}</span>
-            </p>
-            <p css={[style.incon, style.landingPgTxtSize]}>
-              <span css={style.landingPgTxt_bl}>{`tools=[“JavaScript”, “Python”, “CSS”, “HTML”]`}</span>
-            </p>
           </div>
+        <div css={[style.incon, style.light, layout.padding25, style.landingPgTxtSize]}>
+              <span css={style.landingPgTxt_bl}>{`profession =“software-engineer”`}</span>
+            </div>
+        <div css={[style.incon, style.light, layout.padding25, style.landingPgTxtSize]}>
+              <span css={style.landingPgTxt_bl}>{`tools=[“JavaScript”, “Python”, “CSS”, “HTML”]`}</span>
+            </div>
+        <div css={[style.incon, style.light, layout.padding25, style.landingPgTxtSize, style.landingPgTxt_or]}>{`>`}</div>
 
-          <p css={[style.incon, style.landingPgTxtSize, style.landingPgTxt_or]}>{`>`}</p>
         </div>
+
         <Typewriter
           font='pfDisp'
           tarString="
@@ -64,6 +64,9 @@ export default function LandingPage() {
         {
           render2ndTW(firstTWCompleted)
         }
+        <div css={[layout.margin1rem, style.incon, style.light, layout.padding25, style.landingPgTxtSize]}>
+          <span css={style.landingPgTxt_or}>{`<`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span><span css={style.landingPgTxt_or}>{`/>`}</span>
+        </div>
       </ParallaxLayer>
     </>
   )
