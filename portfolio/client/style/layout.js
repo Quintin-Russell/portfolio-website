@@ -9,6 +9,10 @@ row: css`
 flex-direction: row;
 `,
 
+contentWrap: css`
+padding-bottom: 10vh;
+`,
+
 
 justSpbw: css`
 justify-content: space-between;
@@ -30,6 +34,7 @@ footer: css`
 position: absolute;
 bottom: 0;
 width: 100%;
+height: 10vh;
 padding: 1rem 0.5rem;
 font-size: 1.5rem;
 `

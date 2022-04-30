@@ -5,6 +5,7 @@ import { jsx, css } from '@emotion/react'
 import { ParallaxLayer } from '@react-spring/parallax'
 
 import Header from "../components/header";
+import Footer from "../components/footer";
 import Typewriter from "../components/typewriter";
 import style from "../style/style";
 import layout from "../style/layout"
@@ -33,9 +34,7 @@ export default function LandingPage() {
 
   return (
     <>
-      <ParallaxLayer
-        className="bkg1"
-      >
+      <ParallaxLayer className="bkg1">
         <Header />
         <div css={layout.margin1rem}>
           <div css={[style.incon, style.light, layout.padding25, style.landingPgTxtSize]}>

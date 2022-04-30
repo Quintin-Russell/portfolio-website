@@ -4,8 +4,11 @@ import $ from 'jquery'
 
 import parseRoute from './parse-route';
 
+import layout from './style/layout';
+
+import Footer from './components/footer';
 import LandingPage from './pages/landingPage'
-import Footer from "./components/footer";
+import About from './pages/about';
 
 export default function App(props) {
   const [hash, setHash] = useState(parseRoute(window.location.hash))
@@ -15,19 +18,23 @@ export default function App(props) {
   const determinePage = (hash) => {
     if (hash.path === 'about') return <About />
     return <LandingPage />
-
   }
 
+  const determinePageNumber = (hash) => {
+    if (hash.path === 'about') return 3
+    return 1
+  }
 
 
 
   return (
     <>
     <Parallax
-    pages={1}>
-      {landingPage}
-      <Footer />
+    pages={determinePageNumber(hash)}
+    css={layout.contentWrap}>
+      {determinePage(hash)}
     </Parallax>
+    <Footer />
     </>
   )
 
