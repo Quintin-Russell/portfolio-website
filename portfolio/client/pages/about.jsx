@@ -22,10 +22,14 @@ export default function About() {
           bold={[]}
         />
       </ParallaxLayer>
-      <ParallaxLayer className="bkg2">
+      <ParallaxLayer
+      offset={1}
+      className="bkg2">
 
       </ParallaxLayer>
-      <ParallaxLayer className="bkg3">
+      <ParallaxLayer
+      offset={2}
+      className="bkg3">
 
       </ParallaxLayer>
     </>
