@@ -14,13 +14,27 @@ export default function About() {
   return (
     <>
       <ParallaxLayer className="bkg1">
-        <Typewriter
-          font='incon'
-          tarString="
-          hi, i'm quintin.
-          "
-          bold={[]}
-        />
+        <div css={[layout.flex, layout.row, layout.justCent]}>
+          <Typewriter
+            font='incon'
+            tarString="
+            hi, i'm quintin.
+            "
+            bold={[]}
+            cursorDisappear={true}
+          />
+        </div>
+        <div css={[layout.flex, layout.justEnd]}>
+          <p css={[layout.flex, layout.flex50, layout.justCent, style.incon, style.typewriterLandingPage]}>Tools</p>
+        </div>
+        <div css={[layout.flex, layout.alignC, layout.justSpbw, layout.row]}>
+          <div css={[layout.flex, layout.flex50]}>
+
+          </div>
+          <div css={[layout.flex, layout.flex50]}>
+
+          </div>
+        </div>
       </ParallaxLayer>
       <ParallaxLayer
       offset={1}
