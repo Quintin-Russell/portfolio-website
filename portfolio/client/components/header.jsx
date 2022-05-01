@@ -24,7 +24,7 @@ export default function Header() {
        <h1 css={[style.fadeTxt, style.incon]}>{label}</h1>
       </a>
         <div css={[layout.flex, layout.row, layout.alignC]}>
-        <a href="contact"
+        <a href="#contact"
             css={[style.incon, style.whiteUnderline, style.headerA]}
             >
           Let's Talk
