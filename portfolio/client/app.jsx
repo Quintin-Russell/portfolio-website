@@ -15,11 +15,7 @@ import About from './pages/about';
 
 export default function App(props) {
   const determinePageNumber = (hash) => {
-    console.log('determinPgNum fired:', hash.path)
-    if (hash.path === 'about') {
-      console.log('determinePgNum returning 3')
-      return 3
-    }
+    if (hash.path === 'about') return 3
     return 1
   }
 
@@ -33,7 +29,6 @@ export default function App(props) {
       const newHash = parseRoute(window.location.hash)
       setHash(newHash)
       setPgNum(determinePageNumber(newHash))
-      console.log('newHash in app:', newHash)
       })
   }, [])
 
