@@ -34,6 +34,10 @@ padding25: css`
 padding: 0.25rem;
 `,
 
+margin0: css`
+margin: 0;
+`,
+
 margin1rem: css`
 margin: 1rem;
 `,

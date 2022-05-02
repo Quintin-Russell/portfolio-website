@@ -52,7 +52,6 @@ export default function Typewriter(props) {
 
  return (
    <>
-       <span></span>
        <p>
        {dispString.map((x) => <>
          <span key={x.word} css={(x.bold === 'bold') ? [font, style.typewriterLandingPage, style.bold] : [font, style.typewriterLandingPage]}>{x.word} </span>
@@ -60,7 +59,6 @@ export default function Typewriter(props) {
        </>)}
          <span key={cursor} css={[font, style.typewriterLandingPage]}>{(cursor) ?"|" :""}</span>
         </p>
-     <span></span>
    </>
  )
 }

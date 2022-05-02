@@ -63,6 +63,12 @@ export default {
   font-size: 1.5rem;
   color: #fff;
   padding: 0 1rem;
+  transition: all ease 2s;
+
+  :hover {
+    font-size: 2.5rem;
+    color: #E28D29;
+  }
   `,
 
   menuIcon: css`

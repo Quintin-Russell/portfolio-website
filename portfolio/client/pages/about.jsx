@@ -25,7 +25,7 @@ export default function About() {
           />
         </div>
         <div css={[layout.flex, layout.justEnd]}>
-          <p css={[layout.flex, layout.flex50, layout.justCent, style.incon, style.typewriterLandingPage]}>Tools</p>
+          <p css={[layout.margin0, layout.flex, layout.flex50, layout.justCent, style.incon, style.typewriterLandingPage]}>Tools</p>
         </div>
         <div css={[layout.flex, layout.alignC, layout.justSpbw, layout.row]}>
           <div css={[layout.flex, layout.flex50]}>

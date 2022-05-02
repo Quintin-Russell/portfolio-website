@@ -31,11 +31,11 @@ export default function Header() {
         </a>
         <a href="https://github.com/Quintin-Russell/Quintin-Russell/blob/main/Quintin%20Russell%20Resume.pdf"
         target="_blank"
-        css={[style.incon, style.whiteUnderline, style.headerA]}>
+            css={[style.incon, style.whiteUnderline, style.headerA]}>
           Resume
         </a>
         <div
-        css={[style.headerA, layout.flex, layout.alignC]}>
+            css={[style.headerA, layout.flex, layout.alignC]}>
           <VscListSelection css={style.menuIcon} />
         </div>
       </div>
