@@ -30,7 +30,7 @@ export default function About() {
           <p css={[layout.margin0, layout.flex, layout.flex50, layout.justCent, style.incon, style.typewriterLandingPage]}>Tools</p>
         </div>
         <div css={[layout.flex, layout.alignC, layout.justSpbw, layout.row]}>
-          <div css={[layout.flex, layout.flex50]}>
+          <div css={[layout.flex, layout.flex50, layout.justCent]}>
             <ToolsIcons />
           </div>
           <div css={[layout.flex, layout.flex50]}>

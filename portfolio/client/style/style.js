@@ -59,6 +59,10 @@ export default {
   text-decoration: underline;
   `,
 
+  techIconBasics: css`
+  height: 10rem;
+  `,
+
   headerA : css`
   font-size: 1.5rem;
   color: #fff;
