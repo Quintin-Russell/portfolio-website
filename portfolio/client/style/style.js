@@ -67,17 +67,25 @@ export default {
   font-size: 1.5rem;
   color: #fff;
   padding: 0 1rem;
+  `,
+
+  hoverA: css`
   transition: all ease 2s;
 
-  :hover {
-    font-size: 2.5rem;
-    color: #E28D29;
-  }
+    :hover {
+      font-size: 2.5rem;
+      color: #E28D29;
+      cursor: pointer;
+      }
   `,
 
   menuIcon: css`
   transform: rotate(180deg);
-  font-size: 2rem
+  font-size: 2rem;
+
+    :hover {
+    font-size: 3rem;
+    }
   `,
 
   typewriterLandingPage: css`

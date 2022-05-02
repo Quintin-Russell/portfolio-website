@@ -25,18 +25,18 @@ export default function Header() {
       </a>
         <div css={[layout.flex, layout.row, layout.alignC]}>
         <a href="#contact"
-            css={[style.incon, style.whiteUnderline, style.headerA]}
+            css={[style.incon, style.whiteUnderline, style.headerA, style.hoverA]}
             >
           Let's Talk
         </a>
         <a href="https://github.com/Quintin-Russell/Quintin-Russell/blob/main/Quintin%20Russell%20Resume.pdf"
         target="_blank"
-            css={[style.incon, style.whiteUnderline, style.headerA]}>
+            css={[style.incon, style.whiteUnderline, style.headerA, style.hoverA]}>
           Resume
         </a>
         <div
-            css={[style.headerA, layout.flex, layout.alignC]}>
-          <VscListSelection css={style.menuIcon} />
+            css={[style.headerA, layout.flex, layout.alignC, style.hoverA]}>
+            <VscListSelection css={[style.hoverA, style.menuIcon]} />
         </div>
       </div>
 
