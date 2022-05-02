@@ -7,6 +7,8 @@ import { ParallaxLayer } from '@react-spring/parallax'
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Typewriter from "../components/typewriter";
+import ToolsIcons from "../components/toolsicons"
+
 import style from "../style/style";
 import layout from "../style/layout"
 
@@ -29,7 +31,7 @@ export default function About() {
         </div>
         <div css={[layout.flex, layout.alignC, layout.justSpbw, layout.row]}>
           <div css={[layout.flex, layout.flex50]}>
-
+            <ToolsIcons />
           </div>
           <div css={[layout.flex, layout.flex50]}>
 
