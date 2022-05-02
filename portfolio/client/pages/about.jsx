@@ -16,6 +16,7 @@ export default function About() {
   return (
     <>
       <ParallaxLayer className="bkg1">
+        <Header />
         <div css={[layout.flex, layout.row, layout.justCent]}>
           <Typewriter
             font='incon'
