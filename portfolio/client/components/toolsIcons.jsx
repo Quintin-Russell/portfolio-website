@@ -40,7 +40,7 @@ export default function ToolsIcons() {
         alt="postgreSQL" />
     </div>
     </div>
-      <div css={[layout.flex, layout.row, layout.alignC, layout.justCent]}>
+      <div css={[layout.flex, layout.row, layout.alignC, layout.justSpbw]}>
           <img css={style.img}
             src={python}
             alt="python" />

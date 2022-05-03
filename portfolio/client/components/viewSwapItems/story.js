@@ -1,4 +1,4 @@
-import ViewSwapItem from "./viewSwapInfo"
+import ViewSwapItem from "./viewSwapConstructor"
 
 const storyText = [`
 As human-beings, passions are what drives our decisions. As a kid, I used to think about
@@ -27,7 +27,7 @@ it was time to take some time away from my professional aspirations and figure o
 `Over the next 2 years, I would travel to 11 countries and learn alot: how to speak 2 new languages fluently,
 the feeling of standing on a mountain summit with nobody around, the subtleties of Calena salsa dancing, how
 your shins feel after 4 months of training Muay Thai everyday in Thailand (PAIN!)... I could go on and on,
-but the memories far surpass the amount of space on this page. After returning to SOuthern California, I felt
+but the memories far surpass the amount of space on this page. After returning to Southern California, I felt
 connected with myself and, more importantly, I was ready to build something for myself. What that 'something'
 was, I was not sure.
 `,
@@ -35,7 +35,7 @@ was, I was not sure.
 process thousands of data points with a single function call. I couldn't stop learning. I was spending hours a day of my
 free time building programs to help my engineering work and automate my life. As my engineering work required me to create
 graphics and visuals for complex data, I transitiioned into learning HTML, CSS, and JavaScript. IT WAS LIKE I WAS BUILDING
-WITH LEGOS AGAIN. Only these Legos were digital. Each <div> i created and <p> element I nested brought back the joy I felt
+WITH LEGOS AGAIN. Only these Legos were digital. Each <div> I created and <p> element I nested brought back the joy I felt
 assembling the Lego villages I made as a kid. I was hooked. I started thinking that I could make a career out of building
 beautiful websites with these digital Legos. My passion was back. I DIDN'T HAVE TO GIVE UP MY CHILDHOOD PASSION.
 `,

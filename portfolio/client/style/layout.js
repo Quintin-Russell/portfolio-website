@@ -1,6 +1,7 @@
 import { css } from '@emotion/react'
 
 export default {
+// flexbox ctrls
 flex: css`
   display: flex;
   `,
@@ -12,11 +13,6 @@ flex-direction: row;
 col: css`
 flex-direction: column;
 `,
-
-contentWrap: css`
-padding-bottom: 10vh;
-`,
-
 
 justSpbw: css`
 justify-content: space-between;
@@ -30,9 +26,25 @@ justCent: css`
 justify-content: center;
 `,
 
+justEnd: css`
+justify-content: flex-end;
+`,
+
+//width/height ctrls
+
 flex50: css`
 flex-basis: 50%
 `,
+
+width80: css`
+width: 80%;
+`,
+
+height80: css`
+height: 80%;
+`,
+
+//padding/margin ctrls
 
 padding25: css`
 padding: 0.25rem;
@@ -40,6 +52,10 @@ padding: 0.25rem;
 
 padding2rem: css`
 padding: 2rem;
+`,
+
+contentWrap: css`
+padding-bottom: 10vh;
 `,
 
 margin0: css`
@@ -50,16 +66,22 @@ margin1rem: css`
 margin: 1rem;
 `,
 
+//overflow ctrls
+
+overflowScroll: css`
+overflow: scroll;
+`,
+
+// component specific
+
+
+
 footer: css`
-position: absolute;
+position: fixed;
 bottom: 0;
 width: 100%;
 height: 10vh;
 padding: 1rem 0.5rem;
 font-size: 1.5rem;
-`,
-
-justEnd: css`
-justify-content: flex-end;
 `
 }

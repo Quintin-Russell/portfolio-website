@@ -7,14 +7,16 @@ import { ParallaxLayer } from '@react-spring/parallax'
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Typewriter from "../components/typewriter";
-import ViewSwap from "../components/viewSwap";
 import ToolsIcons from "../components/toolsicons"
+import ViewSwap from "../components/viewSwap";
 
-import ViewSwapItem from "../components/viewSwapInfo";
+import story from "../components/viewSwapItems/story";
+
 import style from "../style/style";
 import layout from "../style/layout"
 
 export default function About() {
+  const viewSwapItems = [story]
 
   return (
     <>
@@ -61,8 +63,9 @@ export default function About() {
       </ParallaxLayer>
       <ParallaxLayer
       offset={2}
-      className="bkg3">
-        <ViewSwap />
+      className="bkg3"
+      css={[layout.flex, layout.alignC, layout.justCent]}>
+        <ViewSwap objList={viewSwapItems} />
       </ParallaxLayer>
     </>
   )
