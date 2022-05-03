@@ -7,12 +7,15 @@ import { ParallaxLayer } from '@react-spring/parallax'
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Typewriter from "../components/typewriter";
+import ViewSwap from "../components/viewSwap";
 import ToolsIcons from "../components/toolsicons"
 
+import ViewSwapItem from "../components/viewSwapInfo";
 import style from "../style/style";
 import layout from "../style/layout"
 
 export default function About() {
+
   return (
     <>
       <ParallaxLayer className="bkg1"
@@ -59,7 +62,7 @@ export default function About() {
       <ParallaxLayer
       offset={2}
       className="bkg3">
-
+        <ViewSwap />
       </ParallaxLayer>
     </>
   )
