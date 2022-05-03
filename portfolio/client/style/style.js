@@ -91,5 +91,9 @@ export default {
   typewriterLandingPage: css`
       color: #fff;
       font-size: 3rem;
+  `,
+
+  img: css`
+  height: 5rem;
   `
 }

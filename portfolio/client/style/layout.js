@@ -9,6 +9,10 @@ row: css`
 flex-direction: row;
 `,
 
+col: css`
+flex-direction: column;
+`,
+
 contentWrap: css`
 padding-bottom: 10vh;
 `,
@@ -32,6 +36,10 @@ flex-basis: 50%
 
 padding25: css`
 padding: 0.25rem;
+`,
+
+padding2rem: css`
+padding: 2rem;
 `,
 
 margin0: css`
