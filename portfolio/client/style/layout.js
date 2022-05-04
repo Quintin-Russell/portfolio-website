@@ -80,8 +80,8 @@ overflow: scroll;
 // component specific
 
 footer: css`
-// position: fixed;
-// bottom: 0;
+position: fixed;
+bottom: 0;
 width: 100%;
 height: 10vh;
 padding: 1rem 0.5rem;

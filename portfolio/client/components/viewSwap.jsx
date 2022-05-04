@@ -4,6 +4,7 @@ import { jsx, css } from '@emotion/react'
 import $ from 'jquery'
 
 import ViewSwapText from './viewSwapItems/viewSwapText'
+import ViewSwapList from './viewSwapItems/viewSwapList'
 import Tabs from './viewSwapItems/tabs'
 
 import style from '../style/style'
@@ -21,8 +22,8 @@ props.objList[0].name
 
   const determineItem = (obj) => {
     if (obj.type === 'text' && highlightedTab === obj.name) return <ViewSwapText key={obj.name} obj={obj} />
-    if (highlightedTab === obj.name) return <div css={style.headerA}>You DID IT</div>
-    return <div css={style.hidden}></div>
+    if (obj.type === 'list' && highlightedTab === obj.name) return <ViewSwapList key={obj.name} obj={obj} />
+    return <div key={Math.random() * 9999999} css={style.hidden}></div>
   }
   return (
     <>

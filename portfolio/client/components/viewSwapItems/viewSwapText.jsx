@@ -22,7 +22,7 @@ export default function ViewSwapText(props) {
         {
           props.obj.text.map(txt => {
             return (
-              <p css={[style.monts]}>{txt}</p>
+              <p key={Math.random() * 100000} css={[style.monts]}>{txt}</p>
             )
           })
         }
