@@ -102,7 +102,16 @@ export default {
   `,
 
   highlightedTab: css`
-  background-color: #E9E9E940;
+  background-color: #E9E9E960;
+  `,
+
+  cursor: css`
+  transition: all ease 2s;
+
+    :hover {
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
   `,
 
   //imgs
