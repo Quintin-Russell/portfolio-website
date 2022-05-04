@@ -41,10 +41,12 @@ export default function App(props) {
     <>
     <Parallax
     pages={pgNum}
-    css={[layout.contentWrap]}>
+    // css={[layout.contentWrap]}
+    >
       {determinePage(hash)}
-    <Footer />
     </Parallax>
+    <Footer />
+
     </>
   )
 

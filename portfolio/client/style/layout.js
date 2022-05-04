@@ -14,12 +14,12 @@ col: css`
 flex-direction: column;
 `,
 
-justSpbw: css`
-justify-content: space-between;
-`,
-
 alignC: css`
 align-items: center;
+`,
+
+justSpbw: css`
+justify-content: space-between;
 `,
 
 justCent: css`
@@ -55,7 +55,7 @@ padding: 2rem;
 `,
 
 contentWrap: css`
-padding-bottom: 10vh;
+bottom: 10vh;
 `,
 
 margin0: css`
@@ -74,14 +74,19 @@ overflow: scroll;
 
 // component specific
 
-
-
 footer: css`
-position: fixed;
-bottom: 0;
+// position: fixed;
+// bottom: 0;
 width: 100%;
 height: 10vh;
 padding: 1rem 0.5rem;
 font-size: 1.5rem;
 `
+
+//   footer: css`
+// width: 100%;
+// height: 10vh;
+// padding: 1rem 0.5rem;
+// font-size: 1.5rem;
+// `
 }

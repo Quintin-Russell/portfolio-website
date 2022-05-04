@@ -18,11 +18,11 @@ text object to work with:
 export default function ViewSwapText(props) {
   return (
     <>
-      <div>
+      <div css={[layout.overflowScroll, layout.padding25]}>
         {
           props.obj.text.map(txt => {
             return (
-              <p css={[layout.margin0, style.monts]}>{txt}</p>
+              <p css={[style.monts]}>{txt}</p>
             )
           })
         }

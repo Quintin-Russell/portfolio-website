@@ -64,7 +64,7 @@ export default function About() {
       <ParallaxLayer
       offset={2}
       className="bkg3"
-      css={[layout.flex, layout.alignC, layout.justCent]}>
+      css={[layout.flex, layout.alignC, layout.justCent, layout.contentWrap]}>
         <ViewSwap objList={viewSwapItems} />
       </ParallaxLayer>
     </>

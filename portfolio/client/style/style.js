@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 
 export default {
-
+//fonts
   incon: css`
   font-family: Inconsolata, monospace;
   `,
@@ -38,6 +38,12 @@ export default {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   `,
+//component specific text
+
+  typewriterLandingPage: css`
+      color: #fff;
+      font-size: 3rem;
+  `,
 
   landingPgTxtSize: css`
   font-size: 3rem;
@@ -50,7 +56,7 @@ export default {
   landingPgTxt_bl: css`
   color: #5DB2B8;
   `,
-
+//underline
   noUnderline: css`
   text-decoration: none;
   `,
@@ -62,6 +68,13 @@ export default {
   techIconBasics: css`
   height: 10rem;
   `,
+
+//borders
+  borderLight: css`
+  border: 0.1rem solid #fff;
+  `,
+
+  //component specific style
 
   headerA : css`
   font-size: 1.5rem;
@@ -88,11 +101,7 @@ export default {
     }
   `,
 
-  typewriterLandingPage: css`
-      color: #fff;
-      font-size: 3rem;
-  `,
-
+  //imgs
   img: css`
   height: 5rem;
   `

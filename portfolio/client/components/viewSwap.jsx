@@ -24,7 +24,7 @@ export default function ViewSwap(props) {
             setHighlightedTab(e.target)}}
             objList={props.objList}
             highlightedTab={highlightedTab}/>
-        <div css={[layout.flex, layout.col, layout.justCent, layout.alignC, layout.overflowScroll]}>
+        <div css={[layout.flex, layout.col, layout.justCent, layout.alignC]}>
           {props.objList.map(obj => determineItem(obj))}
         </div>
     </div>

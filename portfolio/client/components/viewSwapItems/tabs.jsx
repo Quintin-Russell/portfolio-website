@@ -10,15 +10,21 @@ import layout from '../../style/layout'
 export default function Tabs(props) {
 return (
   <div css={[layout.flex, layout.row]}>
-    {props.objList.map(obj => <Tab key={obj.name} obj={obj}/>)}
+    {props.objList.map(obj => <Tab key={obj.name}
+                                    obj={obj}
+                                    len={props.objList.length}/>
+    )}
   </div>
 )
 }
 
 // props = obj
 function Tab(props) {
+  const determineWidth = (len) => `${100 / len}`;
+
   return (
-    <div css={[layout.flex, layout.justCent, layout.alignC, style.incon]}>
+    <div style={{width: determineWidth(props.len) + '%'}}
+    css={[layout.flex, layout.justCent, layout.alignC, style.incon, style.borderLight]}>
       <p>{props.obj.name}</p>
     </div>
   )
