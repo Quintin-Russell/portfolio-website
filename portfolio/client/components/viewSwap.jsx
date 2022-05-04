@@ -17,6 +17,7 @@ export default function ViewSwap(props) {
   const [highlightedTab, setHighlightedTab] = useReducer(
   (highlightedTab, e) => {
       if ($(e.target).attr('data')) return $(e.target).attr('data')
+      return highlightedTab
   },
 props.objList[0].name
   )
@@ -29,10 +30,15 @@ props.objList[0].name
   }
   return (
     <>
-      <div onClick={(e) => setHighlightedTab(e)} css={[layout.flex, layout.col, layout.width80, layout.height80]}>
+      <div
+      onClick={(e) => setHighlightedTab(e)}
+      css={[layout.flex, layout.col, layout.width80, layout.height80]}>
       <Tabs objList={props.objList}
             highlighted={highlightedTab}/>
-        <div css={[layout.flex, layout.col, layout.justCent, layout.alignC, style.fade, style.borderLight]}>
+        <div css={[layout.flex, layout.justCent, layout.alignC, style.pfDisp, style.bold, style.viewSwapHeader, style.highlightedTab]}>
+          <h2>{highlightedTab}</h2>
+        </div>
+        <div css={[layout.flex, layout.col, layout.justCent, layout.alignC, style.fade, style.borderLight, layout.padding2rem]}>
           {props.objList.map(obj => determineItem(obj))}
         </div>
     </div>

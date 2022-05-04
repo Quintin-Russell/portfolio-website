@@ -81,6 +81,13 @@ list-style: none;
   border: 0.05rem solid #fff;
   `,
 
+  noBorderBottom: css`
+  border-top: 0.05rem solid #fff;
+  border-left: 0.05rem solid #fff;
+  border-right: 0.05rem solid #fff;
+  border-bottom: 0;
+  `,
+
   //component specific style
   techIconBasics: css`
   height: 10rem;
@@ -113,6 +120,13 @@ list-style: none;
 
   highlightedTab: css`
   background-color: #E9E9E960;
+  `,
+
+  viewSwapHeader: css`
+  border-top: 0;
+  border-left: 0.05rem solid #fff;
+  border-right: 0.05rem solid #fff;
+  border-bottom: 0.15rem solid #fff;
   `,
 
   cursor: css`
