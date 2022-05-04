@@ -1,5 +1,8 @@
+/** @jsx jsx */
 import React, {useState,
               useEffect} from 'react';
+import { jsx, css } from '@emotion/react'
+
 // import { BiRadioCircle,
 //         FaDotCircle,
 //         ImCircleLeft,
@@ -20,50 +23,61 @@ import layout from '../style/layout'
 export default function Carousel(props) {
   const [currentImg, setCurrentImg] = useState(0);
 
+    const int = setInterval(
+      () => nextImg(),
+      5000
+    );
+
+    const resetTimer = (int) => clearInterval(int)
 
   const nextImg= () => {
-    if (currentImg === props.hobbies.length - 1) return setCurrentImg(0)
+    clearInterval(int)
+    if (currentImg === props.obj.text.length - 1) return setCurrentImg(0)
     const newState = currentImg + 1
+    resetTimer(int)
     setCurrentImg(newState)
   }
 
   const prevImg = () => {
-    if (currentImg === 0) return setCurrentImg(props.hobbies.length - 1)
+    clearInterval(int)
+    if (currentImg === 0) return setCurrentImg(props.obj.text.length - 1)
     const newState = currentImg - 1
+    resetTimer(int)
     setCurrentImg(newState)
   }
 
   const handleClickDot = (e) => {
     const tar = parseInt(e.target.id);
+    resetTimer(int)
     setCurrentImg(tar);
   }
 
   const renderDots = () => {
     let index = 0;
-    const dotLiArr = props.hobbies.map(x => {
+    const dotLiArr = props.obj.text.map(x => {
       index++;
       if (currentImg === index - 1) {
       return(
-      <li onClick={() => handleClickDot()} key={index.toString()}>
+      <li id={(index-1).toString} onClick={(e) => handleClickDot(e)} key={index.toString()}>
           <RiFocusFill />
       </li>)
       };
       return (
-        <li onClick={() => handleClickDot()} key={index.toString()}>
+        <li id={(index - 1).toString} onClick={(e) => handleClickDot(e)} key={index.toString()}>
           <RiCheckboxBlankCircleLine />
         </li>
       )
     });
     return (
-      <ul css={[style.noListStyle, layout.row]}>
+      <ul css={[layout.flex, layout.row, layout.alignC, layout.width100, layout.padding0, layout.justSpbw, style.noListStyle]}>
         {dotLiArr}
       </ul>
     );
   }
 
   const renderPhoto = () => {
-    // const photoIndex = this.state.currentImg;
-    const hobby = props.hobbies[currentImg];
+    const hobby = props.obj.text[currentImg];
+    console.log('currentImg in renderPhoto:', currentImg)
     console.log('hobby in renderPhoto:', hobby)
     return (
       <div css={[layout.flex, layout.justCent, layout.alignC]}>
@@ -72,17 +86,8 @@ export default function Carousel(props) {
     );
   }
 
-  useEffect(() => {
-    const int = setInterval(
-      () => nextImg(),
-      5000
-    );
-
-    return () => clearInterval(int)
-  }, [])
-
     return (
-      <div css={[layout.flex, layout.row, layout.justCent, layout.alignC]}>
+      <div css={[layout.flex, layout.width100, layout.row, layout.justSpbw, layout.alignC]}>
         <div css={[style.cursor]}>
           <RiArrowLeftCircleLine onClick={() => prevImg()}
           css={[style.arrow,]}

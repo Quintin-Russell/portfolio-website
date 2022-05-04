@@ -1,5 +1,6 @@
 import ViewSwapItem from "./viewSwapConstructor"
 import BJJ from '../../../server/public/images/hobbies/BJJ.png'
+import MuayThai from '../../../server/public/images/hobbies/MuayThai.png'
 
 const hobbiesArr = [
 {
@@ -9,16 +10,16 @@ const hobbiesArr = [
       src: {BJJ},
       alt: 'QR-BJJ',
     }
+  },
+  {
+    name: 'Muay Thai Kickboxing',
+    text: `In 2019, I moved to Chaing Mai, Thailand to start studying Muay Thai. Over the next 4 months, I would live at the gym and train 5-6 days per week. I still love training and plan to go back to Thailand to train and fight.`,
+    img: {
+      src: {MuayThai},
+      alt:'QR-Muay-Thai',
+    }
   }
-//   ,
-//   {
-//     name: 'Muay Thai Kickboxing',
-//     text:,
-//     img: {
-//       src:,
-//         alt:,
-//     }
-//   },
+  // ,
 // {
 //   name: 'Traveling',
 //   text:,

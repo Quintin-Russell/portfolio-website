@@ -49,11 +49,19 @@ width80: css`
 width: 80%;
 `,
 
+width100: css`
+width: 100%
+`,
+
 height80: css`
 height: 80%;
 `,
 
 //padding/margin ctrls
+
+padding0: css`
+padding: 0;
+`,
 
 padding25: css`
 padding: 0.25rem;
