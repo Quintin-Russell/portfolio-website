@@ -11,12 +11,14 @@ import ToolsIcons from "../components/toolsicons"
 import ViewSwap from "../components/viewSwap";
 
 import story from "../components/viewSwapItems/story";
+import accomplishments from "../components/viewSwapItems/accomplishments";
+import hobbies from "../components/viewSwapItems/hobbies";
 
 import style from "../style/style";
 import layout from "../style/layout"
 
 export default function About() {
-  const viewSwapItems = [story]
+  const viewSwapItems = [story, accomplishments, hobbies]
 
   return (
     <>
