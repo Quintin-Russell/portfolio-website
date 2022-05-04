@@ -2,12 +2,11 @@ import ViewSwapItem from "./viewSwapConstructor"
 
 const storyText = [
 `As human-beings, passions are what drives our decisions.`,
-`As a kid, I used to think aboutwhat I was going to be when I grew up. I would think
+`As a kid, I used to think about what I was going to be when I grew up. I would think
 about cool people that had jobs doing the things that I loved to do. My interests at
-the time were building Legos and being outside at the beautiful beaches of Southern California. Over
-time,`,
-`I had to give up on the first one :( , but I was excited to make a career out of
-proteting the natural environment that I enjoyed so much.
+the time were building Legos and being outside at the beautiful beaches of Southern California.`,
+`Over time, I had to give up on the first one :( , but I was excited to make a career out of
+protecting the natural environment that I enjoyed so much.
 `,
 `After graduating from Oregon State University with a Bachelor's degree in Environmental Sciences
 (with an emphasis in Water Resources), I was determined to become an engineer. Over the next year,

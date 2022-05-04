@@ -1,12 +1,6 @@
 /** @jsx jsx */
-import React, {useState,
-              useEffect} from 'react';
+import React, {useState} from 'react';
 import { jsx, css } from '@emotion/react'
-
-// import { BiRadioCircle,
-//         FaDotCircle,
-//         ImCircleLeft,
-//         ImCircleRight } from 'react-icons/all'
 
 import { RiFocusFill,
         RiCheckboxBlankCircleLine,
@@ -58,12 +52,12 @@ export default function Carousel(props) {
       index++;
       if (currentImg === index - 1) {
       return(
-      <li id={(index-1).toString} onClick={(e) => handleClickDot(e)} key={index.toString()}>
+      <li id={(index-1)} onClick={(e) => handleClickDot(e)} key={index.toString()}>
           <RiFocusFill />
       </li>)
       };
       return (
-        <li id={(index - 1).toString} onClick={(e) => handleClickDot(e)} key={index.toString()}>
+        <li id={(index - 1)} onClick={(e) => handleClickDot(e)} key={index.toString()}>
           <RiCheckboxBlankCircleLine />
         </li>
       )
@@ -81,7 +75,7 @@ export default function Carousel(props) {
     console.log('hobby in renderPhoto:', hobby)
     return (
       <div css={[layout.flex, layout.justCent, layout.alignC]}>
-        <img src={hobby.img.src} alt={hobby.img.alt} css={[layout.width50]} />
+        {hobby.img.src}
       </div>
     );
   }
