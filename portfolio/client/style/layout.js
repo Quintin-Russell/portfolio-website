@@ -1,6 +1,11 @@
 import { css } from '@emotion/react'
 
 export default {
+//over-rides ctrls
+hidden: css`
+display: hidden !important;
+`,
+
 // flexbox ctrls
 flex: css`
   display: flex;

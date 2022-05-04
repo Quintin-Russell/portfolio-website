@@ -44,7 +44,7 @@ beautiful websites with these digital Legos. My passion was back. I DIDN'T HAVE 
 `,
 `I am always eager to explore new opportunities that allow me to apply the skills that I have built and learn new technologies.
 `,
-`If my story resoonated with you at all, I would love to have coffee (or drinks) and talk more. Feel free to send me a message
+`If my story resonated with you at all, I would love to have coffee (or drinks) and talk more. Feel free to send me a message
 on any platform on the Contact Me page (via the 'Let's Talk' link).
 `,
 `Thanks for your time and we'll talk soon!

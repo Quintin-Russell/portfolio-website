@@ -18,7 +18,7 @@ text object to work with:
 export default function ViewSwapText(props) {
   return (
     <>
-      <div css={[layout.overflowScroll, layout.padding25]}>
+      <div css={[layout.padding25]}>
         {
           props.obj.text.map(txt => {
             return (

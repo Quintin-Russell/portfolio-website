@@ -71,7 +71,7 @@ export default {
 
 //borders
   borderLight: css`
-  border: 0.1rem solid #fff;
+  border: 0.05rem solid #fff;
   `,
 
   //component specific style
@@ -99,6 +99,10 @@ export default {
     :hover {
     font-size: 3rem;
     }
+  `,
+
+  highlightedTab: css`
+  background-color: #E9E9E940;
   `,
 
   //imgs
