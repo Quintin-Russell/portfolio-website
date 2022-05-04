@@ -26,6 +26,8 @@ export default {
     background: linear-gradient(to right, #000000, #0c0c0c, rgba(132, 132, 132, .50));
   `,
 
+
+//component specific text
   fadeTxt: css`
   font-size: 2rem;
   font-weight: 300;
@@ -38,7 +40,6 @@ export default {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   `,
-//component specific text
 
   typewriterLandingPage: css`
       color: #fff;
@@ -56,6 +57,11 @@ export default {
   landingPgTxt_bl: css`
   color: #5DB2B8;
   `,
+
+  arrow: css`
+  font-size: 6rem
+  `,
+
 //underline
   noUnderline: css`
   text-decoration: none;
@@ -65,9 +71,10 @@ export default {
   text-decoration: underline;
   `,
 
-  techIconBasics: css`
-  height: 10rem;
-  `,
+//list styling
+noListStyle: css`
+list-style: none;
+`,
 
 //borders
   borderLight: css`
@@ -75,6 +82,9 @@ export default {
   `,
 
   //component specific style
+  techIconBasics: css`
+  height: 10rem;
+  `,
 
   headerA : css`
   font-size: 1.5rem;

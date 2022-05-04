@@ -5,6 +5,7 @@ import $ from 'jquery'
 
 import ViewSwapText from './viewSwapItems/viewSwapText'
 import ViewSwapList from './viewSwapItems/viewSwapList'
+import Carousel from './carousel'
 import Tabs from './viewSwapItems/tabs'
 
 import style from '../style/style'
@@ -23,6 +24,7 @@ props.objList[0].name
   const determineItem = (obj) => {
     if (obj.type === 'text' && highlightedTab === obj.name) return <ViewSwapText key={obj.name} obj={obj} />
     if (obj.type === 'list' && highlightedTab === obj.name) return <ViewSwapList key={obj.name} obj={obj} />
+    if (obj.type === 'carousel' && highlightedTab === obj.name) return <Carousel key={obj.name} obj={obj} />
     return <div key={Math.random() * 9999999} css={style.hidden}></div>
   }
   return (
