@@ -7,6 +7,10 @@ import Typewriter from '../typewriter'
 import style from '../../style/style'
 import layout from '../../style/layout'
 
+import QRfrance from '../../server/public/images/QR Pics/QRfrance.png'
+import QRturkey from '../../server/public/images/QR Pics/QRturkey.png'
+import QRwedding from '../../server/public/images/QR Pics/QRwedding.png'
+
 export default function AboutPhoto() {
   return (
 <>
@@ -79,7 +83,7 @@ export default function AboutPhoto() {
           </section>
         </div>
         <div>
-          <img src="" alt="" srcset="" />
+          <img src={QRwedding} alt="QR-wedding" />
         </div>
       </div>
       <div css={[layout.flex, layout.flex50, layout.col]}>
