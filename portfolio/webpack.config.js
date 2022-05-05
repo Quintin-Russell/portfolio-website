@@ -17,6 +17,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         include: clientPath,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -27,6 +28,17 @@ module.exports = {
           }
         }
       },
+      // {
+      //   test: /\.(png|jpg|gif)$/i,
+      //   use: [
+      //     {
+      //       loader: 'url-loader',
+      //       options: {
+      //         limit: 8192,
+      //       },
+      //     },
+      //   ],
+      // }
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
@@ -34,12 +46,20 @@ module.exports = {
           {
             loader: 'image-webpack-loader',
             options: {
+              // name: '[name].[ext]',
+              // publicPath: 'images/'
               bypassOnDebug: true,
-              disable: true,
+              disable: true
             },
           },
         ],
       }
+      // ,
+      // {
+      //   test: /\.(png|jpe?g|gif)$/i,
+      //   loader: 'file-loader',
+      //   options: {},
+      // },
     ]
   },
   devtool: 'source-map',

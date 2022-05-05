@@ -8,8 +8,8 @@ import style from '../../style/style'
 import layout from '../../style/layout'
 
 import QRfrance from '../../../server/public/images/qrPics/QRfrance.png'
-import QRturkey from '../../../server/public/images/qrPics/QRturkey.png'
-import QRwedding from '../../../server/public/images/qrPics/QRwedding.png'
+import QRturkey from '../../../server/public/images/qrPics/QRturkey.jpeg'
+import QRwedding from '../../../server/public/images/qrPics/QRwedding.jpeg'
 
 export default function AboutPhoto() {
   return (
