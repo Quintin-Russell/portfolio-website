@@ -15,7 +15,7 @@ export default function LandingPage() {
 
   setTimeout(() => {
       setFirstTWCompleted(true)
-    }, 3500)
+    }, 4400)
 
 
   const render2ndTW = (firstTWCompleted) => {
@@ -24,6 +24,7 @@ export default function LandingPage() {
     return (
       <Typewriter
         font='monts'
+        fontSize='font3rem'
         tarString="At my core, I am a constant asker of why? and how did you do that?.
                   On the outside, I use React.js, jQuery, Express.js, PostgreSQL, Python,
                   and more to create web-based applications. I am actively looking for
@@ -38,21 +39,22 @@ export default function LandingPage() {
       <ParallaxLayer className="bkg1">
         <Header />
         <div css={layout.margin1rem}>
-          <div css={[style.incon, style.light, layout.padding25, style.landingPgTxtSize]}>
+          <div css={[style.incon, style.light, layout.padding25, style.font3rem]}>
             <span css={style.landingPgTxt_or}>{`<`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span>
           </div>
-        <div css={[style.incon, style.light, layout.padding25, style.landingPgTxtSize]}>
+          <div css={[style.incon, style.light, layout.padding25, style.font3rem]}>
               <span css={style.landingPgTxt_bl}>{`profession =“software-engineer”`}</span>
             </div>
-        <div css={[style.incon, style.light, layout.padding25, style.landingPgTxtSize]}>
+          <div css={[style.incon, style.light, layout.padding25, style.font3rem]}>
               <span css={style.landingPgTxt_bl}>{`tools=[“JavaScript”, “Python”, “CSS”, “HTML”]`}</span>
             </div>
-        <div css={[style.incon, style.light, layout.padding25, style.landingPgTxtSize, style.landingPgTxt_or]}>{`>`}</div>
+          <div css={[style.incon, style.light, layout.padding25, style.font3rem, style.landingPgTxt_or]}>{`>`}</div>
 
         </div>
 
         <Typewriter
           font='pfDisp'
+          fontSize='font3rem'
           tarString="
           I build intelligent and impactful applications that work.
           "
@@ -64,7 +66,7 @@ export default function LandingPage() {
         {
           render2ndTW(firstTWCompleted)
         }
-        <div css={[layout.margin1rem, style.incon, style.light, layout.padding25, style.landingPgTxtSize]}>
+        <div css={[layout.margin1rem, style.incon, style.light, layout.padding25, style.font3rem]}>
           <span css={style.landingPgTxt_or}>{`</`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span><span css={style.landingPgTxt_or}>{`>`}</span>
         </div>
       </ParallaxLayer>

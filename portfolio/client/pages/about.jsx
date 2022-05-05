@@ -8,7 +8,8 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import Typewriter from "../components/typewriter";
 import ToolsText from "../components/tools/toolsText";
-import ToolsIcons from "../components/tools/toolsIcons"
+import ToolsIcons from "../components/tools/toolsIcons";
+import AboutPhoto from "../components/about/aboutPhoto";
 import ViewSwap from "../components/viewSwap";
 
 import story from "../components/viewSwapItems/story";
@@ -30,6 +31,7 @@ export default function About() {
         <div css={[layout.flex, layout.row, layout.justCent]}>
           <Typewriter
             font='incon'
+            fontSize='font3rem'
             tarString="
             hi, i'm quintin.
             "
@@ -39,7 +41,7 @@ export default function About() {
           />
         </div>
         <div css={[layout.flex, layout.justEnd]}>
-          <p css={[layout.margin0, layout.flex, layout.flex50, layout.justCent, style.incon, style.typewriterLandingPage]}>Tools</p>
+          <p css={[layout.margin0, layout.flex, layout.flex50, layout.justCent, style.incon, style.font3rem]}>Tools</p>
         </div>
         <div css={[layout.flex, layout.alignC, layout.justSpbw, layout.row]}>
           <div css={[layout.flex, layout.flex50, layout.justCent]}>
@@ -54,11 +56,11 @@ export default function About() {
       factor={1.5}
       speed={0.2}
       className="bkg2">
-
+        <AboutPhoto />
       </ParallaxLayer>
 
       <ParallaxLayer
-      offset={2}
+      offset={2.5}
       speed={0.3}
       factor={0.875}
       className="bkg3"

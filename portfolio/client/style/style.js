@@ -26,10 +26,21 @@ export default {
     background: linear-gradient(to right, #000000, #0c0c0c, rgba(132, 132, 132, .50));
   `,
 
+  font1rem: css`
+  font-size: 1rem;
+  `,
+
+  font2rem: css`
+  font-size: 2rem;
+  `,
+
+  font3rem: css`
+  font-size: 3rem;
+  `,
+
   textCent: css`
   text-align: center;
   `,
-
 
 //component specific text
   fadeTxt: css`
@@ -43,15 +54,6 @@ export default {
     );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  `,
-
-  typewriterLandingPage: css`
-      color: #fff;
-      font-size: 3rem;
-  `,
-
-  landingPgTxtSize: css`
-  font-size: 3rem;
   `,
 
   landingPgTxt_or: css`

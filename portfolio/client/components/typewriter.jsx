@@ -49,15 +49,16 @@ export default function Typewriter(props) {
  }, [])
 
  const font = (props.font) ? style[props.font] : null
+  const fontSize = (props.fontSize) ? style[props.fontSize] : null
 
  return (
    <>
        <p>
        {dispString.map((x) => <>
-         <span css={(x.bold === 'bold') ? [font, style.typewriterLandingPage, style.bold] : [font, style.typewriterLandingPage]}>{x.word} </span>
+         <span css={(x.bold === 'bold') ? [font, fontSize, style.bold] : [font, fontSize]}>{x.word} </span>
          <span> </span>
        </>)}
-       <span css={[font, style.typewriterLandingPage]}>{(cursor) ?"|" :""}</span>
+       <span css={[font, fontSize]}>{(cursor) ?"|" :""}</span>
         </p>
    </>
  )
