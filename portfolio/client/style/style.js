@@ -63,7 +63,11 @@ export default {
   `,
 
   arrow: css`
-  font-size: 6rem
+  font-size: 4rem;
+
+      :hover {
+      cursor: pointer;
+    }
   `,
 
 //underline
@@ -131,6 +135,10 @@ list-style: none;
   border-left: 0.05rem solid #fff;
   border-right: 0.05rem solid #fff;
   border-bottom: 0.15rem solid #fff;
+  `,
+
+  dots: css`
+  font-size: 1rem;
   `,
 
   cursor: css`

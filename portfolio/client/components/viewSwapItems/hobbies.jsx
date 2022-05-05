@@ -7,6 +7,7 @@ import layout from '../../style/layout'
 import ViewSwapItem from "./viewSwapConstructor"
 import BJJ from '../../../server/public/images/hobbies/BJJ.png'
 import MuayThai from '../../../server/public/images/hobbies/MuayThai.png'
+import Travel from '../../../server/public/images/hobbies/Travel.png'
 
 const hobbiesArr = [
 {
@@ -31,10 +32,10 @@ const hobbiesArr = [
   },
 {
   name: 'Traveling',
-  text: `Since I was a kid, the highlight of my year would be the vacations that my dad would take us on. Evry year,
+  text: `When I was a kid, the highlight of my year would be the vacations that my dad would take us on. Every year,
   we were lucky enough to explore exotic places and experience new cultures. Since then, I have always had the insatiable
   desire to explore the world around me and experience the different definitions of 'everyday life' that exist. Since 2018,
-  I have had the luxury of working remotely and non-stop explore this planet that we call 'home'.`,
+  I have had the luxury of working remotely and non-stop exploring this planet that we call 'home'.`,
   img: {
     src: <img src={Travel} alt='QR-Travel' css={[layout.width80]} />
   }

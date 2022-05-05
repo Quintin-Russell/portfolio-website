@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { jsx, css } from '@emotion/react'
 
 import { RiFocusFill,
@@ -7,7 +7,12 @@ import { RiFocusFill,
         RiArrowRightCircleLine,
         RiArrowRightCircleFill,
         RiArrowLeftCircleLine,
-        RiArrowLeftCircleFill} from "react-icons/ri"
+        RiArrowLeftCircleFill,
+        RiPauseCircleFill,
+        RiPauseCircleLine,
+        RiPlayCircleFill,
+        RiPlayCircleLine} from "react-icons/ri"
+
 
 import style from '../style/style'
 import layout from '../style/layout'
@@ -17,48 +22,39 @@ import layout from '../style/layout'
 export default function Carousel(props) {
   const [currentImg, setCurrentImg] = useState(0);
 
-    const int = setInterval(
-      () => nextImg(),
-      15000
-    );
-
-    const resetTimer = (int) => clearInterval(int)
-
   const nextImg= () => {
-    clearInterval(int)
     if (currentImg === props.obj.text.length - 1) return setCurrentImg(0)
     const newState = currentImg + 1
-    resetTimer(int)
     setCurrentImg(newState)
   }
 
   const prevImg = () => {
-    clearInterval(int)
     if (currentImg === 0) return setCurrentImg(props.obj.text.length - 1)
     const newState = currentImg - 1
-    resetTimer(int)
     setCurrentImg(newState)
   }
 
-  const handleClickDot = (e) => {
-    const tar = parseInt(e.target.id);
-    resetTimer(int)
-    setCurrentImg(tar);
-  }
+  // const handleClickDot = (e) => {
+  //   console.log
+  //   const tar = parseInt(e.target.id);
+  //   console.log('tar in handleDotClick:', tar)
+  //   setCurrentImg(tar)
+  // }
 
   const renderDots = () => {
     let index = 0;
     const dotLiArr = props.obj.text.map(x => {
       index++;
-      if (currentImg === index - 1) {
+      const currentIndex = index - 1;
+      if (currentImg === currentIndex) {
       return(
-      <li id={(index-1)} onClick={(e) => handleClickDot(e)} key={index.toString()}>
-          <RiFocusFill />
+        <li key={index.toString()}>
+          <RiFocusFill css={[style.cursor, style.dots]} />
       </li>)
       };
       return (
-        <li id={(index - 1)} onClick={(e) => handleClickDot(e)} key={index.toString()}>
-          <RiCheckboxBlankCircleLine />
+        <li onClick={() => setCurrentImg(currentIndex)} key={index.toString()}>
+          <RiCheckboxBlankCircleLine css={[style.cursor, style.dots]} />
         </li>
       )
     });
@@ -70,9 +66,8 @@ export default function Carousel(props) {
   }
 
   const renderPhoto = () => {
+    console.log('renderPhoto called:', currentImg)
     const hobby = props.obj.text[currentImg];
-    console.log('currentImg in renderPhoto:', currentImg)
-    console.log('hobby in renderPhoto:', hobby)
     return (
       <div css={[layout.flex, layout.justCent, layout.alignC]}>
         {hobby.img.src}
@@ -82,21 +77,21 @@ export default function Carousel(props) {
 
     return (
       <div css={[layout.flex, layout.width100, layout.row, layout.justSpbw, layout.alignC]}>
-        <div css={[style.cursor]}>
-          <RiArrowLeftCircleLine onClick={() => prevImg()}
-          css={[style.arrow,]}
-          />
+        <div>
+          <RiArrowLeftCircleLine css={[style.arrow]} onClick={() => prevImg()} />
         </div>
 
         <div css={[layout.flex, layout.col, layout.justCent, layout.alignC]}>
           {renderPhoto()}
           {renderDots()}
+          <div>
+
+          </div>
           <p css={[style.monts, style.textCent]}>{props.obj.text[currentImg].text}</p>
         </div>
 
-        <div>
-          <RiArrowRightCircleLine onClick={() => nextImg()}
-          css={[style.arrow]}/>
+        <div css={[style.arrow]} onClick={() => nextImg()}>
+          <RiArrowRightCircleLine />
         </div>
       </div>
     );
