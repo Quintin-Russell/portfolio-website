@@ -7,9 +7,9 @@ import Typewriter from '../typewriter'
 import style from '../../style/style'
 import layout from '../../style/layout'
 
-import QRfrance from '../../server/public/images/QR Pics/QRfrance.png'
-import QRturkey from '../../server/public/images/QR Pics/QRturkey.png'
-import QRwedding from '../../server/public/images/QR Pics/QRwedding.png'
+import QRfrance from '../../../server/public/images/qrPics/QRfrance.png'
+import QRturkey from '../../../server/public/images/qrPics/QRturkey.png'
+import QRwedding from '../../../server/public/images/qrPics/QRwedding.png'
 
 export default function AboutPhoto() {
   return (
