@@ -34,13 +34,6 @@ export default function Carousel(props) {
     setCurrentImg(newState)
   }
 
-  // const handleClickDot = (e) => {
-  //   console.log
-  //   const tar = parseInt(e.target.id);
-  //   console.log('tar in handleDotClick:', tar)
-  //   setCurrentImg(tar)
-  // }
-
   const renderDots = () => {
     let index = 0;
     const dotLiArr = props.obj.text.map(x => {
