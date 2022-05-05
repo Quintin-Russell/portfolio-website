@@ -15,7 +15,7 @@ export default function LandingPage() {
 
   setTimeout(() => {
       setFirstTWCompleted(true)
-    }, 2500)
+    }, 3500)
 
 
   const render2ndTW = (firstTWCompleted) => {
@@ -28,7 +28,8 @@ export default function LandingPage() {
                   On the outside, I use React.js, jQuery, Express.js, PostgreSQL, Python,
                   and more to create web-based applications. I am actively looking for
                   opportunities that allow me to learn everyday and improve in what I know."
-        bold={['why?', 'how', 'did', 'you', 'do', 'that?.', 'React.js,', 'jQuery,', 'Express.js,', 'PostgreSQL,', 'Python,']} />
+        bold={['why?', 'how', 'did', 'you', 'do', 'that?.', 'React.js,', 'jQuery,', 'Express.js,', 'PostgreSQL,', 'Python,']}
+        interval={250} />
     )
   }
 
@@ -57,6 +58,7 @@ export default function LandingPage() {
           "
           bold={["I", "build", "intelligent", "and", "impactful", "applications", "that", "work."]}
           cursorDisappear={true}
+          interval={400}
         />
 
         {

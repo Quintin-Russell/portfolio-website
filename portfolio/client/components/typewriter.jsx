@@ -43,7 +43,7 @@ export default function Typewriter(props) {
       setCounter(counter++)
     }
 
-  }, 200);
+  }, props.interval);
 
   return () => clearInterval(intCursor)
  }, [])
