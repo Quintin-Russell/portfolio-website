@@ -19,7 +19,7 @@ export default function Carousel(props) {
 
     const int = setInterval(
       () => nextImg(),
-      5000
+      15000
     );
 
     const resetTimer = (int) => clearInterval(int)
@@ -63,7 +63,7 @@ export default function Carousel(props) {
       )
     });
     return (
-      <ul css={[layout.flex, layout.row, layout.alignC, layout.width100, layout.padding0, layout.justSpbw, style.noListStyle]}>
+      <ul css={[layout.flex, layout.row, layout.alignC, layout.width100, layout.padding0, layout.justCent, style.noListStyle]}>
         {dotLiArr}
       </ul>
     );
@@ -91,6 +91,7 @@ export default function Carousel(props) {
         <div css={[layout.flex, layout.col, layout.justCent, layout.alignC]}>
           {renderPhoto()}
           {renderDots()}
+          <p css={[style.monts, style.textCent]}>{props.obj.text[currentImg].text}</p>
         </div>
 
         <div>

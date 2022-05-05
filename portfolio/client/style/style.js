@@ -26,6 +26,10 @@ export default {
     background: linear-gradient(to right, #000000, #0c0c0c, rgba(132, 132, 132, .50));
   `,
 
+  textCent: css`
+  text-align: center;
+  `,
+
 
 //component specific text
   fadeTxt: css`

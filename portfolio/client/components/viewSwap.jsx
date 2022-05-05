@@ -19,7 +19,7 @@ export default function ViewSwap(props) {
       if ($(e.target).attr('data')) return $(e.target).attr('data')
       return highlightedTab
   },
-props.objList[0].name
+props.objList[2].name
   )
 
   const determineItem = (obj) => {
