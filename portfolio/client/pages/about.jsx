@@ -23,7 +23,7 @@ export default function About() {
   return (
     <>
       <ParallaxLayer className="bkg1"
-      speed={1}>
+      speed={0.5}>
         <Header />
         <div css={[layout.flex, layout.row, layout.justCent]}>
           <Typewriter
@@ -59,14 +59,15 @@ export default function About() {
       </ParallaxLayer>
       <ParallaxLayer
       offset={1}
-      speed={0.2}
+      speed={0.5}
       className="bkg2">
 
       </ParallaxLayer>
       <ParallaxLayer
       offset={2}
+      speed={0.5}
       className="bkg3"
-      css={[layout.flex, layout.alignC, layout.justCent, layout.contentWrap]}>
+      css={[layout.flex, layout.alignC, layout.justCent]}>
         <ViewSwap objList={viewSwapItems} />
       </ParallaxLayer>
     </>

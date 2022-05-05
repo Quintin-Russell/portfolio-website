@@ -35,8 +35,8 @@ props.objList[0].name
       css={[layout.flex, layout.col, layout.width80, layout.height80]}>
       <Tabs objList={props.objList}
             highlighted={highlightedTab}/>
-        <div css={[layout.flex, layout.justCent, layout.alignC, style.pfDisp, style.bold, style.viewSwapHeader, style.highlightedTab]}>
-          <h2>{highlightedTab}</h2>
+        <div css={[layout.flex, layout.justCent, layout.alignC, style.bold, style.viewSwapHeader, style.highlightedTab]}>
+          <h2 css={[layout.margin0, layout.padding25, style.pfDispS]}>{highlightedTab}</h2>
         </div>
         <div css={[layout.flex, layout.col, layout.justCent, layout.alignC, style.fade, style.borderLight, layout.padding2rem]}>
           {props.objList.map(obj => determineItem(obj))}
