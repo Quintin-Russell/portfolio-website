@@ -17,6 +17,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         include: clientPath,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -26,6 +27,19 @@ module.exports = {
             ]
           }
         }
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              bypassOnDebug: true,
+              disable: true
+            },
+          },
+        ],
       }
     ]
   },

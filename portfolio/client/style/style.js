@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 
 export default {
-
+//fonts
   incon: css`
   font-family: Inconsolata, monospace;
   `,
@@ -26,6 +26,23 @@ export default {
     background: linear-gradient(to right, #000000, #0c0c0c, rgba(132, 132, 132, .50));
   `,
 
+  font1rem: css`
+  font-size: 1rem;
+  `,
+
+  font2rem: css`
+  font-size: 2rem;
+  `,
+
+  font3rem: css`
+  font-size: 3rem;
+  `,
+
+  textCent: css`
+  text-align: center;
+  `,
+
+//component specific text
   fadeTxt: css`
   font-size: 2rem;
   font-weight: 300;
@@ -39,10 +56,6 @@ export default {
   -webkit-text-fill-color: transparent;
   `,
 
-  landingPgTxtSize: css`
-  font-size: 3rem;
-  `,
-
   landingPgTxt_or: css`
   color: #E28D29;
   `,
@@ -51,6 +64,15 @@ export default {
   color: #5DB2B8;
   `,
 
+  arrow: css`
+  font-size: 4rem;
+
+      :hover {
+      cursor: pointer;
+    }
+  `,
+
+//underline
   noUnderline: css`
   text-decoration: none;
   `,
@@ -59,19 +81,79 @@ export default {
   text-decoration: underline;
   `,
 
+//list styling
+noListStyle: css`
+list-style: none;
+`,
+
+//borders
+  borderLight: css`
+  border: 0.05rem solid #fff;
+  `,
+
+  noBorderBottom: css`
+  border-top: 0.05rem solid #fff;
+  border-left: 0.05rem solid #fff;
+  border-right: 0.05rem solid #fff;
+  border-bottom: 0;
+  `,
+
+  //component specific style
+  techIconBasics: css`
+  height: 10rem;
+  `,
+
   headerA : css`
   font-size: 1.5rem;
   color: #fff;
   padding: 0 1rem;
   `,
 
-  menuIcon: css`
-  transform: rotate(180deg);
-  font-size: 2rem
+  hoverA: css`
+  transition: all ease 2s;
+
+    :hover {
+      font-size: 1.75rem;
+      color: #E28D29;
+      cursor: pointer;
+      }
   `,
 
-  typewriterLandingPage: css`
-      color: #fff;
-      font-size: 3rem;
+  menuIcon: css`
+  transform: rotate(180deg);
+  font-size: 2rem;
+
+    :hover {
+    font-size: 3rem;
+    }
+  `,
+
+  highlightedTab: css`
+  background-color: #E9E9E960;
+  `,
+
+  viewSwapHeader: css`
+  border-top: 0;
+  border-left: 0.05rem solid #fff;
+  border-right: 0.05rem solid #fff;
+  border-bottom: 0.15rem solid #fff;
+  `,
+
+  dots: css`
+  font-size: 1rem;
+  `,
+
+  cursor: css`
+  transition: all ease 2s;
+
+    :hover {
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+  `,
+
+  //imgs
+  img: css`
+  height: 5rem;
   `
 }
