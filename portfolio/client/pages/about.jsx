@@ -25,8 +25,8 @@ export default function About() {
   return (
     <>
       <ParallaxLayer className="bkg1"
-      speed={0.5}
-      factor={1}>
+      speed={0.75}
+      factor={1.2}>
         <Header />
         <div css={[layout.flex, layout.row, layout.justCent]}>
           <Typewriter
@@ -52,15 +52,15 @@ export default function About() {
       </ParallaxLayer>
 
       <ParallaxLayer
-      offset={0.8}
+      offset={0.9}
       factor={1.5}
-      speed={0.2}
+      speed={0.5}
       className="bkg2">
         <AboutPhoto />
       </ParallaxLayer>
 
       <ParallaxLayer
-      offset={1.95}
+      offset={1.5}
       speed={0.3}
       factor={2}
       className="bkg3"

@@ -36,7 +36,10 @@ export default function LandingPage() {
 
   return (
     <>
-      <ParallaxLayer className="bkg1">
+      <ParallaxLayer
+        speed={0.75}
+        factor={1}
+      className="bkg1">
         <Header />
         <div css={layout.margin1rem}>
           <div css={[style.incon, style.light, layout.padding25, style.font3rem]}>
@@ -70,7 +73,6 @@ export default function LandingPage() {
           <span css={style.landingPgTxt_or}>{`</`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span><span css={style.landingPgTxt_or}>{`>`}</span>
         </div>
       </ParallaxLayer>
-      <Footer />
     </>
   )
 }
