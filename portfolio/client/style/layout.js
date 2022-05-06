@@ -35,6 +35,10 @@ justEnd: css`
 justify-content: flex-end;
 `,
 
+justStart: css`
+justify-content: flex-start;
+`,
+
 //width/height ctrls
 
 flex50: css`
@@ -75,8 +79,8 @@ padding2rem: css`
 padding: 2rem;
 `,
 
-contentWrap: css`
-bottom: 10vh;
+bottomPadding: css`
+padding-bottom: 5%;
 `,
 
 margin0: css`
@@ -99,9 +103,11 @@ footer: css`
 position: fixed;
 bottom: 0;
 width: 100%;
-height: 10vh;
-padding: 1rem 0.5rem;
+height: 5%;
+padding: 0 1rem 0 1rem;
 font-size: 1.5rem;
+background: linear-gradient(to right, #000000, #0c0c0c, rgb(132, 132, 132));
+
 `
 
 //   footer: css`

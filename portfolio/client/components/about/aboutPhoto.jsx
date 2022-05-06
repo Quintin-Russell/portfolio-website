@@ -27,6 +27,7 @@ export default function AboutPhoto() {
                   fontSize='font2rem'
                   tarString='Southern California'
                   bold={[]}
+                  cursorDisappear={true}
                   interval={400}/>
             </span>
             </section>
@@ -83,11 +84,22 @@ export default function AboutPhoto() {
           </section>
         </div>
         <div>
-          <img src={QRwedding} alt="QR-wedding" />
+          <img src={QRwedding}
+          alt="QR-wedding"
+          css={[layout.width80, layout.padding2rem]} />
         </div>
       </div>
       <div css={[layout.flex, layout.flex50, layout.col]}>
-
+          <div css={[layout.flex, layout.justEnd]}>
+            <img src={QRfrance}
+                alt="QR-france"
+                css={[layout.width50, layout.padding2rem]} />
+          </div>
+          <div css={[layout.flex, layout.justStart]}>
+            <img src={QRturkey}
+              alt="QR-turkey"
+              css={[layout.width50, layout.padding2rem]} />
+          </div>
       </div>
     </div>
 </>

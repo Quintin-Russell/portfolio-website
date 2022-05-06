@@ -70,6 +70,7 @@ export default function LandingPage() {
           <span css={style.landingPgTxt_or}>{`</`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span><span css={style.landingPgTxt_or}>{`>`}</span>
         </div>
       </ParallaxLayer>
+      <Footer />
     </>
   )
 }

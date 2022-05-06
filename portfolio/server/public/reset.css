@@ -1,5 +1,6 @@
 * {
   color: white;
+  box-sizing: border-box;
 }
 
 #root {

@@ -113,7 +113,7 @@ list-style: none;
   transition: all ease 2s;
 
     :hover {
-      font-size: 2.5rem;
+      font-size: 1.75rem;
       color: #E28D29;
       cursor: pointer;
       }
