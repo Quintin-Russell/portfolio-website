@@ -30,7 +30,7 @@ export default function LandingPage() {
                   and more to create web-based applications. I am actively looking for
                   opportunities that allow me to learn everyday and improve in what I know."
         bold={['why?', 'how', 'did', 'you', 'do', 'that?.', 'React.js,', 'jQuery,', 'Express.js,', 'PostgreSQL,', 'Python,']}
-        interval={250} />
+        interval={200} />
     )
   }
 

@@ -8,6 +8,7 @@ import ViewSwapItem from "./viewSwapConstructor"
 import BJJ from '../../../server/public/images/hobbies/BJJ.png'
 import MuayThai from '../../../server/public/images/hobbies/MuayThai.png'
 import Travel from '../../../server/public/images/hobbies/Travel.png'
+import Surf from '../../../server/public/images/hobbies/Surf.png'
 
 const hobbiesArr = [
 {
@@ -28,6 +29,13 @@ const hobbiesArr = [
     to train and fight.`,
     img: {
       src: <img src={MuayThai} alt='QR-Muay-Thai' css={[layout.width80]}/>
+    }
+  },
+  {
+    name: 'Surfing',
+    text: `Surfing is fun.`,
+    img: {
+      src: <img src={Surf} alt='QR-Surf' css={[layout.width80]} />
     }
   },
 {

@@ -34,12 +34,6 @@ export default function AboutPhoto() {
 
           <section css={[style.font2rem, layout.margin1rem]}>
               <p css={[style.incon, style.light, style.font2rem, layout.margin1rem]}>Education:</p>
-            {/* <Typewriter
-            font='incon'
-            fontSize='font2rem'
-            tarString='Education:'
-            bold={[]}
-            interval={400} /> */}
             <ul>
               <li>
               <Typewriter
