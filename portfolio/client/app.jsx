@@ -27,8 +27,8 @@ export default function App(props) {
   useEffect(() => {
     $(window).on('hashchange', () => {
       const newHash = parseRoute(window.location.hash)
-      setHash(newHash)
       setPgNum(determinePageNumber(newHash))
+      setHash(newHash)
       })
   }, [])
 
@@ -40,8 +40,7 @@ export default function App(props) {
   return (
     <>
     <Parallax
-    pages={pgNum}
-    // css={[layout.contentWrap]}
+        pages={3}
     >
       {determinePage(hash)}
     </Parallax>
