@@ -50,15 +50,6 @@ const hobbiesArr = [
     src: <img src={Travel} alt='QR-Travel' css={[layout.width80]} />
   }
 }
-// ,
-// {
-//   name: 'Surfing',
-//   text:,
-//   img: {
-//     src:,
-//       alt:,
-//   }
-// }
 ]
 
 export default new ViewSwapItem('Hobbies', 'carousel', 'about', hobbiesArr)
