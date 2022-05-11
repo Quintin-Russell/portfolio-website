@@ -83,6 +83,10 @@ bottomPadding: css`
 padding-bottom: 5%;
 `,
 
+marginAuto: css`
+margin: auto;
+`,
+
 margin0: css`
 margin: 0;
 `,

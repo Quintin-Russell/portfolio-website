@@ -5,7 +5,6 @@ import { jsx, css } from '@emotion/react'
 import { ParallaxLayer } from '@react-spring/parallax'
 
 import Header from "../components/header";
-import Footer from "../components/footer";
 import Typewriter from "../components/typewriter";
 import ToolsText from "../components/tools/toolsText";
 import ToolsIcons from "../components/tools/toolsIcons";

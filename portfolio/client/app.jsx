@@ -12,15 +12,11 @@ import layout from './style/layout';
 import Footer from './components/footer';
 import LandingPage from './pages/landingPage'
 import About from './pages/about';
+import Projects from './pages/projects';
 
 export default function App(props) {
-  const determinePageNumber = (hash) => {
-    if (hash.path === 'about') return 3
-    return 1
-  }
-
   const [hash, setHash] = useState(parseRoute(window.location.hash))
-  const [pgNum, setPgNum] = useState(determinePageNumber(hash))
+
 
   $(document).title = '../server/public/images/flavicon/favicn.ico'
 
@@ -28,12 +24,12 @@ export default function App(props) {
     $(window).on('hashchange', () => {
       const newHash = parseRoute(window.location.hash)
       setHash(newHash)
-      return () => setPgNum(determinePageNumber(newHash))
       })
   }, [])
 
   const determinePage = (hash) => {
     if (hash.path === 'about') return <About />
+    if (hash.path === 'projects') return <Projects />
     return <LandingPage />
   }
 
