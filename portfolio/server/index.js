@@ -5,7 +5,7 @@ const errorMiddleware = require('./error-middleware');
 const staticMiddleware = require('./static-middleware');
 const ClientError = require('./client-error');
 
-const getFetch = async (sql, params, res, next) => {
+const fetch = async (sql, params, res, next) => {
   try{
     const result = await db.query(sql)
     return res.status(201).json(result.rows)
@@ -25,8 +25,7 @@ app.get('/api/projects', (req, res, next) => {
   from "projects"
   `;
 
-  return getFetch(sql, [], res, next)
-
+  return fetch(sql, [], res, next)
 })
 
 app.use(jsonMiddleware);
