@@ -27,8 +27,8 @@ export default function App(props) {
   useEffect(() => {
     $(window).on('hashchange', () => {
       const newHash = parseRoute(window.location.hash)
-      setPgNum(determinePageNumber(newHash))
       setHash(newHash)
+      return () => setPgNum(determinePageNumber(newHash))
       })
   }, [])
 

@@ -43,7 +43,9 @@ const hobbiesArr = [
   text: `When I was a kid, the highlight of my year would be the vacations that my dad would take us on. Every year,
   we were lucky enough to explore exotic places and experience new cultures. Since then, I have always had the insatiable
   desire to explore the world around me and experience the different definitions of 'everyday life' that exist. Since 2018,
-  I have had the luxury of working remotely and non-stop exploring this planet that we call 'home'.`,
+  I have had the luxury of working remotely and non-stop exploring this planet that we call 'home'. Also, in case you are
+  wondering: yes! That is a monkey in the center photo. Her name is Maya and she lives with the Sacha Wasi tribe in the remote
+  Amazon.`,
   img: {
     src: <img src={Travel} alt='QR-Travel' css={[layout.width80]} />
   }
