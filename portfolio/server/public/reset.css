@@ -23,7 +23,7 @@
 }
 
 .bkg3 {
-  background-image: url("./images/background/background3.jpg");
+  background-image: url("./images/background/background3.jpeg");
   background-size: cover !important;
   overflow: hidden scroll;
 }

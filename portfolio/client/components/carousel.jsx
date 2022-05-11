@@ -59,7 +59,6 @@ export default function Carousel(props) {
   }
 
   const renderPhoto = () => {
-    console.log('renderPhoto called:', currentImg)
     const hobby = props.obj.text[currentImg];
     return (
       <div css={[layout.flex, layout.justCent, layout.alignC]}>

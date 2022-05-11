@@ -30,15 +30,13 @@ export default function LandingPage() {
                   and more to create web-based applications. I am actively looking for
                   opportunities that allow me to learn everyday and improve in what I know."
         bold={['why?', 'how', 'did', 'you', 'do', 'that?.', 'React.js,', 'jQuery,', 'Express.js,', 'PostgreSQL,', 'Python,']}
-        interval={250} />
+        interval={200} />
     )
   }
 
   return (
     <>
       <ParallaxLayer
-        speed={0.75}
-        factor={1}
       className="bkg1">
         <Header />
         <div css={layout.margin1rem}>
@@ -72,6 +70,16 @@ export default function LandingPage() {
         <div css={[layout.margin1rem, style.incon, style.light, layout.padding25, style.font3rem]}>
           <span css={style.landingPgTxt_or}>{`</`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span><span css={style.landingPgTxt_or}>{`>`}</span>
         </div>
+      </ParallaxLayer>
+      <ParallaxLayer
+      offset={1}
+      className="bkg2">
+
+      </ParallaxLayer>
+      <ParallaxLayer
+      offset={2}
+      className="bkg3">
+
       </ParallaxLayer>
     </>
   )
