@@ -16,7 +16,9 @@ export default function Project(props) {
         <div css={[layout.flex, layout.width80, layout.alignC, layout.justSpbw]}>
           <div css={[layout.flex, layout.flex66]}></div>
           <div css={[layout.flex, layout.flex33]}>
-            <img src={iPhoneFrame} alt="iPhone-Frame" />
+            <img src={iPhoneFrame}
+                  css={[layout.width100]}
+                  alt="iPhone-Frame" />
           </div>
         </div>
       )
@@ -24,20 +26,20 @@ export default function Project(props) {
       return (
         <div css={[layout.flex, layout.width80, layout.alignC, layout.justSpbw]}>
           <div css={[layout.flex, layout.flex33]}>
-            <img src={iPhoneFrame} alt="iPhone-Frame" />
+            <img src={iPhoneFrame}
+                  css={[layout.width100]}
+                  alt="iPhone-Frame" />
           </div>
           <div css={[layout.flex, layout.flex66]}></div>
         </div>
       )
     }
   }
+
   return (
     <>
     <div css={[layout.flex, layout.height100, layout.width100, layout.alignC, layout.justCent]}>
-      <div css={[layout.flex, layout.width80, layout.alignC, layout.justSpbw]}>
-        <div css={[layout.flex, layout.flex66]}></div>
-        <div></div>
-      </div>
+      {alternate()}
     </div>
 
     </>

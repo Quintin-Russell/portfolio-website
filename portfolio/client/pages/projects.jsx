@@ -6,6 +6,7 @@ import { ParallaxLayer } from '@react-spring/parallax'
 
 import Header from "../components/header";
 import Typewriter from "../components/typewriter";
+import Project from "../components/projects/project";
 import style from "../style/style";
 import layout from "../style/layout"
 import fetchReq from '../components/functions/fetch'
@@ -66,6 +67,13 @@ export default function Projects() {
         offset={1}
         speed={0.5}
         className="bkg2">
+          {
+            projects.map((x,index) => {
+              return <Project project={x}
+                              key={x.name}
+                              index={index} />
+            })
+          }
 
       </ParallaxLayer>
       <ParallaxLayer
