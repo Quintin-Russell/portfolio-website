@@ -42,7 +42,7 @@ export default function Projects() {
   return (
     <>
       <ParallaxLayer
-        speed={0.75}
+        factor={1.2}
         className="bkg1">
         <Header />
         <div css={[layout.flex, layout.row, layout.height100, layout.alignC, layout.justCent]}>
@@ -65,6 +65,7 @@ export default function Projects() {
       </ParallaxLayer>
       <ParallaxLayer
         offset={1}
+        factor={1.75}
         speed={0.5}
         className="bkg2">
           {
@@ -78,7 +79,8 @@ export default function Projects() {
       </ParallaxLayer>
       <ParallaxLayer
         offset={2}
-        speed={0.3}
+        speed={0.5}
+        factor={1.2}
         className="bkg3">
 
       </ParallaxLayer>
