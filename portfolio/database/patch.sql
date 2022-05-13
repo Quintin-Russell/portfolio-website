@@ -1,3 +1,3 @@
 UPDATE "projects"
-SET "imgUrl" = 'https://github.com/Quintin-Russell/quick-track/blob/master/QuickTrackdemo.gif?raw=true'
+SET "tech" = '["React.js", "NodeJS", "PostgreSQL", "JavaScript (ES6)"]'
 WHERE "projectId" = 1

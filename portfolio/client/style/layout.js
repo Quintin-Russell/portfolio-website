@@ -1,5 +1,7 @@
 import { css } from '@emotion/react'
 
+import iPhoneFrame from '../../server/public/images/projects/iPhoneFrame.png'
+
 export default {
 //over-rides ctrls
 hidden: css`
@@ -121,11 +123,4 @@ font-size: 1.5rem;
 background: linear-gradient(to right, #000000, #0c0c0c, rgb(132, 132, 132));
 
 `
-
-//   footer: css`
-// width: 100%;
-// height: 10vh;
-// padding: 1rem 0.5rem;
-// font-size: 1.5rem;
-// `
 }
