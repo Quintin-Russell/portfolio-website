@@ -21,7 +21,7 @@ export default function Projects() {
 
   setTimeout(() => {
     setFirstTWCompleted(true)
-  }, 4400)
+  }, 4500)
 
 
   const render2ndTW = (firstTWCompleted) => {
@@ -56,7 +56,7 @@ export default function Projects() {
             tarString={tarString}
             bold={tarString.split(" ")}
             cursorDisappear={true}
-            interval={400}
+            interval={300}
             />
             {render2ndTW(firstTWCompleted)}
           </div>

@@ -2,9 +2,9 @@
 import React, {useState,
               useEffect} from "react";
 import { jsx, css } from '@emotion/react'
-import { ParallaxLayer } from '@react-spring/parallax'
 
-import TechIconList from "./techIconList";
+import Description from "./description";
+import ProjectImg from "./projectImg";
 
 import style from "../../style/style";
 import layout from "../../style/layout"
@@ -13,51 +13,30 @@ export default function Project(props) {
   const alternate = () => {
     if (props.index % 2) {
       return (
-        <div css={[layout.flex, layout.width80, layout.alignC, layout.justSpbw]}>
-          <div css={[layout.flex, layout.col, layout.flex66, layout.alignC, layout.justCent]}>
-            <section css={[style.textCent]}>
-              <p css={[style.pfDisp, style.font2rem, style.bold, layout.margin0]}>{props.project.name}</p>
-              <p css={[style.monts, style.font1rem]}>{props.project.description}</p>
-            </section>
-            <section css={[layout.flex, layout.col, layout.alignC, layout.justCent]}>
-              <p css={[style.pfDisp, style.font1rem, style.bold]}>Tech Used:</p>
-              <TechIconList  techs={props.project.tech} />
-            </section>
-          </div>
-          <div css={[layout.flex, layout.flex33]}>
-            <img src={props.project.imgUrl}
-              css={[layout.width100]}
-              alt="project-demo" />
-          </div>
-        </div>
+        <>
+          <Description project={props.project} />
+
+          <ProjectImg project={props.project} />
+        </>
       )
     } else {
       return (
-        <div css={[layout.flex, layout.width80, layout.alignC, layout.justSpbw]}>
-          <div css={[layout.flex, layout.flex33]}>
-            <img src={props.project.imgUrl}
-              css={[layout.width100]}
-              alt="project-demo" />
-          </div>
-          <div css={[layout.flex, layout.col, layout.flex66, layout.alignC, layout.justCent]}>
-            <section css={[style.textCent]}>
-              <p css={[style.pfDisp, style.font2rem, style.bold, layout.margin0]}>{props.project.name}</p>
-              <p css={[style.monts, style.font1rem]}>{props.project.description}</p>
-            </section>
-            <section css={[layout.flex, layout.col, layout.alignC, layout.justCent]}>
-              <p css={[style.pfDisp, style.font1rem, style.bold]}>Tech Used:</p>
-              <TechIconList techs={props.project.tech} />
-            </section>
-          </div>
-        </div>
+        <>
+          <ProjectImg project={props.project} />
+
+          <Description project={props.project} />
+        </>
       )
     }
   }
 
   return (
     <>
-    <div css={[layout.flex, layout.height100, layout.width100, layout.alignC, layout.justCent]}>
-      {alternate()}
+      <div css={[layout.flex, layout.height100, layout.margin2rem, layout.width100, layout.alignC, layout.justCent]}>
+      <div css={[layout.flex, layout.width80, layout.alignC, layout.justSpbw]}>
+        {alternate()}
+      </div>
+
     </div>
 
     </>

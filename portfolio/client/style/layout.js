@@ -109,6 +109,10 @@ margin1rem: css`
 margin: 1rem;
 `,
 
+margin2rem: css`
+margin: 2rem;
+`,
+
 //overflow ctrls
 
 overflowScroll: css`
