@@ -4,22 +4,24 @@ import React, {useState,
 import { jsx, css } from '@emotion/react'
 import { ParallaxLayer } from '@react-spring/parallax'
 
+import TechIconList from "./techIconList";
+
 import style from "../../style/style";
 import layout from "../../style/layout"
 
 export default function Project(props) {
-  console.log('project.props:', JSON.parse(props.project.tech))
   const alternate = () => {
     if (props.index % 2) {
       return (
         <div css={[layout.flex, layout.width80, layout.alignC, layout.justSpbw]}>
-          <div css={[layout.flex, layout.flex66, layout.alignC, layout.justCent]}>
+          <div css={[layout.flex, layout.col, layout.flex66, layout.alignC, layout.justCent]}>
             <section css={[style.textCent]}>
               <p css={[style.pfDisp, style.font2rem, style.bold, layout.margin0]}>{props.project.name}</p>
               <p css={[style.monts, style.font1rem]}>{props.project.description}</p>
             </section>
-            <section css={[layout.flex, layout.flex66, layout.alignC, layout.justCent]}>
-
+            <section css={[layout.flex, layout.col, layout.alignC, layout.justCent]}>
+              <p css={[style.pfDisp, style.font1rem, style.bold]}>Tech Used:</p>
+              <TechIconList  techs={props.project.tech} />
             </section>
           </div>
           <div css={[layout.flex, layout.flex33]}>
@@ -37,10 +39,14 @@ export default function Project(props) {
               css={[layout.width100]}
               alt="project-demo" />
           </div>
-          <div css={[layout.flex, layout.flex66, layout.alignC, layout.justCent]}>
+          <div css={[layout.flex, layout.col, layout.flex66, layout.alignC, layout.justCent]}>
             <section css={[style.textCent]}>
               <p css={[style.pfDisp, style.font2rem, style.bold, layout.margin0]}>{props.project.name}</p>
               <p css={[style.monts, style.font1rem]}>{props.project.description}</p>
+            </section>
+            <section css={[layout.flex, layout.col, layout.alignC, layout.justCent]}>
+              <p css={[style.pfDisp, style.font1rem, style.bold]}>Tech Used:</p>
+              <TechIconList techs={props.project.tech} />
             </section>
           </div>
         </div>

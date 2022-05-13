@@ -1,3 +1,3 @@
 UPDATE "projects"
-SET "tech" = '["React.js", "NodeJS", "PostgreSQL", "JavaScript (ES6)"]'
-WHERE "projectId" = 1
+SET "tech" = '["JavaScript", "jQuery"]'
+WHERE "projectId" = 3

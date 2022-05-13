@@ -55,6 +55,10 @@ flex50: css`
 flex-basis: 50%
 `,
 
+width20: css`
+width: 20%;
+`,
+
 width50: css`
 width: 50%;
 `,
