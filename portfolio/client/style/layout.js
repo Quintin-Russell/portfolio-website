@@ -1,7 +1,5 @@
 import { css } from '@emotion/react'
 
-import iPhoneFrame from '../../server/public/images/projects/iPhoneFrame.png'
-
 export default {
 //over-rides ctrls
 hidden: css`
@@ -87,6 +85,10 @@ padding: 0;
 
 padding25: css`
 padding: 0.25rem;
+`,
+
+padding1rem: css`
+padding: 1rem;
 `,
 
 padding2rem: css`
