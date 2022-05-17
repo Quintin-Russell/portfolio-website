@@ -2,10 +2,9 @@
 import React, {useState,
                 useEffect} from "react";
 import { jsx, css } from '@emotion/react'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import { ParallaxLayer } from '@react-spring/parallax'
 
 import Header from "../components/header";
-import Footer from "../components/footer";
 import Typewriter from "../components/typewriter";
 import style from "../style/style";
 import layout from "../style/layout"
@@ -36,61 +35,7 @@ export default function LandingPage() {
 
   return (
     <>
-    <Parallax
-    pages={2}>
-    <ParallaxLayer
-    className="bkg1"
-    factor={1}>
-    <Header />
-    </ParallaxLayer>
-    <ParallaxLayer
-    className="bkg2"
-    offset={1}
-    factor={1}>
-      <Footer />
-    </ParallaxLayer>
-
-<ParallaxLayer
-offset={0.1}
-speed={0.75}
-factor={2}
->
-          <div css={layout.margin1rem}>
-            <div css={[style.incon, style.light, layout.padding25, style.font3rem]}>
-              <span css={style.landingPgTxt_or}>{`<`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span>
-            </div>
-            <div css={[style.incon, style.light, layout.padding25, style.font3rem]}>
-              <span css={style.landingPgTxt_bl}>{`profession =“software-engineer”`}</span>
-            </div>
-            <div css={[style.incon, style.light, layout.padding25, style.font3rem]}>
-              <span css={style.landingPgTxt_bl}>{`tools=[“JavaScript”, “Python”, “CSS”, “HTML”]`}</span>
-            </div>
-            <div css={[style.incon, style.light, layout.padding25, style.font3rem, style.landingPgTxt_or]}>{`>`}</div>
-
-          </div>
-
-          <Typewriter
-            font='pfDisp'
-            fontSize='font3rem'
-            tarString="
-          I build intelligent and impactful applications that work.
-          "
-            bold={["I", "build", "intelligent", "and", "impactful", "applications", "that", "work."]}
-            cursorDisappear={true}
-            interval={400}
-          />
-
-          {
-            render2ndTW(firstTWCompleted)
-          }
-          <div css={[layout.margin1rem, style.incon, style.light, layout.padding25, style.font3rem]}>
-            <span css={style.landingPgTxt_or}>{`</`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span><span css={style.landingPgTxt_or}>{`>`}</span>
-          </div>
-</ParallaxLayer>
-
-    </Parallax>
-    </>
-      /* <ParallaxLayer
+      <ParallaxLayer
       className="bkg1">
         <Header />
         <div css={layout.margin1rem}>
@@ -134,6 +79,7 @@ factor={2}
       offset={2}
       className="bkg3">
 
-      </ParallaxLayer> */
+      </ParallaxLayer>
+    </>
   )
 }

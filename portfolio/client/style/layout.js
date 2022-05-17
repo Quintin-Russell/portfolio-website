@@ -87,10 +87,6 @@ padding25: css`
 padding: 0.25rem;
 `,
 
-padding1rem: css`
-padding: 1rem;
-`,
-
 padding2rem: css`
 padding: 2rem;
 `,
