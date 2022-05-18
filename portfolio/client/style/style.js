@@ -118,7 +118,6 @@ list-style: none;
 
     :hover {
       font-size: 1.75rem;
-      color: #E28D29;
       cursor: pointer;
       }
   `,

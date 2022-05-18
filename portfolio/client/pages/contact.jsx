@@ -12,11 +12,13 @@ import Typewriter from "../components/typewriter";
 import ViewSwap from "../components/viewSwap";
 
 import contactForm from "../components/viewSwapItems/contactForm";
+import contactInformation from "../components/viewSwapItems/contactInformation";
 import style from "../style/style";
 import layout from "../style/layout"
 
 export default function Contact() {
   const tarString = `Let's Talk`
+  const viewSwapItems = [contactForm, contactInformation]
   return (
     <>
     <Parallax
@@ -41,6 +43,7 @@ export default function Contact() {
       </ParallaxLayer>
 
         <ParallaxLayer
+          offset={0.1}
           speed={0.5}
           factor={1.2}>
           <div css={[layout.flex, layout.row, layout.height100, layout.alignC, layout.justCent]}>
@@ -66,7 +69,7 @@ export default function Contact() {
         }}
         speed={0.2}>
           <div css={[layout.flex, layout.justCent, layout.alignC]}>
-            <ViewSwap objList={[contactForm]}/>
+            <ViewSwap objList={viewSwapItems}/>
           </div>
 
         </ParallaxLayer>
