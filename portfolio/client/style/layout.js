@@ -6,6 +6,12 @@ hidden: css`
 display: hidden !important;
 `,
 
+// scroll
+
+scroll: css`
+overflow-y: scroll;
+`,
+
 // flexbox ctrls
 flex: css`
   display: flex;
@@ -125,7 +131,7 @@ bottom: 0;
 width: 100%;
 height: 5%;
 padding: 0 1rem 0 1rem;
-font-size: 1.5rem;
+font-size: 1rem;
 background: linear-gradient(to right, #000000, #0c0c0c, rgb(132, 132, 132));
 
 `

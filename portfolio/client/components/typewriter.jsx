@@ -53,7 +53,7 @@ export default function Typewriter(props) {
 
  return (
    <>
-       <p>
+       <p css={[style.textCent]}>
        {dispString.map((x) => <>
          <span key={x.word} css={(x.bold === 'bold') ? [font, fontSize, style.bold] : [font, fontSize]}>{x.word} </span>
          <span key={`${x.word}1`}> </span>
