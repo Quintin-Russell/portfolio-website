@@ -6,6 +6,12 @@ hidden: css`
 display: hidden !important;
 `,
 
+// scroll
+
+scroll: css`
+overflow-y: scroll;
+`,
+
 // flexbox ctrls
 flex: css`
   display: flex;
@@ -41,8 +47,20 @@ justify-content: flex-start;
 
 //width/height ctrls
 
+flex33: css`
+flex-basis: calc(100%/3)
+`,
+
+flex66: css`
+flex-basis: calc(200%/3)
+`,
+
 flex50: css`
 flex-basis: 50%
+`,
+
+width20: css`
+width: 20%;
 `,
 
 width50: css`
@@ -83,12 +101,20 @@ bottomPadding: css`
 padding-bottom: 5%;
 `,
 
+marginAuto: css`
+margin: auto;
+`,
+
 margin0: css`
 margin: 0;
 `,
 
 margin1rem: css`
 margin: 1rem;
+`,
+
+margin2rem: css`
+margin: 2rem;
 `,
 
 //overflow ctrls
@@ -105,15 +131,8 @@ bottom: 0;
 width: 100%;
 height: 5%;
 padding: 0 1rem 0 1rem;
-font-size: 1.5rem;
+font-size: 1rem;
 background: linear-gradient(to right, #000000, #0c0c0c, rgb(132, 132, 132));
 
 `
-
-//   footer: css`
-// width: 100%;
-// height: 10vh;
-// padding: 1rem 0.5rem;
-// font-size: 1.5rem;
-// `
 }

@@ -32,7 +32,7 @@ props.objList[0].name
     <>
       <div
       onClick={(e) => setHighlightedTab(e)}
-      css={[layout.flex, layout.col, layout.width80, layout.height80]}>
+      css={[layout.flex, layout.col, layout.scroll, layout.width80, layout.height80]}>
       <Tabs objList={props.objList}
             highlighted={highlightedTab}/>
         <div css={[layout.flex, layout.justCent, layout.alignC, style.bold, style.viewSwapHeader, style.highlightedTab]}>

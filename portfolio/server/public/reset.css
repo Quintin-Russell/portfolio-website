@@ -1,13 +1,28 @@
 * {
   color: white;
   box-sizing: border-box;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  /* overflow-y: scroll; */
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 #root {
   display: flex;
   flex-direction: column;
+  background-color: black;
   min-height: 100vh;
   box-sizing: border-box;
+}
+
+.bkg-cartoon {
+  background-image: url("./images/background/background-cartoon.jpeg");
+  background-size: cover !important;
+  overflow: hidden scroll;
 }
 
 .bkg1 {
