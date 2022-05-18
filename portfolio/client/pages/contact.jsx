@@ -11,6 +11,7 @@ import Footer from "../components/footer";
 import Typewriter from "../components/typewriter";
 import ViewSwap from "../components/viewSwap";
 
+import contactForm from "../components/viewSwapItems/contactForm";
 import style from "../style/style";
 import layout from "../style/layout"
 
@@ -56,6 +57,18 @@ export default function Contact() {
               />
             </div>
           </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+        sticky={{
+          start: 1,
+          stop: 3.5
+        }}
+        speed={0.2}>
+          <div css={[layout.flex, layout.justCent, layout.alignC]}>
+            <ViewSwap objList={[contactForm]}/>
+          </div>
+
         </ParallaxLayer>
 
     </Parallax>
