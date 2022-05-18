@@ -15,19 +15,49 @@ import style from "../style/style";
 import layout from "../style/layout"
 
 export default function Contact() {
+  const tarString = `Let's Talk`
   return (
     <>
     <Parallax
-    pages={3}
+    pages={4}
     >
-      <ParralaxLayer
-      className="bkg1" />
-      <ParralaxLayer
-      offset={1}
+      <ParallaxLayer
+        factor={1}
+        className="bkg1">
+          <Header />
+      </ParallaxLayer>
+
+      <ParallaxLayer
+        factor={1}
+        offset={1}
         className="bkg2" />
-      <ParralaxLayer
-          offset={2}
-        className="bkg3" />
+
+      <ParallaxLayer
+        factor={2}
+        offset={2}
+        className="bkg3">
+          <Footer />
+      </ParallaxLayer>
+
+        <ParallaxLayer
+          speed={0.5}
+          factor={1.2}>
+          <div css={[layout.flex, layout.row, layout.height100, layout.alignC, layout.justCent]}>
+            <div css={[layout.flex, layout.col, layout.flex50]}>
+              <p css={[layout.margin0, layout.flex, layout.flex50, layout.justCent, style.incon, style.font3rem]}>Contact Me</p>
+            </div>
+            <div css={[layout.flex, layout.col, layout.flex50, layout.marginAuto]}>
+              <Typewriter
+                font='pfDisp'
+                fontSize='font3rem'
+                tarString={tarString}
+                bold={tarString.split(" ")}
+                interval={300}
+              />
+            </div>
+          </div>
+        </ParallaxLayer>
+
     </Parallax>
     </>
   )
