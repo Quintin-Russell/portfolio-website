@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from "react";
-import {useForm} from "react-hook-form"
+import { useForm } from "react-hook-form"
 import { jsx, css } from '@emotion/react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
@@ -25,11 +25,28 @@ import layout from "../../style/layout"
           passed to form in onSubmit handler: onSubmit={handleSubmit(_submit handler funct_)}
 */
 export default function ContactForm() {
-  const {register, handleSubmit, error} = useForm();
+  const { register, handleSubmit, error } = useForm();
 
   return (
     <>
+      <div css={[layout.flex, layout.width100, layout.col, layout.justStart]}>
+        <p css={[layout.marginHalfRem, style.incon, style.font1rem]}>To:
+          <span css={[style.pfDisp, style.font2rem]}
+            style={{ paddingLeft: '1rem' }}>Quintin</span>
+        </p>
+        <p css={[layout.marginHalfRem, style.incon, style.font1rem]}>From:</p>
+      </div>
 
+      <form>
+        <div>
+          <label htmlFor=""><input type="text" /></label>
+          <label htmlFor=""><input type="text" /></label>
+          <label htmlFor=""><input type="text" /></label>
+          <label htmlFor=""><input type="text" /></label>
+          <label htmlFor=""><input type="text" /></label>
+        </div>
+        <div></div>
+      </form>
     </>
   )
 }
