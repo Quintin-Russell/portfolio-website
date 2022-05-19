@@ -24,28 +24,127 @@ import layout from "../../style/layout"
         handleSubmit: takes your custom "submit handler funct" as arg;
           passed to form in onSubmit handler: onSubmit={handleSubmit(_submit handler funct_)}
 */
+
+const inputCss = [style.fade, layout.width100, layout.leftMargin, layout.leftPadding, layout.input]
+const inputCont = [layout.flex, layout.col, style.incon]
+
 export default function ContactForm() {
-  const { register, handleSubmit, error } = useForm();
+  const { register, handleSubmit, errors } = useForm();
+  const submitForm = (data) => { console.log(data) }
 
   return (
     <>
       <div css={[layout.flex, layout.width100, layout.col, layout.justStart]}>
         <p css={[layout.marginHalfRem, style.incon, style.font1rem]}>To:
-          <span css={[style.pfDisp, style.font2rem]}
-            style={{ paddingLeft: '1rem' }}>Quintin</span>
+          <span css={[style.pfDisp, style.font2rem, layout.leftPadding]}>Quintin</span>
         </p>
         <p css={[layout.marginHalfRem, style.incon, style.font1rem]}>From:</p>
       </div>
 
-      <form>
-        <div>
-          <label htmlFor=""><input type="text" /></label>
-          <label htmlFor=""><input type="text" /></label>
-          <label htmlFor=""><input type="text" /></label>
-          <label htmlFor=""><input type="text" /></label>
-          <label htmlFor=""><input type="text" /></label>
+      <form onSubmit={handleSubmit(submitForm)}
+        css={[layout.flex, layout.col, layout.width100, layout.justStart, layout.leftPadding]}>
+        <div css={inputCont}>
+          <div css={[layout.flex, layout.row, layout.marginHalfRem]}>
+            <label htmlFor="contactName">Name:</label>
+            <input id="contactName"
+              name="contactName"
+              css={inputCss}
+              type="text"
+              {...register("contactName", {
+                required: {
+                  value: true,
+                  message: 'Please type your name so that I can get in touch with you.'
+                },
+                minLength: {
+                  value: 2,
+                  message: 'Please type your name so that I can get in touch with you.'
+                }
+              })}
+            />
+          </div>
+
+          <div css={[layout.flex, layout.row, layout.marginHalfRem]}>
+            <label htmlFor="company">Company:</label>
+            <input id="company"
+              name="company"
+              css={inputCss}
+              type="text"
+              {...register("company", {})} />
+          </div>
+
+          <div css={[layout.flex, layout.row, layout.marginHalfRem]}>
+            <label htmlFor="email">Email:</label>
+            <input id="email"
+              name="email"
+              css={inputCss}
+              type="email"
+              {...register("email", {
+                required: {
+                  value: true,
+                  message: 'Please type your email so that I can get in touch with you.'
+                },
+                minLength: {
+                  value: 2,
+                  message: 'Please type your email so that I can get in touch with you.'
+                }
+              })}
+            />
+          </div>
+
+          <div css={[layout.flex, layout.row, layout.marginHalfRem]}>
+            <label htmlFor="linkedInUrl">LinkedIn:</label>
+            <input id="linkedInUrl"
+              name="linkedInUrl"
+              css={inputCss}
+              type="url"
+              {...register("linkedInUrl", {})} />
+          </div>
+
+          <div css={[layout.flex, layout.row, layout.marginHalfRem]}>
+            <label htmlFor="phoneNumber">Phone:</label>
+            <input id="phoneNumber"
+              name="phoneNumber"
+              css={inputCss}
+              type="tel"
+              {...register("phoneNumber", {
+                required: {
+                  value: true,
+                  message: 'Please type your phone number so that I can get in touch with you.'
+                },
+                pattern: {
+                  value: "[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                }
+              })}
+            />
+          </div>
+
+
         </div>
-        <div></div>
+        <div css={inputCont}>
+          <label htmlFor="message"
+            css={[layout.marginHalfRem]}>Message:</label>
+          <textarea id="message"
+            name="message"
+            css={[...inputCss, layout.marginHalfRem]}
+            type="text"
+            {...register("message", {
+              required: {
+                value: true,
+                message: 'Please type a message. no need to be shy :)'
+              },
+              minLength: {
+                value: 2,
+                message: 'Please type a message. no need to be shy :)'
+              }
+            })}
+          ></textarea>
+          <div css={[layout.flex, layout.justEnd]}>
+          <input type="submit"
+            value={`-SEND-`}
+              css={[style.incon, style.font1rem, style.hoverA, layout.padding25]}
+              style={{ width: 'fit-content', backgroundColor: '#fafafa00'}}/>
+          </div>
+        </div>
       </form>
     </>
   )

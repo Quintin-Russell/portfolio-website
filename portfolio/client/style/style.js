@@ -117,7 +117,7 @@ list-style: none;
   transition: all ease 2s;
 
     :hover {
-      font-size: 1.75rem;
+      font-size: 1.25rem;
       cursor: pointer;
       }
   `,

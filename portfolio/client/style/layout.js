@@ -101,6 +101,10 @@ bottomPadding: css`
 padding-bottom: 5%;
 `,
 
+leftPadding: css`
+padding-left: 1rem;
+`,
+
 marginAuto: css`
 margin: auto;
 `,
@@ -121,6 +125,10 @@ margin2rem: css`
 margin: 2rem;
 `,
 
+leftMargin: css`
+padding-left: 0.5rem;
+`,
+
 //overflow ctrls
 
 overflowScroll: css`
@@ -137,6 +145,11 @@ height: 5%;
 padding: 0 1rem 0 1rem;
 font-size: 1rem;
 background: linear-gradient(to right, #000000, #0c0c0c, rgb(132, 132, 132));
+`,
 
+input: css`
+
+background: linear-gradient(to right, #7d7d7d61, rgb(255 255 255 / 63%));
+border-radius: 0.5rem;
 `
 }
