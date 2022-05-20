@@ -7,7 +7,7 @@ const ClientError = require('./client-error');
 
 const fetch = async (sql, params, res, next) => {
   try{
-    const result = await db.query(sql)
+    const result = await db.query(sql, params)
     return res.status(201).json(result.rows)
   } catch (err) {
     next(err)

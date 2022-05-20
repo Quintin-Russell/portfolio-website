@@ -26,11 +26,24 @@ import layout from "../../style/layout"
 */
 
 const inputCss = [style.fade, layout.width100, layout.leftMargin, layout.leftPadding, layout.input]
+const labelCss = [layout.flex, layout.row, layout.marginHalfRem]
 const inputCont = [layout.flex, layout.col, style.incon]
 
 export default function ContactForm() {
   const { register, handleSubmit, errors } = useForm();
-  const submitForm = (data) => { console.log(data) }
+
+  const printErrors = () => {
+    console.log('errors:', errors)
+    // if (!errors) return
+    // for (const err in errors) {
+    //   return <p css={inputCss} style={{color: 'red'}}>{errors[err].message}</p>
+    // }
+  }
+  const submitForm = (data) => {
+    console.log(data)
+  }
+
+
 
   return (
     <>
@@ -41,10 +54,10 @@ export default function ContactForm() {
         <p css={[layout.marginHalfRem, style.incon, style.font1rem]}>From:</p>
       </div>
 
-      <form onSubmit={handleSubmit(submitForm)}
+      <form onSubmit={handleSubmit((data) => submitForm(data))}
         css={[layout.flex, layout.col, layout.width100, layout.justStart, layout.leftPadding]}>
         <div css={inputCont}>
-          <div css={[layout.flex, layout.row, layout.marginHalfRem]}>
+          <div css={labelCss}>
             <label htmlFor="contactName">Name:</label>
             <input id="contactName"
               name="contactName"
@@ -63,7 +76,7 @@ export default function ContactForm() {
             />
           </div>
 
-          <div css={[layout.flex, layout.row, layout.marginHalfRem]}>
+          <div css={labelCss}>
             <label htmlFor="company">Company:</label>
             <input id="company"
               name="company"
@@ -72,7 +85,7 @@ export default function ContactForm() {
               {...register("company", {})} />
           </div>
 
-          <div css={[layout.flex, layout.row, layout.marginHalfRem]}>
+          <div css={labelCss}>
             <label htmlFor="email">Email:</label>
             <input id="email"
               name="email"
@@ -91,7 +104,7 @@ export default function ContactForm() {
             />
           </div>
 
-          <div css={[layout.flex, layout.row, layout.marginHalfRem]}>
+          <div css={labelCss}>
             <label htmlFor="linkedInUrl">LinkedIn:</label>
             <input id="linkedInUrl"
               name="linkedInUrl"
@@ -100,7 +113,7 @@ export default function ContactForm() {
               {...register("linkedInUrl", {})} />
           </div>
 
-          <div css={[layout.flex, layout.row, layout.marginHalfRem]}>
+          <div css={labelCss}>
             <label htmlFor="phoneNumber">Phone:</label>
             <input id="phoneNumber"
               name="phoneNumber"

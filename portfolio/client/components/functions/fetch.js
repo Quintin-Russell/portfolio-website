@@ -1,5 +1,9 @@
 export default async (api, setFunct) => {
-  const result = await fetch(api)
-  const resultJson = await result.json()
-  return setFunct(resultJson)
+  try {
+    const result = await fetch(api)
+    const resultJson = await result.json()
+    return setFunct(resultJson)
+  } catch (e) {
+    alert('Oops! Something went wrong. Please reload the page.')
+  }
 }
