@@ -9,6 +9,7 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import Typewriter from "../../components/typewriter";
 import ViewSwap from "../../components/viewSwap";
+import SubmittedModal from "./SubmittedModal";
 
 import post from "../functions/post";
 
@@ -40,14 +41,14 @@ export default function ContactForm() {
 
   const submitForm = (data) => {
     console.log(data)
-    post(api, data, setSubmitted)
+    post(api, data)
     // sendEmail()
-    $('form#contact-form').trigger("reset")
-    window.alert('form submitted')
+    $('form#contact-form')[0].reset()
+    setSubmitted(!submitted)
   }
 
 
-
+if (!submitted){
   return (
     <>
       <div css={[layout.flex, layout.width100, layout.col, layout.justStart]}>
@@ -163,5 +164,9 @@ export default function ContactForm() {
         </div>
       </form>
     </>
-  )
+  )} else {
+    return <SubmittedModal submitted={submitted}
+    setSubmitted={setSubmitted}/>
+  }
+
 }

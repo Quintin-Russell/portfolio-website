@@ -1,4 +1,4 @@
-export default async (api, data, funct) => {
+export default async (api, data) => {
   try {
     const params = {
       method: 'POST',
@@ -9,7 +9,7 @@ export default async (api, data, funct) => {
       body: JSON.stringify(data)
     }
     const response = await fetch(api, params)
-    if (response.ok) return funct
+    if (response.ok) return
   } catch (e) {
     window.alert('Oops! Something went wrong. Please reload the page.')
   }
