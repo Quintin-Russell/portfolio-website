@@ -42,8 +42,8 @@ app.post('/api/contact', (req, res, next) => {
   const params = [contactName, company, email, linkedInUrl, phoneNumber, message]
 
   const sql = `
-  INSERT into "contact" ("contactName", "company", "email", "linkedInUrl", "phoneNumber", "message", "added")
-  values ($1,$2,$3,$4,$5,$6, now())
+  INSERT into "contact" ("contactName", "company", "email", "linkedInUrl", "phoneNumber", "message")
+  values ($1,$2,$3,$4,$5,$6)
   returning *
   `
 
