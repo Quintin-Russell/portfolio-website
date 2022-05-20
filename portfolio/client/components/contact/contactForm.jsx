@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from "react";
+import React, {useState} from "react";
 import { useForm } from "react-hook-form"
 import { jsx, css } from '@emotion/react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
@@ -8,6 +8,8 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import Typewriter from "../../components/typewriter";
 import ViewSwap from "../../components/viewSwap";
+
+import post from "../functions/post";
 
 import style from "../../style/style";
 import layout from "../../style/layout"
@@ -25,22 +27,19 @@ import layout from "../../style/layout"
           passed to form in onSubmit handler: onSubmit={handleSubmit(_submit handler funct_)}
 */
 
+const api = '/api/contact'
+
 const inputCss = [style.fade, layout.width100, layout.leftMargin, layout.leftPadding, layout.input]
 const labelCss = [layout.flex, layout.row, layout.marginHalfRem]
 const inputCont = [layout.flex, layout.col, style.incon]
 
 export default function ContactForm() {
+  const [submitted, setSubmitted] = useState(null)
   const { register, handleSubmit, errors } = useForm();
 
-  const printErrors = () => {
-    console.log('errors:', errors)
-    // if (!errors) return
-    // for (const err in errors) {
-    //   return <p css={inputCss} style={{color: 'red'}}>{errors[err].message}</p>
-    // }
-  }
   const submitForm = (data) => {
     console.log(data)
+    post(api, data, setSubmitted)
   }
 
 
@@ -152,10 +151,10 @@ export default function ContactForm() {
             })}
           ></textarea>
           <div css={[layout.flex, layout.justEnd]}>
-          <input type="submit"
-            value={`-SEND-`}
+            <input type="submit"
+              value={`-SEND-`}
               css={[style.incon, style.font1rem, style.hoverA, layout.padding25]}
-              style={{ width: 'fit-content', backgroundColor: '#fafafa00'}}/>
+              style={{ width: 'fit-content', backgroundColor: '#fafafa00' }} />
           </div>
         </div>
       </form>
