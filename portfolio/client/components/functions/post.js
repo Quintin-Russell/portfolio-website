@@ -11,6 +11,6 @@ export default async (api, data, funct) => {
     const response = await fetch(api, params)
     if (response.ok) return funct
   } catch (e) {
-    alert('Oops! Something went wrong. Please reload the page.')
+    window.alert('Oops! Something went wrong. Please reload the page.')
   }
 }

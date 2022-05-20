@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import { useForm } from "react-hook-form"
 import { jsx, css } from '@emotion/react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import $ from 'jquery'
 
 import Header from "../../components/header";
 import Footer from "../../components/footer";
@@ -40,6 +41,9 @@ export default function ContactForm() {
   const submitForm = (data) => {
     console.log(data)
     post(api, data, setSubmitted)
+    // sendEmail()
+    $('form#contact-form').trigger("reset")
+    window.alert('form submitted')
   }
 
 
@@ -53,7 +57,7 @@ export default function ContactForm() {
         <p css={[layout.marginHalfRem, style.incon, style.font1rem]}>From:</p>
       </div>
 
-      <form onSubmit={handleSubmit((data) => submitForm(data))}
+      <form id="contact-form" onSubmit={handleSubmit((data) => submitForm(data))}
         css={[layout.flex, layout.col, layout.width100, layout.justStart, layout.leftPadding]}>
         <div css={inputCont}>
           <div css={labelCss}>

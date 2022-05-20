@@ -4,6 +4,6 @@ export default async (api, setFunct) => {
     const resultJson = await result.json()
     return setFunct(resultJson)
   } catch (e) {
-    alert('Oops! Something went wrong. Please reload the page.')
+    window.alert('Oops! Something went wrong. Please reload the page.')
   }
 }
