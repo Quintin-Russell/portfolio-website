@@ -1,4 +1,4 @@
-import { SMTPClient } from 'emailjs';
+import emailjs from '@emailjs/browser';
 
 const serviceID = "service_sqi4c0q"
 
