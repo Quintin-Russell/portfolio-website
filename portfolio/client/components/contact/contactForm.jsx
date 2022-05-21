@@ -12,6 +12,7 @@ import ViewSwap from "../../components/viewSwap";
 import SubmittedModal from "./SubmittedModal";
 
 import post from "../functions/post";
+import sendClientEmail from "../functions/sendClientEmail";
 
 import style from "../../style/style";
 import layout from "../../style/layout"
@@ -42,7 +43,7 @@ export default function ContactForm() {
   const submitForm = (data) => {
     console.log(data)
     post(api, data)
-    // sendEmail()
+    sendClientEmail(data.contactName, data.email)
     $('form#contact-form')[0].reset()
     setSubmitted(!submitted)
   }
