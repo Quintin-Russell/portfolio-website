@@ -11,7 +11,6 @@ export default async (contactName, email) => {
         contactName,
         email
     }
-    console.log('templateParams:', templateParams)
 
     const publicKey = "wF9q7QsIZeLPKfVpO"
     try {

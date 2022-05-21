@@ -13,6 +13,7 @@ import SubmittedModal from "./SubmittedModal";
 
 import post from "../functions/post";
 import sendClientEmail from "../functions/sendClientEmail";
+import sendDataEmail from "../functions/sendDataEmail";
 
 import style from "../../style/style";
 import layout from "../../style/layout"
@@ -44,6 +45,7 @@ export default function ContactForm() {
     console.log(data)
     post(api, data)
     sendClientEmail(data.contactName, data.email)
+    sendDataEmail(data)
     $('form#contact-form')[0].reset()
     setSubmitted(!submitted)
   }

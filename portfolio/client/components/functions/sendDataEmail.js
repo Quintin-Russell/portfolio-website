@@ -2,16 +2,19 @@ import emailjs from '@emailjs/browser';
 
 
 
-export default async (contactName, email) => {
+export default async (data) => {
     const serviceID = "service_sqi4c0q"
 
-    const templateID = "template_ym1zj7z"
+    const templateID = "template_oxo9jbc"
 
     const templateParams = {
-        contactName,
-        email
+        company: data.company,
+        contactName: data.contactName,
+        email: data.email,
+        linkedInUrl: data.linkedInUrl,
+        message: data.message,
+        phoneNumber: data.phoneNumber
     }
-    console.log('templateParams:', templateParams)
 
     const publicKey = "wF9q7QsIZeLPKfVpO"
     try {
@@ -20,8 +23,7 @@ export default async (contactName, email) => {
             templateID,
             templateParams,
             publicKey);
-        console.log(message);
     } catch (err) {
-        console.error(err);
+        window.alert("Opps, we don't know what happened there. You may not recieve a confirmation email. It may be better to connect with Quintin via one of the links in the Contact Information tab.");
     }
 }
