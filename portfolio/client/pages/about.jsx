@@ -87,26 +87,6 @@ export default function About() {
   </ParallaxLayer>
 
     </Parallax>
-
-
-      {/* </ParallaxLayer>
-
-      // <ParallaxLayer
-      // offset={0.9}
-      // factor={1.5}
-      // speed={0.5}
-      // className="bkg2">
-      //   <AboutPhoto />
-      // </ParallaxLayer>
-
-      <ParallaxLayer
-      offset={1.5}
-      speed={0.3}
-      factor={2}
-      className="bkg3"
-      css={[layout.flex, layout.alignC, layout.justCent, layout.bottomPadding]}>
-        <ViewSwap objList={viewSwapItems} />
-      </ParallaxLayer> */}
     </>
   )
 }

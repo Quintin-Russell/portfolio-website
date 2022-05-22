@@ -9,7 +9,7 @@ CREATE TABLE "projects" (
 	"summary" TEXT NOT NULL,
 	"githubLink" TEXT NOT NULL,
 	"liveLink" TEXT NOT NULL,
-	"added" serial NOT NULL UNIQUE,
+	"added" timestamptz NOT NULL default now(),
 	CONSTRAINT "Projects_pk" PRIMARY KEY ("projectId")
 ) WITH (
   OIDS=FALSE
@@ -22,7 +22,7 @@ CREATE TABLE "contact" (
 	"linkedInUrl" TEXT,
 	"phoneNumber" TEXT,
 	"message" TEXT NOT NULL,
-	"added" serial NOT NULL UNIQUE,
+	"added" timestamptz NOT NULL default now(),
 	CONSTRAINT "Contact_pk" PRIMARY KEY ("contactId")
 ) WITH (
   OIDS=FALSE
