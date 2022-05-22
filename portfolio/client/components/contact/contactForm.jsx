@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import React, {useState} from "react";
+import React, {useState,
+              useEffect} from "react";
 import { useForm } from "react-hook-form"
 import { jsx, css } from '@emotion/react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
@@ -39,14 +40,20 @@ const inputCont = [layout.flex, layout.col, style.incon]
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(null)
-  const { register, handleSubmit, errors } = useForm();
+  const { register,
+    handleSubmit,
+    reset,
+    formState: {isSubmitSuccessful},
+    errors } = useForm();
+
+  useEffect(() => {
+    reset()
+  },[isSubmitSuccessful])
 
   const submitForm = (data) => {
-    console.log(data)
     post(api, data)
     sendClientEmail(data.contactName, data.email)
     sendDataEmail(data)
-    $('form#contact-form')[0].reset()
     setSubmitted(!submitted)
   }
 
@@ -61,7 +68,8 @@ if (!submitted){
         <p css={[layout.marginHalfRem, style.incon, style.font1rem]}>From:</p>
       </div>
 
-      <form id="contact-form" onSubmit={handleSubmit((data) => submitForm(data))}
+      <form id="contact-form"
+      onSubmit={handleSubmit((data) => submitForm(data))}
         css={[layout.flex, layout.col, layout.width100, layout.justStart, layout.leftPadding]}>
         <div css={inputCont}>
           <div css={labelCss}>

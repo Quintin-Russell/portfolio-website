@@ -15,7 +15,7 @@ export default function SubmittedModal(props) {
     css={[layout.flex, layout.col, layout.justCent, layout.alignC,layout.width80, style.borderLight, style.textCent, style.cursor]}>
       <p css={[style.pfDisp, style.font3rem]}>Thanks for reaching out!</p>
       <p css={[style.monts, style.font2rem]}>We just sent you an email. Quintin will get in touch with you soon!</p>
-      <p css={[style.incon]}>-Back To Form-</p>
+      <p css={[style.incon]}>-Submit Another Message-</p>
     </div>
     </>
   )
