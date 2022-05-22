@@ -16,9 +16,10 @@ import sql from '../../../server/public/images/techIcons/sql.png'
 export default function ToolsIcons() {
   return (
 <>
-  <div css={[layout.flex, layout.col]}>
+   <div css={[layout.flex, layout.col]}>
     <div css={[layout.flex, layout.alignC, layout.justCent]}>
-      <img css={style.techIconBasics}
+      <img
+      css={style.techIconBasics}
       src={basics}
       alt='basic-web-dev-techs'/>
     </div>

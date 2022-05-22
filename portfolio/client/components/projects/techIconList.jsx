@@ -21,7 +21,6 @@ export default function TechIconList(props) {
   const techArr = JSON.parse(props.techs)
   const parseImg = (tech) => {
     if (!tech) return null
-
     return (
       <img src={imgObj[tech]}
       css={[layout.width20]}

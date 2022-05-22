@@ -44,7 +44,7 @@ export default function Projects() {
   let endSticky = 4;
   return (
     <>
-    <Parallax pages={6}>
+    <Parallax pages={6.15}>
       <ParallaxLayer
         className="bkg1" />
       <ParallaxLayer
@@ -53,7 +53,7 @@ export default function Projects() {
       className="bkg2" />
       <ParallaxLayer
         offset={4.5}
-        factor={1.5}
+        factor={1.65}
         className="bkg3">
           <Footer />
       </ParallaxLayer>
@@ -103,6 +103,7 @@ export default function Projects() {
 
       <ParallaxLayer
       offset={5}
+      factor={1}
       css={[layout.flex, layout.justCent, layout.alignC, layout.width80]}>
         {/* <div css={[layout.col, layout.width80, layout.flex, layout.justCent, layout.alignC, style.fade, style.borderLight]}>
           <p css={[style.monts, style.textCent, style.font2rem]}>
