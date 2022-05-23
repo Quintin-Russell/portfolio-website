@@ -59,6 +59,10 @@ flex50: css`
 flex-basis: 50%
 `,
 
+fitContent: css`
+width:fit-content;
+`,
+
 width20: css`
 width: 20%;
 `,
@@ -148,8 +152,11 @@ background: linear-gradient(to right, #000000, #0c0c0c, rgb(132, 132, 132));
 `,
 
 input: css`
-
 background: linear-gradient(to right, #7d7d7d61, rgb(255 255 255 / 63%));
 border-radius: 0.5rem;
+`,
+
+menuCont: css`
+margin: 0 1rem;
 `
 }
