@@ -123,11 +123,13 @@ list-style: none;
   `,
 
   menuIcon: css`
+  transition: all ease 0.5s;
   transform: rotate(180deg);
   font-size: 2rem;
 
     :hover {
     font-size: 3rem;
+    cursor: pointer;
     }
   `,
 
