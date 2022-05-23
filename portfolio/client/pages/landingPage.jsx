@@ -51,7 +51,7 @@ export default function LandingPage() {
     </ParallaxLayer>
 
 <ParallaxLayer
-offset={0.1}
+offset={0.5}
 speed={0.75}
 factor={2}
 >
