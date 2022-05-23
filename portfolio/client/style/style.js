@@ -38,6 +38,10 @@ export default {
   font-size: 2rem;
   `,
 
+  font2halfrem: css`
+  font-size: 2.5rem;
+  `,
+
   font3rem: css`
   font-size: 3rem;
   `,

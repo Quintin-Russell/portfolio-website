@@ -21,6 +21,12 @@ row: css`
 flex-direction: row;
 `,
 
+rowMobile: css`
+@media (max-width: 768px){
+  flex-direction: column;
+}
+`,
+
 col: css`
 flex-direction: column;
 `,
