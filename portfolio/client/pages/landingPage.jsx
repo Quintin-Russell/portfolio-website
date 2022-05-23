@@ -37,7 +37,7 @@ export default function LandingPage() {
   return (
     <>
     <Parallax
-    pages={2}>
+    pages={2.5}>
     <ParallaxLayer
     className="bkg1"
     factor={1}>
@@ -46,12 +46,12 @@ export default function LandingPage() {
     <ParallaxLayer
     className="bkg2"
     offset={1}
-    factor={1}>
+    factor={1.5}>
       <Footer />
     </ParallaxLayer>
 
 <ParallaxLayer
-offset={0.1}
+offset={0.5}
 speed={0.75}
 factor={2}
 >

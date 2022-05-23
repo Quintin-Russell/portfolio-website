@@ -43,9 +43,11 @@ export default function Contact() {
       </ParallaxLayer>
 
         <ParallaxLayer
-          offset={0.1}
+          offset={0.5} // original 0.1
           speed={0.5}
-          factor={1.2}>
+          factor={0.5} //original 1.2
+          >
+
           <div css={[layout.flex, layout.row, layout.height100, layout.alignC, layout.justCent]}>
             <div css={[layout.flex, layout.col, layout.flex50]}>
               <p css={[layout.margin0, layout.flex, layout.flex50, layout.justCent, style.incon, style.font3rem]}>Contact Me</p>
@@ -64,8 +66,8 @@ export default function Contact() {
 
         <ParallaxLayer
         sticky={{
-          start: 1,
-          stop: 3.5
+          start: 1.3,
+          stop: 3
         }}
         speed={0.2}>
           <div css={[layout.flex, layout.justCent, layout.alignC]}>
