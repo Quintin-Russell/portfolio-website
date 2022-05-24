@@ -35,7 +35,7 @@ export default function Project(props) {
       <div
       style={{backgroundColor: 'black'}}
       css={[layout.flex, layout.margin2rem, layout.width100, layout.alignC, layout.justCent]}>
-      <div css={[layout.flex, layout.width80, layout.alignC, layout.justSpbw]}>
+      <div css={[layout.flex, layout.rowMobile, layout.width80, layout.alignC, layout.justSpbw]}>
         {alternate()}
       </div>
 

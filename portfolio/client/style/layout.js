@@ -143,6 +143,10 @@ margin2rem: css`
 margin: 2rem;
 `,
 
+topMargin: css`
+margin-top: 2rem;
+`,
+
 leftMargin: css`
 padding-left: 0.5rem;
 `,
