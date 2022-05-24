@@ -75,7 +75,6 @@ factor={2}
               <span css={style.landingPgTxt_bl}>{`tools=[“JavaScript”, “Python”, “CSS”, “HTML”]`}</span>
             </div>
             <div css={(screenSize > 768) ? [...jobDesc, style.landingPgTxt_or, style.font3rem] : [...jobDesc, style.landingPgTxt_or, style.font2halfrem]}>
-            {/* css={[style.incon, style.light, layout.padding25, style.font3rem, style.landingPgTxt_or]} */}
               {`>`}
             </div>
 
@@ -102,50 +101,5 @@ factor={2}
 
     </Parallax>
     </>
-      /* <ParallaxLayer
-      className="bkg1">
-        <Header />
-        <div css={layout.margin1rem}>
-          <div css={[style.incon, style.light, layout.padding25, style.font3rem]}>
-            <span css={style.landingPgTxt_or}>{`<`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span>
-          </div>
-          <div css={[style.incon, style.light, layout.padding25, style.font3rem]}>
-              <span css={style.landingPgTxt_bl}>{`profession =“software-engineer”`}</span>
-            </div>
-          <div css={[style.incon, style.light, layout.padding25, style.font3rem]}>
-              <span css={style.landingPgTxt_bl}>{`tools=[“JavaScript”, “Python”, “CSS”, “HTML”]`}</span>
-            </div>
-          <div css={[style.incon, style.light, layout.padding25, style.font3rem, style.landingPgTxt_or]}>{`>`}</div>
-
-        </div>
-
-        <Typewriter
-          font='pfDisp'
-          fontSize='font3rem'
-          tarString="
-          I build intelligent and impactful applications that work.
-          "
-          bold={["I", "build", "intelligent", "and", "impactful", "applications", "that", "work."]}
-          cursorDisappear={true}
-          interval={400}
-        />
-
-        {
-          render2ndTW(firstTWCompleted)
-        }
-        <div css={[layout.margin1rem, style.incon, style.light, layout.padding25, style.font3rem]}>
-          <span css={style.landingPgTxt_or}>{`</`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span><span css={style.landingPgTxt_or}>{`>`}</span>
-        </div>
-      </ParallaxLayer>
-      <ParallaxLayer
-      offset={1}
-      className="bkg2">
-
-      </ParallaxLayer>
-      <ParallaxLayer
-      offset={2}
-      className="bkg3">
-
-      </ParallaxLayer> */
   )
 }

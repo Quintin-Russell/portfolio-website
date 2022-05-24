@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import React, {useState,
-              useEffect} from "react";
+import React, {useState} from "react";
 import { jsx, css } from '@emotion/react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import $ from 'jquery'
 
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -13,14 +13,18 @@ import AboutPhoto from "../components/about/aboutPhoto";
 import ViewSwap from "../components/viewSwap";
 
 import story from "../components/viewSwapItems/story";
-import accomplishments from "../components/viewSwapItems/accomplishments";
+import timeline from "../components/viewSwapItems/timeline";
 import hobbies from "../components/viewSwapItems/hobbies";
 
 import style from "../style/style";
 import layout from "../style/layout"
 
 export default function About() {
-  const viewSwapItems = [story, accomplishments, hobbies]
+  const [screenSize, setScreenSize] = useState(screen.width);
+
+  $(window).on('resize', () => setScreenSize(screen.width))
+
+  const viewSwapItems = [story, timeline, hobbies]
 
   return (
     <>
@@ -40,7 +44,6 @@ export default function About() {
               hi, i'm quintin.
               "
               bold={[]}
-              // cursorDisappear={true}
               interval={500}
             />
           </div>
@@ -60,10 +63,10 @@ export default function About() {
   offset={0.5}
   factor={1.5}
   speed={2}>
-    <div css={[layout.flex, layout.justEnd]}>
+          <div css={(screenSize > 768) ? [layout.flex, layout.justEnd] : [layout.flex, layout.justCent]}>
       <p css={[layout.margin0, layout.flex, layout.flex50, layout.justCent, style.incon, style.font3rem]}>Tools</p>
     </div>
-    <div css={[layout.flex, layout.alignC, layout.justSpbw, layout.row]}>
+    <div css={[layout.flex, layout.alignC, layout.justSpbw, layout.rowMobile]}>
       <div css={[layout.flex, layout.flex50, layout.justCent]}>
         <ToolsIcons />
       </div>

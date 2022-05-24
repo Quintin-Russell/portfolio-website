@@ -69,6 +69,10 @@ fitContent: css`
 width:fit-content;
 `,
 
+width10: css`
+width: 10%;
+`,
+
 width20: css`
 width: 20%;
 `,
@@ -109,6 +113,10 @@ padding: 2rem;
 
 bottomPadding: css`
 padding-bottom: 5%;
+`,
+
+topPadding: css`
+padding-top: 2rem;
 `,
 
 leftPadding: css`
