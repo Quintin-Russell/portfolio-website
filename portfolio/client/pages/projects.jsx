@@ -82,13 +82,13 @@ export default function Projects() {
 
           {
             projects.map((x,index) => {
-              startSticky += 1.25
+              startSticky += 1.25 //og=1.25
               return (
                 <ParallaxLayer
                   key={index}
                   sticky={{
                     start: startSticky,
-                    end: endSticky,
+                    end: endSticky
                   }}
                   factor={1}
                   speed={0.75}>

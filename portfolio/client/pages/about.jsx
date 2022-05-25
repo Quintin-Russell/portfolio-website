@@ -62,7 +62,7 @@ export default function About() {
   <ParallaxLayer
   offset={0.5}
   factor={1.5}
-  speed={2}>
+  speed={0.75}>
           <div css={(screenSize > 768) ? [layout.flex, layout.justEnd] : [layout.flex, layout.justCent]}>
       <p css={[layout.margin0, layout.flex, layout.flex50, layout.justCent, style.incon, style.font3rem]}>Tools</p>
     </div>
@@ -75,14 +75,14 @@ export default function About() {
   </ParallaxLayer>
 
   <ParallaxLayer
-  offset={1}
+  offset={1.25}
   factor={1.75}
   speed={0.5}>
     <AboutPhoto />
   </ParallaxLayer>
 
   <ParallaxLayer
-    offset={2.2}
+    offset={2.45}
     speed={0.3}
     factor={2}
     css={[layout.flex, layout.alignC, layout.justCent, layout.bottomPadding]}>
