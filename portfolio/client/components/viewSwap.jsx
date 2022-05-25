@@ -40,7 +40,7 @@ props.objList[0].name
         <div css={[layout.flex, layout.justCent, layout.alignC, style.bold, style.viewSwapHeader, style.highlightedTab]}>
           <h2 css={[layout.margin0, layout.padding25, style.pfDispS]}>{highlightedTab}</h2>
         </div>
-        <div css={[layout.flex, layout.col, layout.justCent, layout.alignC, style.fade, style.borderLight, layout.padding2rem]}>
+        <div css={(highlightedTab === 'Hobbies') ? [layout.flex, layout.col, layout.justCent, layout.alignC, style.fade, style.borderLight, layout.topPadding] : [layout.flex, layout.col, layout.justCent, layout.alignC, style.fade, style.borderLight, layout.padding2rem]}>
           {props.objList.map(obj => determineItem(obj))}
         </div>
     </div>

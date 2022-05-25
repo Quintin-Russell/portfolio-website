@@ -19,7 +19,7 @@ const hobbiesArr = [
     in the summer of 2012. I'll never forget recieving the first paycheck from my job and immediately
     going to the gym and signing up. Since then, I can't imagine doing a more fullfilling sport.`,
     img: {
-      src: <img src={BJJ} alt='QR-BJJ' css={[layout.width80]}/>
+      src: <img src={BJJ} alt='QR-BJJ' css={[layout.width100]}/>
     }
   },
   {
@@ -28,14 +28,14 @@ const hobbiesArr = [
     I would live at the gym and train 5-6 days per week. I still love training and plan to go back to Thailand
     to train and fight.`,
     img: {
-      src: <img src={MuayThai} alt='QR-Muay-Thai' css={[layout.width80]}/>
+      src: <img src={MuayThai} alt='QR-Muay-Thai' css={[layout.width100]}/>
     }
   },
   {
     name: 'Surfing',
     text: `Surfing is fun.`,
     img: {
-      src: <img src={Surf} alt='QR-Surf' css={[layout.width80]} />
+      src: <img src={Surf} alt='QR-Surf' css={[layout.width100]} />
     }
   },
 {
@@ -47,7 +47,7 @@ const hobbiesArr = [
   wondering: yes! That is a monkey in the center photo. Her name is Maya and she lives with the Sacha Wasi tribe in the remote
   Amazon.`,
   img: {
-    src: <img src={Travel} alt='QR-Travel' css={[layout.width80]} />
+    src: <img src={Travel} alt='QR-Travel' css={[layout.width100]} />
   }
 }
 ]

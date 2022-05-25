@@ -37,6 +37,24 @@ export default function Header() {
       )
     }
 
+  const renderHeaderTxt = (screenSize) => {
+    if (screenSize > 768) return (
+      <>
+        <a href="#contact"
+          css={headerTextCss}
+        >
+          Let's Talk
+        </a>
+
+        <a href="https://github.com/Quintin-Russell/Quintin-Russell/blob/main/Quintin%20Russell%20Resume.pdf"
+        target="_blank"
+          css={headerTextCss}>
+        Resume
+        </a>
+      </>
+    )
+  }
+
 
   return (
     <>
@@ -46,16 +64,7 @@ export default function Header() {
        <h1 css={[style.fadeTxt, style.incon]}>{label}</h1>
       </a>
         <div css={[layout.flex, layout.row, layout.alignC]}>
-        <a href="#contact"
-            css={headerTextCss}
-            >
-          Let's Talk
-        </a>
-        <a href="https://github.com/Quintin-Russell/Quintin-Russell/blob/main/Quintin%20Russell%20Resume.pdf"
-        target="_blank"
-            css={headerTextCss}>
-          Resume
-        </a>
+          {renderHeaderTxt(screenSize)}
           <Menu setMenuDisplay={setMenuDisplay}
                 menuDisplay={menuDisplay}/>
       </div>

@@ -21,6 +21,12 @@ row: css`
 flex-direction: row;
 `,
 
+rowMobile: css`
+@media (max-width: 768px){
+  flex-direction: column;
+}
+`,
+
 col: css`
 flex-direction: column;
 `,
@@ -61,6 +67,10 @@ flex-basis: 50%
 
 fitContent: css`
 width:fit-content;
+`,
+
+width10: css`
+width: 10%;
 `,
 
 width20: css`
@@ -105,6 +115,10 @@ bottomPadding: css`
 padding-bottom: 5%;
 `,
 
+topPadding: css`
+padding-top: 2rem;
+`,
+
 leftPadding: css`
 padding-left: 1rem;
 `,
@@ -127,6 +141,10 @@ margin: 1rem;
 
 margin2rem: css`
 margin: 2rem;
+`,
+
+topMargin: css`
+margin-top: 2rem;
 `,
 
 leftMargin: css`

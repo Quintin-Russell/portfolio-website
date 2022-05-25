@@ -22,11 +22,7 @@ return (
 
 // props = obj
 function Tab(props) {
-  // const defaultCss = [layout.flex, layout.justCent, layout.alignC, style.incon, style.borderLight, style.cursor]
-  // const isHighlighted = (props.highlighted === props.obj.name)
-  //   ? [...defaultCss, style.highlightedTab]
-  //   : defaultCss
-  const defaultCss = [layout.flex, layout.justCent, layout.alignC, style.incon, style.borderLight, style.cursor]
+  const defaultCss = [layout.flex, layout.justCent, layout.alignC, style.incon, style.borderLight, style.textCent, style.cursor]
   const isHighlighted = () => (props.highlighted === props.obj.name)
     ? (
     <div data={props.obj.name}

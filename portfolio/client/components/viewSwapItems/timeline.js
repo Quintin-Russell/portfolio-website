@@ -9,4 +9,4 @@ const accomplishmentArr = [
   'Jan 2022: graduated from LearningFuze Accelerated Web Development program'
 ]
 
-export default new ViewSwapItem('Accomplishments', 'list', 'about', accomplishmentArr)
+export default new ViewSwapItem('Timeline', 'list', 'about', accomplishmentArr)

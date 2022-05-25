@@ -1,18 +1,23 @@
 /** @jsx jsx */
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { jsx, css } from '@emotion/react'
+import $ from 'jquery'
 
-import { RiFocusFill,
-        RiCheckboxBlankCircleLine,
-        RiArrowRightCircleLine,
-        RiArrowRightCircleFill,
-        RiArrowLeftCircleLine,
-        RiArrowLeftCircleFill,
-        RiPauseCircleFill,
-        RiPauseCircleLine,
-        RiPlayCircleFill,
-        RiPlayCircleLine} from "react-icons/ri"
+import {
+  RiFocusFill,
+  RiCheckboxBlankCircleLine,
+  RiArrowRightCircleLine,
+  RiArrowRightCircleFill,
+  RiPauseCircleFill,
+  RiPauseCircleLine,
+  RiPlayCircleFill,
+  RiPlayCircleLine
+} from "react-icons/ri"
 
+import {
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight
+} from "react-icons/md"
 
 import style from '../style/style'
 import layout from '../style/layout'
@@ -21,8 +26,12 @@ import layout from '../style/layout'
 
 export default function Carousel(props) {
   const [currentImg, setCurrentImg] = useState(0);
+  const [screenSize, setScreenSize] = useState(screen.width);
 
-  const nextImg= () => {
+  $(window).on('resize', () => setScreenSize(screen.width))
+
+
+  const nextImg = () => {
     if (currentImg === props.obj.text.length - 1) return setCurrentImg(0)
     const newState = currentImg + 1
     setCurrentImg(newState)
@@ -40,10 +49,10 @@ export default function Carousel(props) {
       index++;
       const currentIndex = index - 1;
       if (currentImg === currentIndex) {
-      return(
-        <li key={index.toString()}>
-          <RiFocusFill css={[style.cursor, style.dots]} />
-      </li>)
+        return (
+          <li key={index.toString()}>
+            <RiFocusFill css={[style.cursor, style.dots]} />
+          </li>)
       };
       return (
         <li onClick={() => setCurrentImg(currentIndex)} key={index.toString()}>
@@ -67,24 +76,44 @@ export default function Carousel(props) {
     );
   }
 
-    return (
-      <div css={[layout.flex, layout.width100, layout.row, layout.justSpbw, layout.alignC]}>
-        <div>
-          <RiArrowLeftCircleLine css={[style.arrow]} onClick={() => prevImg()} />
+  const renderCarousel = () => {
+    if (screenSize > 768) {
+      return (
+      <>
+        <div css={[layout.flex, layout.justCent, layout.width10]} onClick={() => prevImg()}>
+          <MdOutlineKeyboardArrowLeft css={[style.arrow]} />
         </div>
 
         <div css={[layout.flex, layout.col, layout.justCent, layout.alignC]}>
           {renderPhoto()}
           {renderDots()}
-          <div>
+        </div>
 
+          <div css={[layout.flex, layout.justCent, layout.width10]} onClick={() => nextImg()}>
+            <MdOutlineKeyboardArrowRight css={[style.arrow]} />
+        </div>
+      </>
+      )
+    } else {
+      return (
+        <>
+          <div css={[layout.flex, layout.col, layout.justCent, layout.alignC]}>
+            {renderPhoto()}
+            {renderDots()}
           </div>
-          <p css={[style.monts, style.textCent]}>{props.obj.text[currentImg].text}</p>
-        </div>
+        </>
+      )
+    }
+  }
 
-        <div css={[style.arrow]} onClick={() => nextImg()}>
-          <RiArrowRightCircleLine />
-        </div>
+  return (
+    <>
+      <div css={[layout.flex, layout.width100, layout.row, layout.justSpbw, layout.alignC]}>
+        {renderCarousel()}
       </div>
-    );
+      <div>
+        <p css={[style.monts, style.textCent]}>{props.obj.text[currentImg].text}</p>
+      </div>
+    </>
+  );
 }

@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import React, {useState,
-              useEffect} from "react";
+import React, {useState} from "react";
 import { jsx, css } from '@emotion/react'
+import $ from 'jquery'
 
 import Description from "./description";
 import ProjectImg from "./projectImg";
@@ -9,7 +9,13 @@ import ProjectImg from "./projectImg";
 import style from "../../style/style";
 import layout from "../../style/layout"
 
+const contDivCss = [layout.flex, layout.width100, layout.alignC, layout.justCent]
+
 export default function Project(props) {
+  const [screenSize, setScreenSize] = useState(screen.width);
+
+  $(window).on('resize', () => setScreenSize(screen.width))
+
   const alternate = () => {
     if (props.index % 2) {
       return (
@@ -34,8 +40,8 @@ export default function Project(props) {
     <>
       <div
       style={{backgroundColor: 'black'}}
-      css={[layout.flex, layout.margin2rem, layout.width100, layout.alignC, layout.justCent]}>
-      <div css={[layout.flex, layout.width80, layout.alignC, layout.justSpbw]}>
+      css={(screenSize > 768) ? [...contDivCss, layout.margin2rem] : contDivCss}>
+      <div css={[layout.flex, layout.rowMobile, layout.width80, layout.alignC, layout.justSpbw]}>
         {alternate()}
       </div>
 

@@ -62,7 +62,7 @@ export default function Projects() {
       speed={0.5}
       factor={1.2}>
         <Header />
-        <div css={[layout.flex, layout.row, layout.height100, layout.alignC, layout.justCent]}>
+          <div css={[layout.flex, layout.rowMobile, layout.height100, layout.alignC, layout.justCent, layout.topMargin]}>
           <div css={[layout.flex, layout.col, layout.flex50]}>
             <p css={[layout.margin0, layout.flex, layout.flex50, layout.justCent, style.incon, style.font3rem]}>Projects</p>
           </div>
@@ -82,13 +82,13 @@ export default function Projects() {
 
           {
             projects.map((x,index) => {
-              startSticky += 1.25
+              startSticky += 1.25 //og=1.25
               return (
                 <ParallaxLayer
                   key={index}
                   sticky={{
                     start: startSticky,
-                    end: endSticky,
+                    end: endSticky
                   }}
                   factor={1}
                   speed={0.75}>
@@ -105,18 +105,7 @@ export default function Projects() {
       offset={5}
       factor={1}
       css={[layout.flex, layout.justCent, layout.alignC, layout.width80]}>
-        {/* <div css={[layout.col, layout.width80, layout.flex, layout.justCent, layout.alignC, style.fade, style.borderLight]}>
-          <p css={[style.monts, style.textCent, style.font2rem]}>
-          Do you have an idea of What you want to create?
-          A new feature for your website?
-          A new way for your clients to communicate with you?
-          I would love to help out in the design and build process.
-          Click the link below and let's make your idea a reality!</p>
-            <a href=" #contact">
-              <button css={[layout.button]}>Contact Me</button>
-            </a>
-        </div> */}
-          <div css={[layout.flex, layout.row, layout.width80, layout.alignC, layout.justCent]}>
+          <div css={[layout.flex, layout.rowMobile, layout.width80, layout.alignC, layout.justCent]}>
             <div css={[layout.flex, layout.col, layout.flex50, style.textCent]}>
             <p css={[layout.margin0, layout.flex, layout.flex50, layout.justCent, style.monts, style.font1rem]}>
                 Do you have an idea of what you want to create? <br />
