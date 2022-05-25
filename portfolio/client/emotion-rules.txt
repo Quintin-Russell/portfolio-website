@@ -1,0 +1,18 @@
+layout:
+-display (flex)
+-layout(col or row)
+-align-items
+-justify-content
+-height
+-width (flex basis)
+-margin
+-padding
+-custom
+
+
+style:
+-text align
+-font size
+-font
+-font styles
+-custom
