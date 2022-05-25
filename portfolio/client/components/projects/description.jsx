@@ -8,6 +8,9 @@ import TechIconList from "./techIconList";
 import style from "../../style/style";
 import layout from "../../style/layout"
 
+const cont = [layout.flex, layout.col, layout.alignC, layout.justCent]
+const boldPfDisp = [style.pfDisp, style.bold]
+
 export default function Description(props) {
   const [screenSize, setScreenSize] = useState(screen.width);
 
@@ -17,8 +20,8 @@ export default function Description(props) {
     if (screenSize > 768) {
       return (
         <>
-          <section css={[layout.flex, layout.col, layout.alignC, layout.justCent]}>
-            <p css={[style.pfDisp, style.font2rem, style.bold]}>Tech Used:</p>
+          <section css={cont}>
+            <p css={[...boldPfDisp, style.font2rem]}>Tech Used:</p>
             <TechIconList techs={props.project.tech} />
           </section>
         </>
@@ -27,10 +30,10 @@ export default function Description(props) {
   }
 
   return (
-    <div css={[layout.flex, layout.col, layout.flex66, layout.alignC, layout.justCent]}>
+    <div css={[...cont, layout.flex66]}>
       <section css={[style.textCent]}>
-        <p css={[style.pfDisp, style.font3rem, style.bold, layout.margin0]}>{props.project.name}</p>
-        <p css={[style.monts, style.font1halfrem, style.light]}>{props.project.description}</p>
+        <p css={[...boldPfDisp,  layout.margin0, style.font3rem]}>{props.project.name}</p>
+        <p css={[style.font1halfrem, style.monts, style.light]}>{props.project.description}</p>
       </section>
       {renderTechUsed(screenSize)}
     </div>
