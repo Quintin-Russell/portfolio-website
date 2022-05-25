@@ -19,7 +19,7 @@ const inputCss = [layout.width100, layout.leftMargin, layout.leftPadding, layout
 const labelCss = [layout.flex, layout.row, layout.marginHalfRem]
 const inputCont = [layout.flex, layout.col, style.incon]
 const toFrom = [layout.marginHalfRem, style.font1rem, style.incon]
-const contDiv = [layout.flex, layout.width100, layout.col, layout.justStart]
+const contDiv = [layout.flex, layout.col, layout.justStart, layout.width100]
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(null)
@@ -46,7 +46,7 @@ if (!submitted){
     <>
       <div css={contDiv}>
         <p css={toFrom}>To:
-          <span css={[style.pfDisp, style.font2rem, layout.leftPadding]}>Quintin</span>
+          <span css={[layout.leftPadding, style.font2rem, style.pfDisp]}>Quintin</span>
         </p>
         <p css={toFrom}>From:</p>
       </div>
@@ -152,7 +152,7 @@ if (!submitted){
           <div css={[layout.flex, layout.justEnd]}>
             <input type="submit"
               value={`-SEND-`}
-              css={[style.incon, style.font1rem, style.hoverA, layout.padding25]}
+              css={[layout.padding25, style.font1rem, style.incon, style.hoverA]}
               style={{ width: 'fit-content', backgroundColor: '#fafafa00' }} />
           </div>
         </div>
