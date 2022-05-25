@@ -48,7 +48,7 @@ export default function Contact() {
           factor={0.5} //original 1.2
           >
 
-          <div css={[layout.flex, layout.row, layout.height100, layout.alignC, layout.justCent]}>
+          <div css={[layout.flex, layout.rowMobile, layout.height100, layout.alignC, layout.justCent]}>
             <div css={[layout.flex, layout.col, layout.flex50]}>
               <p css={[layout.margin0, layout.flex, layout.flex50, layout.justCent, style.incon, style.font3rem]}>Contact Me</p>
             </div>
