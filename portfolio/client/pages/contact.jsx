@@ -43,9 +43,9 @@ export default function Contact() {
       </ParallaxLayer>
 
         <ParallaxLayer
-          offset={0.5} // original 0.1
+          offset={0.5}
           speed={0.5}
-          factor={0.5} //original 1.2
+          factor={0.5}
           >
 
           <div css={[layout.flex, layout.rowMobile, layout.height100, layout.alignC, layout.justCent]}>
