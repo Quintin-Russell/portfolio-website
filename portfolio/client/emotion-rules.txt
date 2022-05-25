@@ -15,4 +15,5 @@ style:
 -font size
 -font
 -font styles
+-border
 -custom
