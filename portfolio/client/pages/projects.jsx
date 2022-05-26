@@ -1,6 +1,8 @@
 /** @jsx jsx */
-import React, {useState,
-              useEffect} from "react";
+import React, {
+  useState,
+  useEffect
+} from "react";
 import { jsx, css } from '@emotion/react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
@@ -21,7 +23,7 @@ export default function Projects() {
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
-     fetchReq('/api/projects', setProjects)
+    fetchReq('/api/projects', setProjects)
   }, [])
 
   setTimeout(() => {
@@ -47,91 +49,91 @@ export default function Projects() {
   let endSticky = 4;
   return (
     <>
-    <Parallax pages={6.15}>
+      <Parallax pages={6.15}>
 
-      <ParallaxLayer
-        className="bkg1" />
+        <ParallaxLayer
+          css={[layout.bkg1]} />
 
-      <ParallaxLayer
-      offset={1}
-      factor={1.5}
-      className="bkg2" />
+        <ParallaxLayer
+          offset={1}
+          factor={1.5}
+          css={[layout.bkg2]} />
 
-      <ParallaxLayer
-        offset={4.5}
-        factor={1.65}
-        className="bkg3">
+        <ParallaxLayer
+          offset={4.5}
+          factor={1.65}
+          css={[layout.bkg3]}>
           <Footer />
-      </ParallaxLayer>
+        </ParallaxLayer>
 
-      <ParallaxLayer
-      speed={0.5}
-      factor={1.2}>
-        <Header />
+        <ParallaxLayer
+          speed={0.5}
+          factor={1.2}>
+          <Header />
           <div css={[layout.flex, layout.rowMobile, layout.alignC, layout.justCent, layout.height100, layout.topMargin]}>
-          <div css={col50Cont}>
-            <p css={[layout.flex, layout.flex50, layout.justCent, layout.margin0, style.font3rem, style.incon]}>Projects</p>
+            <div css={col50Cont}>
+              <p css={[layout.flex, layout.flex50, layout.justCent, layout.margin0, style.font3rem, style.incon]}>Projects</p>
+            </div>
+            <div css={[...col50Cont, layout.marginAuto]}>
+              <Typewriter
+                font='pfDisp'
+                fontSize='font3rem'
+                tarString={tarString}
+                bold={tarString.split(" ")}
+                cursorDisappear={true}
+                interval={300}
+              />
+              {render2ndTW(firstTWCompleted)}
+            </div>
           </div>
-          <div css={[...col50Cont, layout.marginAuto]}>
-            <Typewriter
-            font='pfDisp'
-            fontSize='font3rem'
-            tarString={tarString}
-            bold={tarString.split(" ")}
-            cursorDisappear={true}
-            interval={300}
-            />
-            {render2ndTW(firstTWCompleted)}
-          </div>
-        </div>
-      </ParallaxLayer>
+        </ParallaxLayer>
 
-          {
-            projects.map((x,index) => {
-              startSticky += 1.25 //og=1.25
-              return (
-                <ParallaxLayer
-                  key={index}
-                  sticky={{
-                    start: startSticky,
-                    end: endSticky
-                  }}
-                  factor={1}
-                  speed={0.75}>
-                  <Project project={x}
-                    key={x.name}
-                    index={index} />
-                </ParallaxLayer>
-              )
+        {
+          projects.map((x, index) => {
+            startSticky += 1.25 //og=1.25
+            return (
+              <ParallaxLayer
+                key={index}
+                sticky={{
+                  start: startSticky,
+                  end: endSticky
+                }}
+                factor={1}
+                speed={0.75}>
+                <Project project={x}
+                  key={x.name}
+                  index={index} />
+              </ParallaxLayer>
+            )
 
-            })
-          }
+          })
+        }
 
-      <ParallaxLayer
-      offset={5}
-      factor={1}
-      css={[layout.flex, layout.alignC, layout.justCent, layout.width80]}>
+        <ParallaxLayer
+          offset={5}
+          factor={1}
+          css={[layout.flex, layout.alignC, layout.justCent, layout.width80]}>
           <div css={[layout.flex, layout.rowMobile, layout.alignC, layout.justCent, layout.width80]}>
             <div css={[...col50Cont, style.textCent]}>
-            <p css={[...endText, layout.margin0]}>
+              <p css={[...endText, layout.margin0]}>
                 Do you have an idea of what you want to create? <br />
                 A new feature for your website?
                 A new way for your clients to communicate with you?
                 I would love to help out in the design and build process.
 
-            </p>
+              </p>
               <p css={endText}>Click to the right and let's make your idea a reality!</p>
-          </div>
+            </div>
             <div css={[...col50Cont, layout.marginAuto]}>
               <a
                 css={[layout.marginAuto, layout.padding25, style.font3rem, style.incon, style.hoverA]}
-              href=" #contact">
+                href=" #contact">
                 -Contact Me-
               </a>
+            </div>
           </div>
-        </div>
-      </ParallaxLayer>
-    </Parallax>
+        </ParallaxLayer>
+      </Parallax>
 
     </>
 

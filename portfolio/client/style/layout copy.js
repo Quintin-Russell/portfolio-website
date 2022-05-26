@@ -1,7 +1,4 @@
 import { css } from '@emotion/react'
-import background1 from '../../server/public/images/background/background1.jpg'
-import background2 from '../../server/public/images/background/background2.jpg'
-import background3 from '../../server/public/images/background/background3.jpeg'
 
 export default {
 //over-rides ctrls
@@ -11,21 +8,9 @@ display: hidden !important;
 
 //background
 bkg1: css`
-background-image: url(${background1});
-background-size: cover!important;
-overflow: hidden scroll;
-`,
-
-bkg2: css`
-background-image: url(${background2});
-background-size: cover!important;
-overflow: hidden scroll;
-`,
-
-bkg3: css`
-background-image: url(${background3});
-background-size: cover!important;
-overflow: hidden scroll;
+  background-image: url('../../server/public/images/background/background1.jpg');
+  background-size: cover!important;
+  overflow: hidden scroll;
 `,
 
 // scroll
@@ -35,8 +20,8 @@ overflow-y: scroll;
 
 // flexbox ctrls
 flex: css`
-display: flex;
-`,
+  display: flex;
+  `,
 
 row: css`
 flex-direction: row;
@@ -44,7 +29,7 @@ flex-direction: row;
 
 rowMobile: css`
 @media (max-width: 768px){
-flex-direction: column;
+  flex-direction: column;
 }
 `,
 

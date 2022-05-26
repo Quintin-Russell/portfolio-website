@@ -26,19 +26,19 @@ export default function Contact() {
 
         <ParallaxLayer
           factor={1}
-          className="bkg1">
+          css={[layout.bkg1]}>
           <Header />
         </ParallaxLayer>
 
         <ParallaxLayer
           factor={1}
           offset={1}
-          className="bkg2" />
+          css={[layout.bkg2]} />
 
         <ParallaxLayer
           factor={2}
           offset={2}
-          className="bkg3">
+          css={[layout.bkg3]}>
           <Footer />
         </ParallaxLayer>
 
@@ -49,7 +49,7 @@ export default function Contact() {
         >
           <div css={[layout.flex, layout.rowMobile, layout.height100, layout.alignC, layout.justCent]}>
             <div css={cont50}>
-              <p css={[...cont50, layout.justCent, layout.margin0, style.font3rem, style.incon]}>Contact Me</p>
+              <p css={[...cont50, layout.justCent, layout.margin0, style.textCent, style.font3rem, style.incon]}>Contact Me</p>
             </div>
             <div css={[...cont50, layout.marginAuto]}>
               <Typewriter

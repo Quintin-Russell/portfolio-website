@@ -33,7 +33,7 @@ export default function About() {
         pages={4.25}>
 
         <ParallaxLayer
-          className="bkg1"
+          css={[layout.bkg1]}
           factor={1}>
           <Header />
           <div css={[layout.flex, layout.row, layout.justCent]}>
@@ -52,12 +52,12 @@ export default function About() {
         <ParallaxLayer
           offset={1}
           factor={1.5}
-          className="bkg2" />
+          css={[layout.bkg2]} />
 
         <ParallaxLayer
           offset={2.7}
           factor={1.55}
-          className="bkg3">
+          css={[layout.bkg3]}>
           <Footer />
         </ParallaxLayer>
 

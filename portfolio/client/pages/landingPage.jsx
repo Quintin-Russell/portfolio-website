@@ -49,13 +49,13 @@ export default function LandingPage() {
       <Parallax pages={2.5}>
 
         <ParallaxLayer
-          className="bkg1"
+          css={[layout.bkg1]}
           factor={1}>
           <Header />
         </ParallaxLayer>
 
         <ParallaxLayer
-          className="bkg2"
+          css={[layout.bkg2]}
           offset={1}
           factor={1.5}>
           <Footer />

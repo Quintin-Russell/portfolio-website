@@ -19,26 +19,20 @@
   box-sizing: border-box;
 }
 
-.bkg-cartoon {
-  background-image: url("./images/background/background-cartoon.jpeg");
-  background-size: cover !important;
-  overflow: hidden scroll;
-}
-
-.bkg1 {
+/* .bkg1 {
   background-image: url("./images/background/background1.jpg");
   background-size: cover !important;
   overflow: hidden scroll;
-}
+} */
 
-.bkg2 {
+/* .bkg2 {
   background-image: url("./images/background/background2.jpg");
   background-size: cover !important;
   overflow: hidden scroll;
-}
+} */
 
-.bkg3 {
+/* .bkg3 {
   background-image: url("./images/background/background3.jpeg");
   background-size: cover !important;
   overflow: hidden scroll;
-}
+} */
