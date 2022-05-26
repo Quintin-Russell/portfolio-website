@@ -13,6 +13,8 @@ import postgresql from '../../../server/public/images/techIcons/postgresql.png'
 import python from '../../../server/public/images/techIcons/python.png'
 import sql from '../../../server/public/images/techIcons/sql.png'
 
+const imgCont = [layout.flex, layout.row, layout.justCent]
+
 export default function ToolsIcons() {
   return (
 <>
@@ -22,8 +24,8 @@ export default function ToolsIcons() {
       src={basics}
       alt='basic-web-dev-techs'/>
     </div>
-    <div css={[layout.flex, layout.justCent, layout.col]}>
-      <div css={[layout.flex, layout.row, layout.justCent]}>
+    <div css={[layout.flex, layout.col, layout.justCent]}>
+      <div css={imgCont}>
         <img css={style.img}
         src={react}
         alt="react.js" />
@@ -31,7 +33,7 @@ export default function ToolsIcons() {
         src={node}
         alt="nodeJS" />
       </div>
-      <div css={[layout.flex, layout.row, layout.justCent]}>
+          <div css={imgCont}>
         <img css={style.img}
         src={jquery}
         alt="jquery" />

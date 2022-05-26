@@ -5,21 +5,25 @@ import { jsx, css } from '@emotion/react'
 import style from "../../style/style";
 import layout from "../../style/layout"
 
+const contDiv = [layout.flex, layout.col, layout.alignC, layout.justCent]
+const montsBold = [layout.padding25, style.monts, style.bold]
+const light = [layout.margin0, style.light]
+
 export default function ToolsText() {
 
 return (
-  <div css={[layout.flex, layout.flex50, layout.col, layout.alignC, layout.justCent]}>
-    <p css={[style.monts, layout.padding25, style.bold]}>HTML</p>
-    <p css={[style.monts, layout.padding25, style.bold]}>CSS</p>
-    <div css={[layout.flex, layout.col, layout.alignC, layout.justCent, style.monts, layout.padding25, style.bold]}>
+  <div css={[...contDiv, layout.flex50]}>
+    <p css={montsBold}>HTML</p>
+    <p css={montsBold}>CSS</p>
+    <div css={[...montsBold, contDiv]}>
       <p>JavaScript</p>
-      <p css={[style.light, layout.margin0]}>React.js</p>
-      <p css={[style.light, layout.margin0]}>NodeJS</p>
-      <p css={[style.light, layout.margin0]}>jQuery</p>
-      <p css={[style.light, layout.margin0]}>PostgreSQL</p>
+      <p css={light}>React.js</p>
+      <p css={light}>NodeJS</p>
+      <p css={light}>jQuery</p>
+      <p css={light}>PostgreSQL</p>
     </div>
-    <p css={[style.monts, layout.padding25, style.bold]}>Python</p>
-    <p css={[style.monts, layout.padding25, style.bold]}>SQL</p>
+    <p css={montsBold}>Python</p>
+    <p css={montsBold}>SQL</p>
   </div>
 )
 }
