@@ -8,13 +8,13 @@ import layout from '../../style/layout'
 export default function ViewSwapList(props) {
   return (
     <>
-    <ul css={[layout.flex, layout.col]}>
-      {
-        props.obj.text.map(item => {
-          return <li key={item} css={[layout.padding2rem, style.incon]}>{item}</li>
-        })
-      }
-    </ul>
+      <ul css={[layout.flex, layout.col]}>
+        {
+          props.obj.text.map(item => {
+            return <li key={item} css={[layout.padding2rem, style.incon]}>{item}</li>
+          })
+        }
+      </ul>
     </>
   )
 }

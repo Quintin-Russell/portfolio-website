@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { jsx, css } from '@emotion/react'
 import $ from 'jquery'
 
@@ -39,13 +39,13 @@ export default function Project(props) {
   return (
     <>
       <div
-      style={{backgroundColor: 'black'}}
-      css={(screenSize > 768) ? [...contDivCss, layout.margin2rem] : contDivCss}>
-      <div css={[layout.flex, layout.rowMobile, layout.width80, layout.alignC, layout.justSpbw]}>
-        {alternate()}
-      </div>
+        style={{ backgroundColor: 'black' }}
+        css={(screenSize > 768) ? [...contDivCss, layout.margin2rem] : contDivCss}>
+        <div css={[layout.flex, layout.rowMobile, layout.width80, layout.alignC, layout.justSpbw]}>
+          {alternate()}
+        </div>
 
-    </div>
+      </div>
 
     </>
   )

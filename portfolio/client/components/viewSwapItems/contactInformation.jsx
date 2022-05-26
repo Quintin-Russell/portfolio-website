@@ -6,9 +6,11 @@ import style from '../../style/style'
 import layout from '../../style/layout'
 
 import ViewSwapItem from "./viewSwapConstructor"
-import { AiOutlineLinkedin,
-        AiOutlinePhone,
-        AiOutlineMail } from 'react-icons/ai'
+import {
+  AiOutlineLinkedin,
+  AiOutlinePhone,
+  AiOutlineMail
+} from 'react-icons/ai'
 import { VscGithub } from 'react-icons/vsc'
 import { HiOutlineDocumentText } from 'react-icons/hi'
 import { GoLocation } from 'react-icons/go'
@@ -27,8 +29,8 @@ const contactInfo = [
     <span>Email  </span>
     <span>
       <a css={aCss}
-      href="mailto:quinn.j.russell@gmail.com"
-      target="_blank">
+        href="mailto:quinn.j.russell@gmail.com"
+        target="_blank">
         <AiOutlineMail />
       </a>
     </span>

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { jsx, css } from '@emotion/react'
 import $ from 'jquery'
 
@@ -23,6 +23,10 @@ import style from '../style/style'
 import layout from '../style/layout'
 
 //props: hobbies (arr of objs)
+
+const cont = [layout.flex, layout.justCent, layout.alignC]
+const arrow = [layout.flex, layout.justCent, layout.width10]
+const dots = [style.cursor, style.dots]
 
 export default function Carousel(props) {
   const [currentImg, setCurrentImg] = useState(0);
@@ -51,17 +55,17 @@ export default function Carousel(props) {
       if (currentImg === currentIndex) {
         return (
           <li key={index.toString()}>
-            <RiFocusFill css={[style.cursor, style.dots]} />
+            <RiFocusFill css={dots} />
           </li>)
       };
       return (
         <li onClick={() => setCurrentImg(currentIndex)} key={index.toString()}>
-          <RiCheckboxBlankCircleLine css={[style.cursor, style.dots]} />
+          <RiCheckboxBlankCircleLine css={dots} />
         </li>
       )
     });
     return (
-      <ul css={[layout.flex, layout.row, layout.alignC, layout.width100, layout.padding0, layout.justCent, style.noListStyle]}>
+      <ul css={[...cont, layout.row, layout.width100, layout.padding0, style.noListStyle]}>
         {dotLiArr}
       </ul>
     );
@@ -70,7 +74,7 @@ export default function Carousel(props) {
   const renderPhoto = () => {
     const hobby = props.obj.text[currentImg];
     return (
-      <div css={[layout.flex, layout.justCent, layout.alignC]}>
+      <div css={cont}>
         {hobby.img.src}
       </div>
     );
@@ -80,16 +84,16 @@ export default function Carousel(props) {
     if (screenSize > 768) {
       return (
       <>
-        <div css={[layout.flex, layout.justCent, layout.width10]} onClick={() => prevImg()}>
+        <div css={arrow} onClick={() => prevImg()}>
           <MdOutlineKeyboardArrowLeft css={[style.arrow]} />
         </div>
 
-        <div css={[layout.flex, layout.col, layout.justCent, layout.alignC]}>
+        <div css={[...cont, layout.col]}>
           {renderPhoto()}
           {renderDots()}
         </div>
 
-          <div css={[layout.flex, layout.justCent, layout.width10]} onClick={() => nextImg()}>
+          <div css={arrow} onClick={() => nextImg()}>
             <MdOutlineKeyboardArrowRight css={[style.arrow]} />
         </div>
       </>
@@ -97,7 +101,7 @@ export default function Carousel(props) {
     } else {
       return (
         <>
-          <div css={[layout.flex, layout.col, layout.justCent, layout.alignC]}>
+          <div css={[...cont, layout.col]}>
             {renderPhoto()}
             {renderDots()}
           </div>

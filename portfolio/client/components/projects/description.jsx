@@ -32,7 +32,7 @@ export default function Description(props) {
   return (
     <div css={[...cont, layout.flex66]}>
       <section css={[style.textCent]}>
-        <p css={[...boldPfDisp,  layout.margin0, style.font3rem]}>{props.project.name}</p>
+        <p css={[...boldPfDisp, layout.margin0, style.font3rem]}>{props.project.name}</p>
         <p css={[style.font1halfrem, style.monts, style.light]}>{props.project.description}</p>
       </section>
       {renderTechUsed(screenSize)}

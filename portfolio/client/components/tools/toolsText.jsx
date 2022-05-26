@@ -11,19 +11,19 @@ const light = [layout.margin0, style.light]
 
 export default function ToolsText() {
 
-return (
-  <div css={[...contDiv, layout.flex50]}>
-    <p css={montsBold}>HTML</p>
-    <p css={montsBold}>CSS</p>
-    <div css={[...montsBold, contDiv]}>
-      <p>JavaScript</p>
-      <p css={light}>React.js</p>
-      <p css={light}>NodeJS</p>
-      <p css={light}>jQuery</p>
-      <p css={light}>PostgreSQL</p>
+  return (
+    <div css={[...contDiv, layout.flex50]}>
+      <p css={montsBold}>HTML</p>
+      <p css={montsBold}>CSS</p>
+      <div css={[...montsBold, contDiv]}>
+        <p>JavaScript</p>
+        <p css={light}>React.js</p>
+        <p css={light}>NodeJS</p>
+        <p css={light}>jQuery</p>
+        <p css={light}>PostgreSQL</p>
+      </div>
+      <p css={montsBold}>Python</p>
+      <p css={montsBold}>SQL</p>
     </div>
-    <p css={montsBold}>Python</p>
-    <p css={montsBold}>SQL</p>
-  </div>
-)
+  )
 }
