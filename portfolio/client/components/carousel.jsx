@@ -83,20 +83,20 @@ export default function Carousel(props) {
   const renderCarousel = () => {
     if (screenSize > 768) {
       return (
-      <>
-        <div css={arrow} onClick={() => prevImg()}>
-          <MdOutlineKeyboardArrowLeft css={[style.arrow]} />
-        </div>
+        <>
+          <div css={arrow} onClick={() => prevImg()}>
+            <MdOutlineKeyboardArrowLeft css={[style.arrow]} />
+          </div>
 
-        <div css={[...cont, layout.col]}>
-          {renderPhoto()}
-          {renderDots()}
-        </div>
+          <div css={[...cont, layout.col]}>
+            {renderPhoto()}
+            {renderDots()}
+          </div>
 
           <div css={arrow} onClick={() => nextImg()}>
             <MdOutlineKeyboardArrowRight css={[style.arrow]} />
-        </div>
-      </>
+          </div>
+        </>
       )
     } else {
       return (

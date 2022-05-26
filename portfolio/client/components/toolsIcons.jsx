@@ -17,43 +17,43 @@ const rowCont = [layout.flex, layout.row, layout.justCent]
 
 export default function ToolsIcons() {
   return (
-<>
-   <div css={[layout.flex, layout.col]}>
-    <div css={[layout.flex, layout.alignC, layout.justCent]}>
-      <img
-      css={style.techIconBasics}
-      src={basics}
-      alt='basic-web-dev-techs'/>
-    </div>
-    <div css={[layout.flex, layout.justCent, layout.col]}>
-      <div css={rowCont}>
-        <img css={style.img}
-        src={react}
-        alt="react.js" />
-        <img css={style.img}
-        src={node}
-        alt="nodeJS" />
-      </div>
-      <div css={rowCont}>
-        <img css={style.img}
-        src={jquery}
-        alt="jquery" />
-        <img css={style.img}
-        src={postgresql}
-        alt="postgreSQL" />
-    </div>
-    </div>
-      <div css={[layout.flex, layout.row, layout.alignC, layout.justSpbw]}>
+    <>
+      <div css={[layout.flex, layout.col]}>
+        <div css={[layout.flex, layout.alignC, layout.justCent]}>
+          <img
+            css={style.techIconBasics}
+            src={basics}
+            alt='basic-web-dev-techs' />
+        </div>
+        <div css={[layout.flex, layout.justCent, layout.col]}>
+          <div css={rowCont}>
+            <img css={style.img}
+              src={react}
+              alt="react.js" />
+            <img css={style.img}
+              src={node}
+              alt="nodeJS" />
+          </div>
+          <div css={rowCont}>
+            <img css={style.img}
+              src={jquery}
+              alt="jquery" />
+            <img css={style.img}
+              src={postgresql}
+              alt="postgreSQL" />
+          </div>
+        </div>
+        <div css={[layout.flex, layout.row, layout.alignC, layout.justSpbw]}>
           <img css={style.img}
             src={python}
             alt="python" />
           <img css={style.img}
             src={sql}
             alt="SQL" />
+        </div>
       </div>
-  </div>
 
-</>
+    </>
 
   )
 }
