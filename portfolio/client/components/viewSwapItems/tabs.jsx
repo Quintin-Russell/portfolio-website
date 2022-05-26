@@ -6,6 +6,7 @@ import style from '../../style/style'
 import layout from '../../style/layout'
 
 //props = objList, highlightedTab
+const defaultCss = [layout.flex, layout.alignC, layout.justCent, style.textCent, style.incon, style.borderLight,  style.cursor]
 
 export default function Tabs(props) {
   const width = 100 / props.objList.length;
@@ -22,12 +23,12 @@ return (
 
 // props = obj
 function Tab(props) {
-  const defaultCss = [layout.flex, layout.justCent, layout.alignC, style.incon, style.borderLight, style.textCent, style.cursor]
+
   const isHighlighted = () => (props.highlighted === props.obj.name)
     ? (
     <div data={props.obj.name}
       style={{ width: props.width + '%' }}
-        css={[style.highlightedTab, style.noBorderBottom]}>
+        css={[style.noBorderBottom, style.highlightedTab]}>
     </div>
   )
     :(

@@ -11,7 +11,7 @@ export default function ViewSwapList(props) {
     <ul css={[layout.flex, layout.col]}>
       {
         props.obj.text.map(item => {
-          return <li key={item} css={[style.incon, layout.padding2rem]}>{item}</li>
+          return <li key={item} css={[layout.padding2rem, style.incon]}>{item}</li>
         })
       }
     </ul>
