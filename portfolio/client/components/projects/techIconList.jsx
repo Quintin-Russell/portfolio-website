@@ -11,11 +11,13 @@ import ReactJS from '../../../server/public/images/techIcons/react.png'
 import NodeJS from '../../../server/public/images/techIcons/node.png'
 import PostgreSQL from '../../../server/public/images/techIcons/postgresql.png'
 
-const imgObj = {'JavaScript': JavaScript,
-                'jQuery': jQuery,
-                'ReactJS': ReactJS,
-                'NodeJS': NodeJS,
-                'PostgreSQL': PostgreSQL}
+const imgObj = {
+  'JavaScript': JavaScript,
+  'jQuery': jQuery,
+  'ReactJS': ReactJS,
+  'NodeJS': NodeJS,
+  'PostgreSQL': PostgreSQL
+}
 
 export default function TechIconList(props) {
   const techArr = JSON.parse(props.techs)
@@ -23,8 +25,8 @@ export default function TechIconList(props) {
     if (!tech) return null
     return (
       <img src={imgObj[tech]}
-      css={[layout.width20]}
-      alt={tech} />
+        css={[layout.width20]}
+        alt={tech} />
     )
   }
 

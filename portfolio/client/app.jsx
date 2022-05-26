@@ -37,14 +37,7 @@ export default function App(props) {
 
   return (
     <>
-    {/* <Parallax
-        // pages={3}
-        pages={1}
-    > */}
       {determinePage(hash)}
-    {/* </Parallax> */}
-    {/* <Footer /> */}
-
     </>
   )
 

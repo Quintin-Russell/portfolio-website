@@ -9,9 +9,9 @@ import Menu from './menu'
 import style from '../style/style'
 import layout from '../style/layout'
 
-const headerCss = [style.fade, layout.flex, layout.row, layout.justSpbw]
+const headerCss = [layout.flex, layout.row, layout.justSpbw, style.fade]
 const headerTextCss = [style.incon, style.whiteUnderline, style.headerA, style.hoverA]
-const aCss = [style.hoverA, layout.padding25, layout.marginHalfRem]
+const aCss = [layout.padding25, layout.marginHalfRem, style.hoverA]
 
 export default function Header() {
   const [screenSize, setScreenSize] = useState(screen.width);
@@ -25,17 +25,17 @@ export default function Header() {
 
   const renderMenu = () => {
     if (menuDisplay) return (
-        <>
+      <>
         <div css={[layout.flex, layout.justEnd]}>
-            <div css={[style.incon, layout.flex, layout.col, layout.justSpbw, layout.alignC, layout.fitContent, layout.menuCont, style.borderLight, style.fade]}>
+          <div css={[layout.flex, layout.col, layout.justSpbw, layout.alignC, layout.fitContent, layout.menuCont, style.incon, style.borderLight, style.fade]}>
             <a css={aCss} href="#about">{`-ABOUT-`}</a>
             <a css={aCss} href="#projects">{`-SEE MY WORK-`}</a>
             <a css={aCss} href="#contact">{`-CONTACT ME-`}</a>
-            </div>
           </div>
-        </>
-      )
-    }
+        </div>
+      </>
+    )
+  }
 
   const renderHeaderTxt = (screenSize) => {
     if (screenSize > 768) return (
@@ -47,9 +47,9 @@ export default function Header() {
         </a>
 
         <a href="https://github.com/Quintin-Russell/Quintin-Russell/blob/main/Quintin%20Russell%20Resume.pdf"
-        target="_blank"
+          target="_blank"
           css={headerTextCss}>
-        Resume
+          Resume
         </a>
       </>
     )
@@ -58,19 +58,19 @@ export default function Header() {
 
   return (
     <>
-    <header css={headerCss}>
-      <a href=""
-      css={style.noUnderline}>
-       <h1 css={[style.fadeTxt, style.incon]}>{label}</h1>
-      </a>
+      <header css={headerCss}>
+        <a href=""
+          css={style.noUnderline}>
+          <h1 css={[style.incon, style.fadeTxt]}>{label}</h1>
+        </a>
         <div css={[layout.flex, layout.row, layout.alignC]}>
           {renderHeaderTxt(screenSize)}
           <Menu setMenuDisplay={setMenuDisplay}
-                menuDisplay={menuDisplay}/>
-      </div>
-    </header>
+            menuDisplay={menuDisplay} />
+        </div>
+      </header>
 
-        {renderMenu()}
-        </>
+      {renderMenu()}
+    </>
   )
 }

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, {useReducer} from 'react'
+import React, { useReducer } from 'react'
 import { jsx, css } from '@emotion/react'
 import $ from 'jquery'
 
@@ -14,13 +14,15 @@ import layout from '../style/layout'
 
 // props= objList (arr of objects)
 
+const viewSwapCont = [layout.flex, layout.col, layout.justCent, layout.alignC, style.fade, style.borderLight]
+
 export default function ViewSwap(props) {
   const [highlightedTab, setHighlightedTab] = useReducer(
-  (highlightedTab, e) => {
+    (highlightedTab, e) => {
       if ($(e.target).attr('data')) return $(e.target).attr('data')
       return highlightedTab
-  },
-props.objList[0].name
+    },
+    props.objList[0].name
   )
 
   const determineItem = (obj) => {
@@ -33,17 +35,17 @@ props.objList[0].name
   return (
     <>
       <div
-      onClick={(e) => setHighlightedTab(e)}
-      css={[layout.flex, layout.col, layout.scroll, layout.width80, layout.height80]}>
-      <Tabs objList={props.objList}
-            highlighted={highlightedTab}/>
-        <div css={[layout.flex, layout.justCent, layout.alignC, style.bold, style.viewSwapHeader, style.highlightedTab]}>
-          <h2 css={[layout.margin0, layout.padding25, style.pfDispS]}>{highlightedTab}</h2>
+        onClick={(e) => setHighlightedTab(e)}
+        css={[layout.flex, layout.col, layout.height80, layout.width80, layout.scroll]}>
+        <Tabs objList={props.objList}
+          highlighted={highlightedTab} />
+        <div css={[layout.flex, layout.alignC, layout.justCent, style.bold, style.viewSwapHeader, style.highlightedTab]}>
+          <h2 css={[layout.margin0, layout.padding25, style.pfDisp]}>{highlightedTab}</h2>
         </div>
-        <div css={(highlightedTab === 'Hobbies') ? [layout.flex, layout.col, layout.justCent, layout.alignC, style.fade, style.borderLight, layout.topPadding] : [layout.flex, layout.col, layout.justCent, layout.alignC, style.fade, style.borderLight, layout.padding2rem]}>
+        <div css={(highlightedTab === 'Hobbies') ? [...viewSwapCont, layout.topPadding] : [...viewSwapCont, layout.padding2rem]}>
           {props.objList.map(obj => determineItem(obj))}
         </div>
-    </div>
+      </div>
 
     </>
   )

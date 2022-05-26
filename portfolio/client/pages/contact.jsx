@@ -1,8 +1,5 @@
 /** @jsx jsx */
-import React, {
-  useState,
-  useEffect
-} from "react";
+import React from "react";
 import { jsx, css } from '@emotion/react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
@@ -16,43 +13,45 @@ import contactInformation from "../components/viewSwapItems/contactInformation";
 import style from "../style/style";
 import layout from "../style/layout"
 
+const cont50 = [layout.flex, layout.col, layout.flex50]
+
 export default function Contact() {
   const tarString = `Let's Talk`
   const viewSwapItems = [contactForm, contactInformation]
   return (
     <>
-    <Parallax
-    pages={4}
-    >
-      <ParallaxLayer
-        factor={1}
-        className="bkg1">
+      <Parallax
+        pages={4}
+      >
+
+        <ParallaxLayer
+          factor={1}
+          css={[layout.bkg1]}>
           <Header />
-      </ParallaxLayer>
+        </ParallaxLayer>
 
-      <ParallaxLayer
-        factor={1}
-        offset={1}
-        className="bkg2" />
+        <ParallaxLayer
+          factor={1}
+          offset={1}
+          css={[layout.bkg2]} />
 
-      <ParallaxLayer
-        factor={2}
-        offset={2}
-        className="bkg3">
+        <ParallaxLayer
+          factor={2}
+          offset={2}
+          css={[layout.bkg3]}>
           <Footer />
-      </ParallaxLayer>
+        </ParallaxLayer>
 
         <ParallaxLayer
           offset={0.5}
           speed={0.5}
           factor={0.5}
-          >
-
+        >
           <div css={[layout.flex, layout.rowMobile, layout.height100, layout.alignC, layout.justCent]}>
-            <div css={[layout.flex, layout.col, layout.flex50]}>
-              <p css={[layout.margin0, layout.flex, layout.flex50, layout.justCent, style.incon, style.font3rem]}>Contact Me</p>
+            <div css={cont50}>
+              <p css={[...cont50, layout.justCent, layout.margin0, style.textCent, style.font3rem, style.incon]}>Contact Me</p>
             </div>
-            <div css={[layout.flex, layout.col, layout.flex50, layout.marginAuto]}>
+            <div css={[...cont50, layout.marginAuto]}>
               <Typewriter
                 font='pfDisp'
                 fontSize='font3rem'
@@ -65,18 +64,17 @@ export default function Contact() {
         </ParallaxLayer>
 
         <ParallaxLayer
-        sticky={{
-          start: 1.3,
-          stop: 3
-        }}
-        speed={0.2}>
-          <div css={[layout.flex, layout.justCent, layout.alignC]}>
-            <ViewSwap objList={viewSwapItems}/>
+          sticky={{
+            start: 1.3,
+            stop: 3
+          }}
+          speed={0.2}>
+          <div css={[layout.flex, layout.alignC, layout.justCent]}>
+            <ViewSwap objList={viewSwapItems} />
           </div>
-
         </ParallaxLayer>
 
-    </Parallax>
+      </Parallax>
     </>
   )
 }

@@ -24,7 +24,8 @@ export default function ViewSwapText(props) {
             return (
               <p key={Math.random() * 100000} css={[style.monts]}>{txt}</p>
             )
-          })
+          }
+          )
         }
       </div>
     </>

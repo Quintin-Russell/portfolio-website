@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import React, {useState,
-                useEffect} from "react";
+import React, { useState } from "react";
 import { jsx, css } from '@emotion/react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import $ from 'jquery'
@@ -8,6 +7,7 @@ import $ from 'jquery'
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Typewriter from "../components/typewriter";
+
 import style from "../style/style";
 import layout from "../style/layout"
 
@@ -20,8 +20,8 @@ export default function LandingPage() {
   $(window).on('resize', () => setScreenSize(screen.width))
 
   setTimeout(() => {
-      setFirstTWCompleted(true)
-    }, 4400)
+    setFirstTWCompleted(true)
+  }, 4400)
 
   const determinePgNum = (screenSize) => {
     if (screenSize > 768) return 3.5
@@ -46,24 +46,26 @@ export default function LandingPage() {
 
   return (
     <>
-    <Parallax pages={2.5}>
-    <ParallaxLayer
-    className="bkg1"
-    factor={1}>
-    <Header />
-    </ParallaxLayer>
-    <ParallaxLayer
-    className="bkg2"
-    offset={1}
-    factor={1.5}>
-      <Footer />
-    </ParallaxLayer>
+      <Parallax pages={2.5}>
 
-<ParallaxLayer
-offset={0.5}
-speed={0.75}
-factor={2}
->
+        <ParallaxLayer
+          css={[layout.bkg1]}
+          factor={1}>
+          <Header />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          css={[layout.bkg2]}
+          offset={1}
+          factor={1.5}>
+          <Footer />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={0.5}
+          speed={0.75}
+          factor={2}
+        >
           <div css={layout.margin1rem}>
             <div css={(screenSize > 768) ? [...jobDesc, style.font3rem] : [...jobDesc, style.font2halfrem]}>
               <span css={style.landingPgTxt_or}>{`<`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span>
@@ -74,7 +76,7 @@ factor={2}
             <div css={(screenSize > 768) ? [...jobDesc, style.font3rem] : [...jobDesc, style.font2halfrem]}>
               <span css={style.landingPgTxt_bl}>{`tools=[“JavaScript”, “Python”, “CSS”, “HTML”]`}</span>
             </div>
-            <div css={(screenSize > 768) ? [...jobDesc, style.landingPgTxt_or, style.font3rem] : [...jobDesc, style.landingPgTxt_or, style.font2halfrem]}>
+            <div css={(screenSize > 768) ? [...jobDesc, style.font3rem, style.landingPgTxt_or] : [...jobDesc, style.font2halfrem, style.landingPgTxt_or]}>
               {`>`}
             </div>
 
@@ -97,9 +99,9 @@ factor={2}
           <div css={(screenSize > 768) ? [...jobDesc, layout.margin1rem, style.font3rem] : [...jobDesc, layout.margin1rem, style.font2halfrem]}>
             <span css={style.landingPgTxt_or}>{`</`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span><span css={style.landingPgTxt_or}>{`>`}</span>
           </div>
-</ParallaxLayer>
+        </ParallaxLayer>
 
-    </Parallax>
+      </Parallax>
     </>
   )
 }
