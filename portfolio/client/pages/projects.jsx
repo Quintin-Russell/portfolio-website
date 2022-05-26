@@ -13,6 +13,9 @@ import style from "../style/style";
 import layout from "../style/layout"
 import fetchReq from '../components/functions/fetch'
 
+const endText = [layout.flex, layout.justCent, layout.flex50, style.font1rem, style.monts]
+const col50Cont = [layout.flex, layout.col, layout.flex50]
+
 export default function Projects() {
   const [firstTWCompleted, setFirstTWCompleted] = useState(null)
   const [projects, setProjects] = useState([])
@@ -45,12 +48,15 @@ export default function Projects() {
   return (
     <>
     <Parallax pages={6.15}>
+
       <ParallaxLayer
         className="bkg1" />
+
       <ParallaxLayer
       offset={1}
       factor={1.5}
       className="bkg2" />
+
       <ParallaxLayer
         offset={4.5}
         factor={1.65}
@@ -62,11 +68,11 @@ export default function Projects() {
       speed={0.5}
       factor={1.2}>
         <Header />
-          <div css={[layout.flex, layout.rowMobile, layout.height100, layout.alignC, layout.justCent, layout.topMargin]}>
-          <div css={[layout.flex, layout.col, layout.flex50]}>
-            <p css={[layout.margin0, layout.flex, layout.flex50, layout.justCent, style.incon, style.font3rem]}>Projects</p>
+          <div css={[layout.flex, layout.rowMobile, layout.alignC, layout.justCent, layout.height100, layout.topMargin]}>
+          <div css={col50Cont}>
+            <p css={[layout.flex, layout.flex50, layout.justCent, layout.margin0, style.font3rem, style.incon]}>Projects</p>
           </div>
-          <div css={[layout.flex, layout.col, layout.flex50, layout.marginAuto]}>
+          <div css={[...col50Cont, layout.marginAuto]}>
             <Typewriter
             font='pfDisp'
             fontSize='font3rem'
@@ -104,21 +110,21 @@ export default function Projects() {
       <ParallaxLayer
       offset={5}
       factor={1}
-      css={[layout.flex, layout.justCent, layout.alignC, layout.width80]}>
-          <div css={[layout.flex, layout.rowMobile, layout.width80, layout.alignC, layout.justCent]}>
-            <div css={[layout.flex, layout.col, layout.flex50, style.textCent]}>
-            <p css={[layout.margin0, layout.flex, layout.flex50, layout.justCent, style.monts, style.font1rem]}>
+      css={[layout.flex, layout.alignC, layout.justCent, layout.width80]}>
+          <div css={[layout.flex, layout.rowMobile, layout.alignC, layout.justCent, layout.width80]}>
+            <div css={[...col50Cont, style.textCent]}>
+            <p css={[...endText, layout.margin0]}>
                 Do you have an idea of what you want to create? <br />
                 A new feature for your website?
                 A new way for your clients to communicate with you?
                 I would love to help out in the design and build process.
 
             </p>
-              <p css={[layout.flex, layout.flex50, layout.justCent, style.monts, style.font1rem]}>Click to the right and let's make your idea a reality!</p>
+              <p css={endText}>Click to the right and let's make your idea a reality!</p>
           </div>
-            <div css={[layout.flex, layout.col, layout.flex50, layout.marginAuto]}>
+            <div css={[...col50Cont, layout.marginAuto]}>
               <a
-                css={[layout.marginAuto, style.incon, style.font3rem, layout.padding25, style.hoverA]}
+                css={[layout.marginAuto, layout.padding25, style.font3rem, style.incon, style.hoverA]}
               href=" #contact">
                 -Contact Me-
               </a>

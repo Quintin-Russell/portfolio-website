@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { jsx, css } from '@emotion/react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import $ from 'jquery'
@@ -29,14 +29,14 @@ export default function About() {
   return (
     <>
 
-    <Parallax
-    pages={4.25}>
+      <Parallax
+        pages={4.25}>
 
-      <ParallaxLayer
-        className="bkg1"
-        factor={1}>
+        <ParallaxLayer
+          className="bkg1"
+          factor={1}>
           <Header />
-              <div css={[layout.flex, layout.row, layout.justCent]}>
+          <div css={[layout.flex, layout.row, layout.justCent]}>
             <Typewriter
               font='incon'
               fontSize='font3rem'
@@ -48,48 +48,50 @@ export default function About() {
             />
           </div>
         </ParallaxLayer>
-      <ParallaxLayer
-        offset={1}
-        factor={1.5}
-        className="bkg2" />
-      <ParallaxLayer
-        offset={2.7}
-        factor={1.55}
-        className="bkg3">
+
+        <ParallaxLayer
+          offset={1}
+          factor={1.5}
+          className="bkg2" />
+
+        <ParallaxLayer
+          offset={2.7}
+          factor={1.55}
+          className="bkg3">
           <Footer />
         </ParallaxLayer>
 
-  <ParallaxLayer
-  offset={0.5}
-  factor={1.5}
-  speed={0.75}>
+        <ParallaxLayer
+          offset={0.5}
+          factor={1.5}
+          speed={0.75}>
           <div css={(screenSize > 768) ? [layout.flex, layout.justEnd] : [layout.flex, layout.justCent]}>
-      <p css={[layout.margin0, layout.flex, layout.flex50, layout.justCent, style.incon, style.font3rem]}>Tools</p>
-    </div>
-    <div css={[layout.flex, layout.alignC, layout.justSpbw, layout.rowMobile]}>
-      <div css={[layout.flex, layout.flex50, layout.justCent]}>
-        <ToolsIcons />
-      </div>
-      <ToolsText />
-    </div>
-  </ParallaxLayer>
+            <p css={[layout.margin0, layout.flex, layout.flex50, layout.justCent, style.incon, style.font3rem]}>Tools</p>
+          </div>
+          <div css={[layout.flex, layout.alignC, layout.justSpbw, layout.rowMobile]}>
+            <div css={[layout.flex, layout.flex50, layout.justCent]}>
+              <ToolsIcons />
+            </div>
+            <ToolsText />
+          </div>
+        </ParallaxLayer>
 
-  <ParallaxLayer
-  offset={1.25}
-  factor={1.75}
-  speed={0.5}>
-    <AboutPhoto />
-  </ParallaxLayer>
+        <ParallaxLayer
+          offset={1.25}
+          factor={1.75}
+          speed={0.5}>
+          <AboutPhoto />
+        </ParallaxLayer>
 
-  <ParallaxLayer
-    offset={2.45}
-    speed={0.3}
-    factor={2}
-    css={[layout.flex, layout.alignC, layout.justCent, layout.bottomPadding]}>
-      <ViewSwap objList={viewSwapItems} />
-  </ParallaxLayer>
+        <ParallaxLayer
+          offset={2.45}
+          speed={0.3}
+          factor={2}
+          css={[layout.flex, layout.alignC, layout.justCent, layout.bottomPadding]}>
+          <ViewSwap objList={viewSwapItems} />
+        </ParallaxLayer>
 
-    </Parallax>
+      </Parallax>
     </>
   )
 }
