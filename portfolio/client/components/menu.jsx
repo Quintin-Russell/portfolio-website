@@ -11,7 +11,7 @@ export default function Menu(props) {
   <>
     <div
       onClick={() => props.setMenuDisplay(!props.menuDisplay)}
-      css={[style.headerA, layout.flex, layout.alignC]}>
+      css={[layout.flex, layout.alignC, style.headerA]}>
       <VscListSelection css={[style.menuIcon]}
                         style={(props.menuDisplay) ? {transform: 'rotate(90deg'} : null}/>
     </div>

@@ -112,11 +112,11 @@ export default function Carousel(props) {
 
   return (
     <>
-      <div css={[layout.flex, layout.width100, layout.row, layout.justSpbw, layout.alignC]}>
+      <div css={[layout.flex, layout.row, layout.alignC, layout.justSpbw, layout.width100]}>
         {renderCarousel()}
       </div>
       <div>
-        <p css={[style.monts, style.textCent]}>{props.obj.text[currentImg].text}</p>
+        <p css={[style.textCent, style.monts]}>{props.obj.text[currentImg].text}</p>
       </div>
     </>
   );

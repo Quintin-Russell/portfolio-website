@@ -9,9 +9,9 @@ import Menu from './menu'
 import style from '../style/style'
 import layout from '../style/layout'
 
-const headerCss = [style.fade, layout.flex, layout.row, layout.justSpbw]
+const headerCss = [layout.flex, layout.row, layout.justSpbw, style.fade]
 const headerTextCss = [style.incon, style.whiteUnderline, style.headerA, style.hoverA]
-const aCss = [style.hoverA, layout.padding25, layout.marginHalfRem]
+const aCss = [layout.padding25, layout.marginHalfRem, style.hoverA]
 
 export default function Header() {
   const [screenSize, setScreenSize] = useState(screen.width);
@@ -27,7 +27,7 @@ export default function Header() {
     if (menuDisplay) return (
         <>
         <div css={[layout.flex, layout.justEnd]}>
-            <div css={[style.incon, layout.flex, layout.col, layout.justSpbw, layout.alignC, layout.fitContent, layout.menuCont, style.borderLight, style.fade]}>
+            <div css={[ layout.flex, layout.col, layout.justSpbw, layout.alignC, layout.fitContent, layout.menuCont, style.incon, style.borderLight, style.fade]}>
             <a css={aCss} href="#about">{`-ABOUT-`}</a>
             <a css={aCss} href="#projects">{`-SEE MY WORK-`}</a>
             <a css={aCss} href="#contact">{`-CONTACT ME-`}</a>
@@ -61,7 +61,7 @@ export default function Header() {
     <header css={headerCss}>
       <a href=""
       css={style.noUnderline}>
-       <h1 css={[style.fadeTxt, style.incon]}>{label}</h1>
+       <h1 css={[style.incon, style.fadeTxt]}>{label}</h1>
       </a>
         <div css={[layout.flex, layout.row, layout.alignC]}>
           {renderHeaderTxt(screenSize)}
