@@ -21,7 +21,7 @@ export default function LandingPage() {
 
   setTimeout(() => {
     setFirstTWCompleted(true)
-  }, 4400)
+  }, 2500)
 
   const determinePgNum = (screenSize) => {
     if (screenSize > 768) return 3.5
@@ -40,7 +40,7 @@ export default function LandingPage() {
                   and more to create web-based applications. I am actively looking for
                   opportunities that allow me to learn everyday and improve in what I know."
         bold={['why?', 'how', 'did', 'you', 'do', 'that?.', 'React.js,', 'jQuery,', 'Express.js,', 'PostgreSQL,', 'Python,']}
-        interval={200} />
+        interval={175} />
     )
   }
 
@@ -90,7 +90,7 @@ export default function LandingPage() {
           "
             bold={["I", "build", "intelligent", "and", "impactful", "applications", "that", "work."]}
             cursorDisappear={true}
-            interval={400}
+            interval={200}
           />
 
           {
