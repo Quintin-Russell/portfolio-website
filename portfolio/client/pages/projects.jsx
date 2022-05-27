@@ -28,7 +28,7 @@ export default function Projects() {
 
   setTimeout(() => {
     setFirstTWCompleted(true)
-  }, 4500)
+  }, 3000)
 
 
   const render2ndTW = (firstTWCompleted) => {
@@ -46,22 +46,23 @@ export default function Projects() {
 
   const tarString = "I'm your easy-to-work-with partner that can make your ideas become (digital) reality."
   let startSticky = 0.25;
-  let endSticky = 4;
+  let endSticky = 2.75; //og=4
   return (
     <>
-      <Parallax pages={6.15}>
+      <Parallax pages={4.75}>
 
         <ParallaxLayer
+          factor={1.25}
           css={[layout.bkg1]} />
 
         <ParallaxLayer
-          offset={1}
+          offset={1.25}
           factor={1.5}
           css={[layout.bkg2]} />
 
         <ParallaxLayer
-          offset={4.5}
-          factor={1.65}
+          offset={2.75}
+          factor={2}
           css={[layout.bkg3]}>
           <Footer />
         </ParallaxLayer>
@@ -81,16 +82,16 @@ export default function Projects() {
                 tarString={tarString}
                 bold={tarString.split(" ")}
                 cursorDisappear={true}
-                interval={300}
+                interval={200}
               />
-              {render2ndTW(firstTWCompleted)}
+              {/* {render2ndTW(firstTWCompleted)} */}
             </div>
           </div>
         </ParallaxLayer>
 
         {
           projects.map((x, index) => {
-            startSticky += 1.25 //og=1.25
+            startSticky += 1.05 //og=1.25
             return (
               <ParallaxLayer
                 key={index}
@@ -110,7 +111,7 @@ export default function Projects() {
         }
 
         <ParallaxLayer
-          offset={5}
+          offset={3.75}
           factor={1}
           css={[layout.flex, layout.alignC, layout.justCent, layout.width80]}>
           <div css={[layout.flex, layout.rowMobile, layout.alignC, layout.justCent, layout.width80]}>
