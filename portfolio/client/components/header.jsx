@@ -13,13 +13,13 @@ const headerCss = [layout.flex, layout.row, layout.justSpbw, style.fade]
 const headerTextCss = [style.incon, style.whiteUnderline, style.headerA, style.hoverA]
 const aCss = [layout.padding25, layout.marginHalfRem, style.hoverA]
 
-export default function Header() {
-  const [screenSize, setScreenSize] = useState(screen.width);
+export default function Header(props) {
+  // const [screenSize, setScreenSize] = useState(screen.width);
   const [menuDisplay, setMenuDisplay] = useState(false);
 
-  $(window).on('resize', () => setScreenSize(screen.width))
+  // $(window).on('resize', () => setScreenSize(screen.width))
 
-  const label = (screenSize > 768)
+  const label = (props.screenSize > 768)
     ? `<QUINTINRUSSELL/>`
     : `<>QR</>`
 
@@ -38,7 +38,8 @@ export default function Header() {
   }
 
   const renderHeaderTxt = (screenSize) => {
-    if (screenSize > 768) return (
+    console.log('screenSize in header:', props.screenSize)
+    if (props.screenSize > 768) return (
       <>
         <a href="#contact"
           css={headerTextCss}
@@ -64,7 +65,7 @@ export default function Header() {
           <h1 css={[style.incon, style.fadeTxt]}>{label}</h1>
         </a>
         <div css={[layout.flex, layout.row, layout.alignC]}>
-          {renderHeaderTxt(screenSize)}
+          {renderHeaderTxt(props.screenSize)}
           <Menu setMenuDisplay={setMenuDisplay}
             menuDisplay={menuDisplay} />
         </div>

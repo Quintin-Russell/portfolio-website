@@ -17,9 +17,11 @@ import Contact from './pages/contact';
 
 export default function App(props) {
   const [hash, setHash] = useState(parseRoute(window.location.hash))
+  const [screenSize, setScreenSize] = useState(screen.width);
 
 
   $(document).title = '../server/public/images/flavicon/favicn.ico'
+  $(window).on('resize', () => setScreenSize(screen.width))
 
   useEffect(() => {
     $(window).on('hashchange', () => {
@@ -29,10 +31,10 @@ export default function App(props) {
   }, [])
 
   const determinePage = (hash) => {
-    if (hash.path === 'about') return <About />
-    if (hash.path === 'projects') return <Projects />
-    if (hash.path === 'contact') return <Contact />
-    return <LandingPage />
+    // if (hash.path === 'about') return <About />
+    // if (hash.path === 'projects') return <Projects />
+    // if (hash.path === 'contact') return <Contact />
+    return <LandingPage screenSize={screenSize}/>
   }
 
   return (

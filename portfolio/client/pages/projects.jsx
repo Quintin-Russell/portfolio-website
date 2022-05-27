@@ -46,7 +46,7 @@ export default function Projects() {
 
   const tarString = "I'm your easy-to-work-with partner that can make your ideas become (digital) reality."
   let startSticky = 0.25;
-  let endSticky = 2.75; //og=4
+  let endSticky = 2.5; //og=4
   return (
     <>
       <Parallax pages={4.75}>
