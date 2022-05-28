@@ -12,15 +12,14 @@ import layout from "../../style/layout"
 const contDivCss = [layout.flex, layout.width100, layout.alignC, layout.justCent]
 
 export default function Project(props) {
-  const [screenSize, setScreenSize] = useState(screen.width);
-
-  $(window).on('resize', () => setScreenSize(screen.width))
 
   const alternate = () => {
     if (props.index % 2) {
       return (
         <>
-          <Description project={props.project} />
+          <Description
+          screenSize={props.screenSize}
+          project={props.project} />
 
           <ProjectImg project={props.project} />
         </>
@@ -30,7 +29,9 @@ export default function Project(props) {
         <>
           <ProjectImg project={props.project} />
 
-          <Description project={props.project} />
+          <Description
+          screenSize={props.screenSize}
+          project={props.project} />
         </>
       )
     }

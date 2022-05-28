@@ -78,12 +78,12 @@ flex33: css`
 flex-basis: calc(100%/3)
 `,
 
-flex66: css`
-flex-basis: calc(200%/3)
-`,
-
 flex50: css`
 flex-basis: 50%
+`,
+
+flex66: css`
+flex-basis: calc(200%/3)
 `,
 
 fitContent: css`

@@ -18,7 +18,7 @@ import fetchReq from '../components/functions/fetch'
 const endText = [layout.flex, layout.justCent, layout.flex50, style.font1rem, style.monts]
 const col50Cont = [layout.flex, layout.col, layout.flex50]
 
-export default function Projects() {
+export default function Projects(props) {
   const [firstTWCompleted, setFirstTWCompleted] = useState(null)
   const [projects, setProjects] = useState([])
 
@@ -101,7 +101,9 @@ export default function Projects() {
                 }}
                 factor={1}
                 speed={0.75}>
-                <Project project={x}
+                <Project
+                  screenSize={props.screenSize}
+                  project={x}
                   key={x.name}
                   index={index} />
               </ParallaxLayer>
