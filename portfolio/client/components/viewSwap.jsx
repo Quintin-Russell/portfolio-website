@@ -33,20 +33,35 @@ export default function ViewSwap(props) {
     return <div key={Math.random() * 9999999} css={style.hidden}></div>
   }
   return (
+//OG
+    // <>
+    //   <div
+    //     onClick={(e) => setHighlightedTab(e)}
+    //     css={[layout.flex, layout.col, layout.height80, layout.width80, layout.scroll]}>
+    //     <Tabs objList={props.objList}
+    //       highlighted={highlightedTab} />
+    //     <div css={[layout.flex, layout.alignC, layout.justCent, style.bold, style.viewSwapHeader, style.highlightedTab]}>
+    //       <h2 css={[layout.margin0, layout.padding25, style.pfDisp]}>{highlightedTab}</h2>
+    //     </div>
+    //     <div css={(highlightedTab === 'Hobbies') ? [...viewSwapCont, layout.topPadding] : [...viewSwapCont, layout.padding2rem]}>
+    //       {props.objList.map(obj => determineItem(obj))}
+    //     </div>
+    //   </div>
+
+    // </>
     <>
       <div
         onClick={(e) => setHighlightedTab(e)}
         css={[layout.flex, layout.col, layout.height80, layout.width80, layout.scroll]}>
         <Tabs objList={props.objList}
           highlighted={highlightedTab} />
-        <div css={[layout.flex, layout.alignC, layout.justCent, style.bold, style.viewSwapHeader, style.highlightedTab]}>
+        {/* <div css={[layout.flex, layout.alignC, layout.justCent, style.bold, style.viewSwapHeader, style.highlightedTab]}>
           <h2 css={[layout.margin0, layout.padding25, style.pfDisp]}>{highlightedTab}</h2>
-        </div>
+        </div> */}
         <div css={(highlightedTab === 'Hobbies') ? [...viewSwapCont, layout.topPadding] : [...viewSwapCont, layout.padding2rem]}>
           {props.objList.map(obj => determineItem(obj))}
         </div>
       </div>
-
     </>
   )
 }

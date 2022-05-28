@@ -12,6 +12,7 @@ import ToolsIcons from "../components/tools/toolsIcons";
 import AboutPhoto from "../components/about/aboutPhoto";
 import ViewSwap from "../components/viewSwap";
 
+import lessThan768 from "../components/functions/lessthan768";
 import story from "../components/viewSwapItems/story";
 import timeline from "../components/viewSwapItems/timeline";
 import hobbies from "../components/viewSwapItems/hobbies";
@@ -19,11 +20,7 @@ import hobbies from "../components/viewSwapItems/hobbies";
 import style from "../style/style";
 import layout from "../style/layout"
 
-export default function About() {
-  const [screenSize, setScreenSize] = useState(screen.width);
-
-  $(window).on('resize', () => setScreenSize(screen.width))
-
+export default function About(props) {
   const viewSwapItems = [story, timeline, hobbies]
 
   return (
@@ -35,7 +32,7 @@ export default function About() {
         <ParallaxLayer
           css={[layout.bkg1]}
           factor={1}>
-          <Header />
+          <Header screenSize={props.screenSize}/>
           <div css={[layout.flex, layout.row, layout.justCent]}>
             <Typewriter
               font='incon'
@@ -65,7 +62,7 @@ export default function About() {
           offset={0.5}
           factor={1.5}
           speed={0.75}>
-          <div css={(screenSize > 768) ? [layout.flex, layout.justEnd] : [layout.flex, layout.justCent]}>
+          <div css={(!lessThan768(props.screenSize)) ? [layout.flex, layout.justEnd] : [layout.flex, layout.justCent]}>
             <p css={[layout.margin0, layout.flex, layout.flex50, layout.justCent, style.incon, style.font3rem]}>Tools</p>
           </div>
           <div css={[layout.flex, layout.alignC, layout.justSpbw, layout.rowMobile]}>

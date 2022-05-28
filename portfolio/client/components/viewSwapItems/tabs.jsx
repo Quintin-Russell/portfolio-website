@@ -23,12 +23,28 @@ export default function Tabs(props) {
 
 // props = obj
 function Tab(props) {
+// OG
+  // const isHighlighted = () => (props.highlighted === props.obj.name)
+  //   ? (
+  //     <div data={props.obj.name}
+  //       style={{ width: props.width + '%' }}
+  //       css={[style.noBorderBottom, style.highlightedTab]}>
+  //     </div>
+  //   )
+  //   : (
+  //     <div data={props.obj.name}
+  //       style={{ width: props.width + '%' }}
+  //       css={defaultCss}>
+  //       <p data={props.obj.name}>{props.obj.name}</p>
+  //     </div>
+  //   )
 
   const isHighlighted = () => (props.highlighted === props.obj.name)
     ? (
       <div data={props.obj.name}
         style={{ width: props.width + '%' }}
-        css={[style.noBorderBottom, style.highlightedTab]}>
+        css={[...defaultCss, style.highlightedTab]}>
+        <p data={props.obj.name}>{props.obj.name}</p>
       </div>
     )
     : (

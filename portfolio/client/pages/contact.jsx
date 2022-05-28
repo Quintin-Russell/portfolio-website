@@ -15,7 +15,7 @@ import layout from "../style/layout"
 
 const cont50 = [layout.flex, layout.col, layout.flex50]
 
-export default function Contact() {
+export default function Contact(props) {
   const tarString = `Let's Talk`
   const viewSwapItems = [contactForm, contactInformation]
   return (
@@ -27,7 +27,7 @@ export default function Contact() {
         <ParallaxLayer
           factor={1}
           css={[layout.bkg1]}>
-          <Header />
+          <Header screenSize={props.screenSize}/>
         </ParallaxLayer>
 
         <ParallaxLayer

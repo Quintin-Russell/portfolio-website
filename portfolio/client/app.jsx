@@ -31,9 +31,9 @@ export default function App(props) {
   }, [])
 
   const determinePage = (hash) => {
-    // if (hash.path === 'about') return <About />
-    // if (hash.path === 'projects') return <Projects />
-    // if (hash.path === 'contact') return <Contact />
+    if (hash.path === 'about') return <About screenSize={screenSize}/>
+    if (hash.path === 'projects') return <Projects screenSize={screenSize}/>
+    if (hash.path === 'contact') return <Contact screenSize={screenSize}/>
     return <LandingPage screenSize={screenSize}/>
   }
 
