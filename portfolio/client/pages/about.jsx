@@ -85,7 +85,9 @@ export default function About(props) {
           speed={0.3}
           factor={2}
           css={[layout.flex, layout.alignC, layout.justCent, layout.bottomPadding]}>
-          <ViewSwap objList={viewSwapItems} />
+          <ViewSwap
+          screenSize={props.screenSize}
+          objList={viewSwapItems} />
         </ParallaxLayer>
 
       </Parallax>

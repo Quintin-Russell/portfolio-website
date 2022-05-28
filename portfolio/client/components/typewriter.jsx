@@ -10,7 +10,7 @@ import style from '../style/style'
 
 export default function Typewriter(props) {
   const [cursor, toggleCursor] = useState(true);
-  let [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(0);
   const [dispString, pushDispString] = useReducer(
     (dispString, newVal) => [...dispString, newVal],
     [])

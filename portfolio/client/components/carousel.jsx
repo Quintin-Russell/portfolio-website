@@ -21,6 +21,7 @@ import {
 
 import style from '../style/style'
 import layout from '../style/layout'
+import lessthan768 from './functions/lessthan768';
 
 //props: hobbies (arr of objs)
 
@@ -30,10 +31,6 @@ const dots = [style.cursor, style.dots]
 
 export default function Carousel(props) {
   const [currentImg, setCurrentImg] = useState(0);
-  const [screenSize, setScreenSize] = useState(screen.width);
-
-  $(window).on('resize', () => setScreenSize(screen.width))
-
 
   const nextImg = () => {
     if (currentImg === props.obj.text.length - 1) return setCurrentImg(0)
@@ -81,7 +78,7 @@ export default function Carousel(props) {
   }
 
   const renderCarousel = () => {
-    if (screenSize > 768) {
+    if (!lessthan768(props.screenSize)) {
       return (
         <>
           <div css={arrow} onClick={() => prevImg()}>
