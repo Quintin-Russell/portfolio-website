@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import React from 'react'
 import { jsx, css } from '@emotion/react'
+import Marquee from 'react-fast-marquee'
 
 import Typewriter from '../typewriter'
+import SlowCarousel from '../slowCarousel'
 
 import style from '../../style/style'
 import layout from '../../style/layout'
@@ -15,10 +17,12 @@ import QRhuay from '../../../server/public/images/qrPics/QRhuay.jpg'
 import QRlakes from '../../../server/public/images/qrPics/QRlakes.jpg'
 import QRmountain from '../../../server/public/images/qrPics/QRmountain.jpg'
 
+const imgArr = [QRfrance, QRhuay, QRwedding, QRcanyon, QRturkey,  QRlakes, QRmountain]
+
 const pCss = [layout.margin1rem, style.font2rem, style.incon, style.light]
 const smallerImgCss = [layout.width20, layout.padding2rem]
 
-export default function AboutPhoto() {
+export default function AboutPhoto(props) {
   return (
     <>
       {/* <div css={[layout.flex, layout.justCent, layout.height100, layout.width100]}> */}
@@ -102,7 +106,7 @@ export default function AboutPhoto() {
               css={smallerImgCss} />
           </div>
         </div> */}
-        <div css={layout.flex, layout.justSpbw}>
+        {/* <div css={layout.flex, layout.justSpbw}>
           <img src={QRwedding}
             alt="QR-wedding"
             css={[layout.width20, layout.padding2rem]} />
@@ -112,7 +116,28 @@ export default function AboutPhoto() {
           <img src={QRturkey}
             alt="QR-turkey"
             css={smallerImgCss} />
-        </div>
+        </div> */}
+        {/* <div style={{padding: '1rem 0'}}>
+          <SlowCarousel type="photo" baseArray={imgArr} screenSize={props.screenSize}></SlowCarousel>
+        </div> */}
+<div css={style.fade}>
+  <Marquee pauseOnHover={true} gradient={false}>
+    {
+      imgArr.map(x => {
+        return (
+          <div
+            css={[layout.margin1rem]}>
+            <img
+              style={{ minHeight: '75px', width: '150px' }}
+              src={x} alt='QRphoto' />
+          </div>
+        )
+      })
+    }
+  </Marquee>
+</div>
+
+
       </div>
     </>
   )

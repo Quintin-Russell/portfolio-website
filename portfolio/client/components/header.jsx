@@ -38,8 +38,7 @@ export default function Header(props) {
   }
 
   const renderHeaderTxt = (screenSize) => {
-    console.log('screenSize in header:', props.screenSize)
-    if (props.screenSize > 768) return (
+    if (screenSize > 768) return (
       <>
         <a href="#contact"
           css={headerTextCss}

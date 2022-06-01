@@ -77,7 +77,7 @@ export default function About(props) {
           offset={1.25}
           factor={1.75}
           speed={0.5}>
-          <AboutPhoto />
+          <AboutPhoto screenSize={props.screenSize}/>
         </ParallaxLayer>
 
         <ParallaxLayer

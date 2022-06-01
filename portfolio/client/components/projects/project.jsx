@@ -41,7 +41,7 @@ export default function Project(props) {
     <>
       <div
         style={{ backgroundColor: 'black' }}
-        css={(screenSize > 768) ? [...contDivCss, layout.margin2rem] : contDivCss}>
+        css={(props.screenSize > 768) ? [...contDivCss, layout.margin2rem] : contDivCss}>
         <div css={[layout.flex, layout.rowMobile, layout.width80, layout.alignC, layout.justSpbw]}>
           {alternate()}
         </div>
