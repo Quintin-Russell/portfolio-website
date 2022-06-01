@@ -4,7 +4,6 @@ import { jsx, css } from '@emotion/react'
 import Marquee from 'react-fast-marquee'
 
 import Typewriter from '../typewriter'
-import SlowCarousel from '../slowCarousel'
 
 import style from '../../style/style'
 import layout from '../../style/layout'
@@ -87,39 +86,7 @@ export default function AboutPhoto(props) {
                 </li>
               </ul>
             </section>
-          {/* </div> */}
-          {/* <div>
-            <img src={QRwedding}
-              alt="QR-wedding"
-              css={[layout.width80, layout.padding2rem]} />
-          </div> */}
-        {/* </div> */}
-        {/* <div css={[layout.flex, layout.col, layout.flex50]}>
-          <div css={[layout.flex, layout.justEnd]}>
-            <img src={QRfrance}
-              alt="QR-france"
-              css={smallerImgCss} />
-          </div>
-          <div css={[layout.flex, layout.justStart]}>
-            <img src={QRturkey}
-              alt="QR-turkey"
-              css={smallerImgCss} />
-          </div>
-        </div> */}
-        {/* <div css={layout.flex, layout.justSpbw}>
-          <img src={QRwedding}
-            alt="QR-wedding"
-            css={[layout.width20, layout.padding2rem]} />
-          <img src={QRfrance}
-            alt="QR-france"
-            css={smallerImgCss} />
-          <img src={QRturkey}
-            alt="QR-turkey"
-            css={smallerImgCss} />
-        </div> */}
-        {/* <div style={{padding: '1rem 0'}}>
-          <SlowCarousel type="photo" baseArray={imgArr} screenSize={props.screenSize}></SlowCarousel>
-        </div> */}
+
 <div css={style.fade}>
   <Marquee pauseOnHover={true} gradient={false}>
     {
