@@ -5,9 +5,7 @@ import Marquee from 'react-fast-marquee'
 
 import Typewriter from '../typewriter'
 
-import style from '../../style/style'
-import layout from '../../style/layout'
-
+import lessthan768 from '../functions/lessthan768'
 import QRfrance from '../../../server/public/images/qrPics/QRfrance.png'
 import QRturkey from '../../../server/public/images/qrPics/QRturkey.jpeg'
 import QRwedding from '../../../server/public/images/qrPics/QRwedding.jpeg'
@@ -15,6 +13,11 @@ import QRcanyon from '../../../server/public/images/qrPics/QRcanyon.jpg'
 import QRhuay from '../../../server/public/images/qrPics/QRhuay.jpg'
 import QRlakes from '../../../server/public/images/qrPics/QRlakes.jpg'
 import QRmountain from '../../../server/public/images/qrPics/QRmountain.jpg'
+
+import style from '../../style/style'
+import layout from '../../style/layout'
+
+
 
 const imgArr = [QRfrance, QRhuay, QRwedding, QRcanyon, QRturkey, QRlakes, QRmountain]
 
@@ -98,7 +101,7 @@ export default function AboutPhoto(props) {
                     key={x}
                     css={[layout.margin1rem]}>
                     <img
-                      style={{ width: `${props.screenSize / 5}px` }}
+                      style={(!lessthan768(props.screenSize)) ? { width: `${props.screenSize / 5}px` } : { width: `10rem` }}
                       src={x} alt='QRphoto' />
                   </div>
                 )

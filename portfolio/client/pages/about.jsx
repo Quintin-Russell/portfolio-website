@@ -28,7 +28,7 @@ export default function About(props) {
     <>
 
       <Parallax
-        pages={(!lessThan768(props.screenSize))? 2 : 4.25}>
+        pages={4.25}>
 
         <ParallaxLayer
           css={[layout.bkg1]}
@@ -60,7 +60,7 @@ export default function About(props) {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={(lessThan768(props.screenSize)) ? 0.5 : 1} //og = 0.5
+          offset={0.5} //og = 0.5
           factor={1.5}
           speed={0.75}>
           <div css={(!lessThan768(props.screenSize)) ? [layout.flex, layout.justEnd] : [layout.flex, layout.justCent]}>
