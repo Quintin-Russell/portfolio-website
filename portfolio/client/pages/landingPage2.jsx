@@ -36,10 +36,10 @@ const jobDesc = [style.incon, style.light, layout.padding25]
 // }
 
 const settings = {
-  pages: 2,
+  pages: 2.5,
   bkg1: {
     offset: 0,
-    factor: 1
+    factor: 2.5
   },
   bkg2: {
     offset: 1,
@@ -87,7 +87,46 @@ export default function LandingPage(props) {
           css={[layout.bkg1]}
           factor={settings.bkg1.factor}>
           <Header screenSize={props.screenSize}/>
-        </ParallaxLayer>
+
+          <ParallaxLayer
+            offset={settings.parallax1.offset}
+            speed={settings.parallax1.speed}
+            factor={settings.parallax1.factor}
+          >
+            <div css={layout.margin1rem}>
+              <div css={(!lessThan768(props.screenSize)) ? [...jobDesc, style.font3rem] : [...jobDesc, style.font2halfrem]}>
+                <span css={style.landingPgTxt_or}>{`<`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span>
+              </div>
+              <div css={(!lessThan768(props.screenSize)) ? [...jobDesc, style.font3rem] : [...jobDesc, style.font2halfrem]}>
+                <span css={style.landingPgTxt_bl}>{`profession =“software-engineer”`}</span>
+              </div>
+              <div css={(!lessThan768(props.screenSize)) ? [...jobDesc, style.font3rem] : [...jobDesc, style.font2halfrem]}>
+                <span css={style.landingPgTxt_bl}>{`tools=[“JavaScript”, “Python”, “CSS”, “HTML”]`}</span>
+              </div>
+              <div css={(!lessThan768(props.screenSize)) ? [...jobDesc, style.font3rem, style.landingPgTxt_or] : [...jobDesc, style.font2halfrem, style.landingPgTxt_or]}>
+                {`>`}
+              </div>
+
+            </div>
+
+            <Typewriter
+              font='pfDisp'
+              fontSize={(!lessThan768(props.screenSize)) ? 'font3rem' : 'font2halfrem'}
+              tarString="
+            I build intelligent and impactful applications that work.
+            "
+              bold={["I", "build", "intelligent", "and", "impactful", "applications", "that", "work."]}
+              cursorDisappear={true}
+              interval={200}
+            />
+
+            {
+              render2ndTW(firstTWCompleted)
+            }
+            <div css={(!lessThan768(props.screenSize)) ? [...jobDesc, layout.margin1rem, style.font3rem] : [...jobDesc, layout.margin1rem, style.font2halfrem]}>
+              <span css={style.landingPgTxt_or}>{`</`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span><span css={style.landingPgTxt_or}>{`>`}</span>
+            </div>
+          </ParallaxLayer>
 
         <ParallaxLayer
           css={[layout.bkg2]}
@@ -96,45 +135,10 @@ export default function LandingPage(props) {
           <Footer />
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={settings.parallax1.offset}
-          speed={settings.parallax1.speed}
-          factor={settings.parallax1.factor}
-        >
-          <div css={layout.margin1rem}>
-            <div css={(!lessThan768(props.screenSize)) ? [...jobDesc, style.font3rem] : [...jobDesc, style.font2halfrem]}>
-              <span css={style.landingPgTxt_or}>{`<`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span>
-            </div>
-            <div css={(!lessThan768(props.screenSize)) ? [...jobDesc, style.font3rem] : [...jobDesc, style.font2halfrem]}>
-              <span css={style.landingPgTxt_bl}>{`profession =“software-engineer”`}</span>
-            </div>
-            <div css={(!lessThan768(props.screenSize)) ? [...jobDesc, style.font3rem] : [...jobDesc, style.font2halfrem]}>
-              <span css={style.landingPgTxt_bl}>{`tools=[“JavaScript”, “Python”, “CSS”, “HTML”]`}</span>
-            </div>
-            <div css={(!lessThan768(props.screenSize)) ? [...jobDesc, style.font3rem, style.landingPgTxt_or] : [...jobDesc, style.font2halfrem, style.landingPgTxt_or]}>
-              {`>`}
-            </div>
-
-          </div>
-
-          <Typewriter
-            font='pfDisp'
-            fontSize={(!lessThan768(props.screenSize)) ? 'font3rem' : 'font2halfrem'}
-            tarString="
-          I build intelligent and impactful applications that work.
-          "
-            bold={["I", "build", "intelligent", "and", "impactful", "applications", "that", "work."]}
-            cursorDisappear={true}
-            interval={200}
-          />
-
-          {
-            render2ndTW(firstTWCompleted)
-          }
-          <div css={(!lessThan768(props.screenSize)) ? [...jobDesc, layout.margin1rem, style.font3rem] : [...jobDesc, layout.margin1rem, style.font2halfrem]}>
-            <span css={style.landingPgTxt_or}>{`</`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span><span css={style.landingPgTxt_or}>{`>`}</span>
-          </div>
         </ParallaxLayer>
+
+
+
 
       </Parallax>
     </>

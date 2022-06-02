@@ -26,6 +26,10 @@ export default {
     background: linear-gradient(to right, #000000, #0c0c0c, rgba(132, 132, 132, .50));
   `,
 
+  fadeSolid: css`
+    background: linear-gradient(to right, #000000, #0c0c0c, rgb(132, 132, 132));
+  `,
+
   font1rem: css`
   font-size: 1rem;
   `,

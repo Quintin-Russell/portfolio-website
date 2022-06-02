@@ -21,13 +21,14 @@ import style from "../style/style";
 import layout from "../style/layout"
 
 export default function About(props) {
+
   const viewSwapItems = [story, timeline, hobbies]
 
   return (
     <>
 
       <Parallax
-        pages={4.25}>
+        pages={(!lessThan768(props.screenSize))? 2 : 4.25}>
 
         <ParallaxLayer
           css={[layout.bkg1]}
@@ -59,7 +60,7 @@ export default function About(props) {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={0.5}
+          offset={(lessThan768(props.screenSize)) ? 0.5 : 1} //og = 0.5
           factor={1.5}
           speed={0.75}>
           <div css={(!lessThan768(props.screenSize)) ? [layout.flex, layout.justEnd] : [layout.flex, layout.justCent]}>
@@ -81,7 +82,7 @@ export default function About(props) {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={2.45}
+          offset={2.2}
           speed={0.3}
           factor={2}
           css={[layout.flex, layout.alignC, layout.justCent, layout.bottomPadding]}>

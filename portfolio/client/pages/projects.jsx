@@ -70,7 +70,7 @@ export default function Projects(props) {
         <ParallaxLayer
           speed={0.5}
           factor={1.2}>
-          <Header />
+          <Header screenSize={props.screenSize}/>
           <div css={[layout.flex, layout.rowMobile, layout.alignC, layout.justCent, layout.height100, layout.topMargin]}>
             <div css={col50Cont}>
               <p css={[layout.flex, layout.flex50, layout.justCent, layout.margin0, style.font3rem, style.incon]}>Projects</p>
@@ -114,7 +114,7 @@ export default function Projects(props) {
 
         <ParallaxLayer
           offset={3.75}
-          factor={1}
+          factor={0.8}
           css={[layout.flex, layout.alignC, layout.justCent, layout.width80]}>
           <div css={[layout.flex, layout.rowMobile, layout.alignC, layout.justCent, layout.width80]}>
             <div css={[...col50Cont, style.textCent]}>

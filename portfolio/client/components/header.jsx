@@ -27,7 +27,7 @@ export default function Header(props) {
     if (menuDisplay) return (
       <>
         <div css={[layout.flex, layout.justEnd]}>
-          <div css={[layout.flex, layout.col, layout.justSpbw, layout.alignC, layout.fitContent, layout.menuCont, style.incon, style.borderLight, style.fade]}>
+          <div css={[layout.flex, layout.col, layout.justSpbw, layout.alignC, layout.fitContent, layout.menuCont, style.incon, style.borderLight, style.fadeSolid]}>
             <a css={aCss} href="#about">{`-ABOUT-`}</a>
             <a css={aCss} href="#projects">{`-SEE MY WORK-`}</a>
             <a css={aCss} href="#contact">{`-CONTACT ME-`}</a>
