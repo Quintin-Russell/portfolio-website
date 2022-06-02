@@ -3,6 +3,8 @@ import React from "react";
 import { jsx, css } from '@emotion/react'
 import $ from 'jquery'
 
+import pageArr from '../pages/pages'
+
 import style from "../style/style";
 import layout from "../style/layout"
 
@@ -13,9 +15,16 @@ export default function Footer(props) {
     <div
     style={{maxHeight: '3%'}}
     css={[style.fade, style.incon, layout.flex, layout.row, layout.justSpbw, layout.alignC, layout.footer]}>
-      <a css={aCss} href="#about">{`-ABOUT-`}</a>
-      <a css={aCss} href="#projects">{`-SEE MY WORK-`}</a>
-      <a css={aCss} href="#contact">{`-CONTACT ME-`}</a>
+      {
+        pageArr.map(x => {
+          return (
+           <a
+            key={x.name}
+            css={aCss}
+            href={x.hash}>{x.display}</a>
+          )
+        })
+      }
     </div>
   )
 }

@@ -7,12 +7,16 @@ import $ from 'jquery'
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Typewriter from "../components/typewriter";
+import Marquee from "react-fast-marquee";
 
+import pageArr from "../pages/pages"
 import lessThan768 from "../components/functions/lessthan768";
 import style from "../style/style";
 import layout from "../style/layout"
 
 const jobDesc = [style.incon, style.light, layout.padding25]
+const marqueeDiv = [layout.flex, layout.alignC, layout.justCent, layout.margin1rem, style.borderLight]
+const marqueeA = [layout.margin1rem, layout.padding2rem, style.incon]
 
 // const originalSettings = {
 //   pages: 2.5,
@@ -51,7 +55,7 @@ const settings = {
   },
   parallax1: {
     offset: 0.3,
-    factor: 2,
+    factor: 1,
     speed: 0.75
   }
 }
@@ -76,6 +80,30 @@ export default function LandingPage(props) {
                   opportunities that allow me to learn everyday and improve in what I know."
         bold={['why?', 'how', 'did', 'you', 'do', 'that?.', 'React.js,', 'jQuery,', 'Express.js,', 'PostgreSQL,', 'Python,']}
         interval={175} />
+    )
+  }
+
+  const renderMarquee = (screenHeight) => {
+    if (!lessThan768(screenHeight)) return (
+      <div css={style.fade}>
+        <Marquee pauseOnHover={true} gradient={false}>
+          {
+            pageArr.map(x => {
+              return (
+                <div
+                  key={x.name}
+                  style={{ minWidth: `${props.screenSize / pageArr.length}px` }}
+                  css={[marqueeDiv]}>
+                  <a css={(!lessThan768(props.screenSize)) ? [...marqueeA, style.font2halfrem] : [...marqueeA]} href={x.hash}>
+                    <p>{x.display}</p>
+                  </a>
+                </div>
+              )
+            })
+          }
+        </Marquee>
+      </div>
+
     )
   }
 
@@ -134,7 +162,25 @@ export default function LandingPage(props) {
           <div css={(!lessThan768(props.screenSize)) ? [...jobDesc, layout.margin1rem, style.font3rem] : [...jobDesc, layout.margin1rem, style.font2halfrem]}>
             <span css={style.landingPgTxt_or}>{`</`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span><span css={style.landingPgTxt_or}>{`>`}</span>
           </div>
+
         </ParallaxLayer>
+
+        <ParallaxLayer
+          // offset={(props.screenHeight < 1010 && props.screenSize < 500)
+          //   ? 1.3
+          //   : (props.screenHeight > 850 && props.screenSize < 400)
+          //     ? 1.75
+          //     : 1.6}
+          offset={1.3}
+            factor={0.5}
+            speed={0.75}>
+          <div>
+            {
+              renderMarquee(props.screenHeight)
+            }
+          </div>
+        </ParallaxLayer>
+
 
       </Parallax>
     </>
