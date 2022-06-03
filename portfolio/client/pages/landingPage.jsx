@@ -83,10 +83,12 @@ export default function LandingPage(props) {
     )
   }
 
-  const renderMarquee = (screenHeight) => {
-    if (!lessThan768(screenHeight)) return (
+  const renderMarquee = (screenHeight, screenWidth) => {
+    if (screenHeight > 640 && screenWidth > 585) return (
       <div css={style.fade}>
-        <Marquee pauseOnHover={true} gradient={false}>
+        <Marquee
+        style={{height: '100%'}}
+        pauseOnHover={true} gradient={false}>
           {
             pageArr.map(x => {
               return (
@@ -171,14 +173,12 @@ export default function LandingPage(props) {
           //   : (props.screenHeight > 850 && props.screenSize < 400)
           //     ? 1.75
           //     : 1.6}
-          offset={1.3}
+            offset={1.15}
             factor={0.5}
             speed={0.75}>
-          <div>
             {
-              renderMarquee(props.screenHeight)
+              renderMarquee(props.screenHeight, props.screenSize)
             }
-          </div>
         </ParallaxLayer>
 
 
