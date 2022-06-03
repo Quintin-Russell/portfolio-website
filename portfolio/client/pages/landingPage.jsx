@@ -94,7 +94,8 @@ export default function LandingPage(props) {
               return (
                 <div
                   key={x.name}
-                  style={{ minWidth: `${props.screenSize / pageArr.length}px` }}
+                  style={{ minWidth: `${props.screenSize / pageArr.length}px`,
+                          borderRadius: '3rem' }}
                   css={[marqueeDiv]}>
                   <a css={(!lessThan768(props.screenSize)) ? [...marqueeA, style.font2halfrem] : [...marqueeA]} href={x.hash}>
                     <p>{x.display}</p>

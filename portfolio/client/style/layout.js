@@ -197,5 +197,9 @@ border-radius: 0.5rem;
 
 menuCont: css`
 margin: 0 1rem;
+`,
+
+toolsMargin: css`
+margin: 1.5rem 0;
 `
 }
