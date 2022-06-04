@@ -27,9 +27,7 @@ const smallerImgCss = [layout.width20, layout.padding2rem]
 export default function AboutPhoto(props) {
   return (
     <>
-      {/* <div css={[layout.flex, layout.justCent, layout.height100, layout.width100]}> */}
       <div css={[layout.flex, layout.col]}>
-        {/* <div> */}
         <section
         css={[layout.flex, layout.row, layout.margin1rem]}
         style={{alignItems: 'baseline'}}>

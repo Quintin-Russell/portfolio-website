@@ -6,7 +6,7 @@ import style from "../../style/style";
 import layout from "../../style/layout"
 
 const contDiv = [layout.flex, layout.col, layout.alignC, layout.justCent]
-const montsBold = [layout.padding25, style.monts, style.bold]
+const montsBold = [layout.padding25, style.monts, style.font1halfrem, style.bold]
 const light = [layout.margin0, style.light]
 
 export default function ToolsText() {
