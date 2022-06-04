@@ -21,7 +21,7 @@ import layout from '../../style/layout'
 
 const imgArr = [QRfrance, QRhuay, QRwedding, QRcanyon, QRturkey, QRlakes, QRmountain]
 
-const pCss = [layout.margin1rem, style.font2rem, style.incon, style.light]
+const pCss = [layout.margin1rem, style.font3rem, style.incon, style.light]
 const smallerImgCss = [layout.width20, layout.padding2rem]
 
 export default function AboutPhoto(props) {
@@ -30,7 +30,9 @@ export default function AboutPhoto(props) {
       {/* <div css={[layout.flex, layout.justCent, layout.height100, layout.width100]}> */}
       <div css={[layout.flex, layout.col]}>
         {/* <div> */}
-        <section css={[layout.flex, layout.row, layout.margin1rem]}>
+        <section
+        css={[layout.flex, layout.row, layout.margin1rem]}
+        style={{alignItems: 'baseline'}}>
           <span>
             <p css={pCss}>From:</p>
           </span>
@@ -47,22 +49,20 @@ export default function AboutPhoto(props) {
 
         <section css={[layout.margin1rem, style.font2rem]}>
           <p css={pCss}>Education:</p>
-          <ul
-          // css={[style.textCent]}
-          >
+          <ul css={[layout.flex, layout.col, layout.justCent, layout.padding0, style.noListStyle]}>
             <li>
               <Typewriter
                 font='incon'
-                fontSize='font2rem'
+                fontSize='font2halfrem'
                 tarString='Oregon State University, Bachelors of Science'
                 bold={[]}
                 cursorDisappear={true}
                 interval={400} />
-              <ul>
+              <ul css={[style.noListStyle]}>
                 <li>
                   <Typewriter
                     font='incon'
-                    fontSize='font1rem'
+                    fontSize='font1halfrem'
                     tarString='Environmental Sciences: Water Resources'
                     bold={[]}
                     cursorDisappear={true}
@@ -73,16 +73,16 @@ export default function AboutPhoto(props) {
             <li>
               <Typewriter
                 font='incon'
-                fontSize='font2rem'
+                fontSize='font2halfrem'
                 tarString='LearningFuze, Accelerated Web Developent Program'
                 bold={[]}
                 cursorDisappear={true}
                 interval={400} />
-              <ul>
+              <ul css={[style.noListStyle]}>
                 <li>
                   <Typewriter
                     font='incon'
-                    fontSize='font1rem'
+                    fontSize='font1halfrem'
                     tarString='Computer Science'
                     bold={[]}
                     interval={400} />
