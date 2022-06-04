@@ -25,11 +25,13 @@ const contDiv = [layout.flex, layout.col, layout.justStart, layout.width100]
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(null)
-  const { register,
+  const {
+    register,
     handleSubmit,
     reset,
     formState: { isSubmitSuccessful },
-    errors } = useForm();
+    errors
+  } = useForm();
 
   useEffect(() => {
     reset()

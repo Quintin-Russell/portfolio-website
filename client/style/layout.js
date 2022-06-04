@@ -78,12 +78,12 @@ flex33: css`
 flex-basis: calc(100%/3)
 `,
 
-flex66: css`
-flex-basis: calc(200%/3)
-`,
-
 flex50: css`
 flex-basis: 50%
+`,
+
+flex66: css`
+flex-basis: calc(200%/3)
 `,
 
 fitContent: css`
@@ -144,6 +144,10 @@ leftPadding: css`
 padding-left: 1rem;
 `,
 
+smallSidePadding: css`
+padding: 0 0.25rem;
+`,
+
 marginAuto: css`
 margin: auto;
 `,
@@ -197,5 +201,9 @@ border-radius: 0.5rem;
 
 menuCont: css`
 margin: 0 1rem;
+`,
+
+toolsMargin: css`
+margin: 1.5rem 0;
 `
 }
