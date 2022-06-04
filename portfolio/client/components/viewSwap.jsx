@@ -12,7 +12,6 @@ import Tabs from './viewSwapItems/tabs'
 import style from '../style/style'
 import layout from '../style/layout'
 
-// props= objList (arr of objects)
 
 const viewSwapCont = [layout.flex, layout.col, layout.justCent, layout.alignC, style.fade, style.borderLight]
 
@@ -33,32 +32,15 @@ export default function ViewSwap(props) {
     return <div key={Math.random() * 9999999} css={style.hidden}></div>
   }
   return (
-//OG
-    // <>
-    //   <div
-    //     onClick={(e) => setHighlightedTab(e)}
-    //     css={[layout.flex, layout.col, layout.height80, layout.width80, layout.scroll]}>
-    //     <Tabs objList={props.objList}
-    //       highlighted={highlightedTab} />
-    //     <div css={[layout.flex, layout.alignC, layout.justCent, style.bold, style.viewSwapHeader, style.highlightedTab]}>
-    //       <h2 css={[layout.margin0, layout.padding25, style.pfDisp]}>{highlightedTab}</h2>
-    //     </div>
-    //     <div css={(highlightedTab === 'Hobbies') ? [...viewSwapCont, layout.topPadding] : [...viewSwapCont, layout.padding2rem]}>
-    //       {props.objList.map(obj => determineItem(obj))}
-    //     </div>
-    //   </div>
-
-    // </>
     <>
       <div
         onClick={(e) => setHighlightedTab(e)}
         css={[layout.flex, layout.col, layout.height80, layout.width80, layout.scroll]}>
         <Tabs objList={props.objList}
           highlighted={highlightedTab} />
-        {/* <div css={[layout.flex, layout.alignC, layout.justCent, style.bold, style.viewSwapHeader, style.highlightedTab]}>
-          <h2 css={[layout.margin0, layout.padding25, style.pfDisp]}>{highlightedTab}</h2>
-        </div> */}
-        <div css={(highlightedTab === 'Hobbies') ? [...viewSwapCont, layout.topPadding] : [...viewSwapCont, layout.padding2rem]}>
+        <div css={(highlightedTab === 'Hobbies')
+          ? [...viewSwapCont, layout.topPadding]
+          : [...viewSwapCont, layout.padding2rem]}>
           {props.objList.map(obj => determineItem(obj))}
         </div>
       </div>

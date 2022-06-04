@@ -1,8 +1,7 @@
 /** @jsx jsx */
-import React, { useState } from "react";
+import React from "react";
 import { jsx, css } from '@emotion/react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import $ from 'jquery'
 
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -33,7 +32,7 @@ export default function About(props) {
         <ParallaxLayer
           css={[layout.bkg1]}
           factor={1}>
-          <Header screenSize={props.screenSize}/>
+          <Header screenSize={props.screenSize} />
           <div css={[layout.flex, layout.row, layout.justCent]}>
             <Typewriter
               font='incon'
@@ -78,7 +77,7 @@ export default function About(props) {
           offset={1.25}
           factor={1.75}
           speed={0.5}>
-          <AboutPhoto screenSize={props.screenSize}/>
+          <AboutPhoto screenSize={props.screenSize} />
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -87,8 +86,8 @@ export default function About(props) {
           factor={2}
           css={[layout.flex, layout.alignC, layout.justCent, layout.bottomPadding]}>
           <ViewSwap
-          screenSize={props.screenSize}
-          objList={viewSwapItems} />
+            screenSize={props.screenSize}
+            objList={viewSwapItems} />
         </ParallaxLayer>
 
       </Parallax>

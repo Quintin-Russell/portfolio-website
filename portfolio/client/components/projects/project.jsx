@@ -18,8 +18,8 @@ export default function Project(props) {
       return (
         <>
           <Description
-          screenSize={props.screenSize}
-          project={props.project} />
+            screenSize={props.screenSize}
+            project={props.project} />
 
           <ProjectImg project={props.project} />
         </>
@@ -30,8 +30,8 @@ export default function Project(props) {
           <ProjectImg project={props.project} />
 
           <Description
-          screenSize={props.screenSize}
-          project={props.project} />
+            screenSize={props.screenSize}
+            project={props.project} />
         </>
       )
     }
@@ -41,7 +41,9 @@ export default function Project(props) {
     <>
       <div
         style={{ backgroundColor: 'black' }}
-        css={(props.screenSize > 768) ? [...contDivCss, layout.margin2rem] : contDivCss}>
+        css={(props.screenSize > 768)
+          ? [...contDivCss, layout.margin2rem]
+          : contDivCss}>
         <div css={[layout.flex, layout.rowMobile, layout.width80, layout.alignC, layout.justSpbw]}>
           {alternate()}
         </div>

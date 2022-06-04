@@ -1,8 +1,6 @@
 /** @jsx jsx */
 import React, { useState } from 'react'
 import { jsx, css } from '@emotion/react'
-import { VscListSelection } from 'react-icons/vsc'
-import $ from 'jquery'
 
 import Menu from './menu'
 
@@ -14,10 +12,7 @@ const headerTextCss = [style.incon, style.whiteUnderline, style.headerA, style.h
 const aCss = [layout.padding25, layout.marginHalfRem, style.hoverA]
 
 export default function Header(props) {
-  // const [screenSize, setScreenSize] = useState(screen.width);
   const [menuDisplay, setMenuDisplay] = useState(false);
-
-  // $(window).on('resize', () => setScreenSize(screen.width))
 
   const label = (props.screenSize > 768)
     ? `<QUINTINRUSSELL/>`
@@ -30,7 +25,9 @@ export default function Header(props) {
           <div css={[layout.flex, layout.col, layout.justSpbw, layout.alignC, layout.fitContent, layout.menuCont, style.incon, style.borderLight, style.fadeSolid]}>
             <a css={aCss} href="#about">{`-ABOUT-`}</a>
             <a css={aCss} href="#projects">{`-SEE MY WORK-`}</a>
-            <a css={aCss} href="#contact">{`-CONTACT ME-`}</a>
+            <a css={aCss}
+              href="mailto:quinn.j.russell@gmail.com"
+              target="_blank">{`-CONTACT ME-`}</a>
           </div>
         </div>
       </>

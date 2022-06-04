@@ -29,8 +29,8 @@ export default function AboutPhoto(props) {
     <>
       <div css={[layout.flex, layout.col]}>
         <section
-        css={[layout.flex, layout.row, layout.margin1rem]}
-        style={{alignItems: 'baseline'}}>
+          css={[layout.flex, layout.row, layout.margin1rem]}
+          style={{ alignItems: 'baseline' }}>
           <span>
             <p css={pCss}>From:</p>
           </span>
@@ -91,7 +91,8 @@ export default function AboutPhoto(props) {
         </section>
 
         <div css={style.fade}>
-          <Marquee pauseOnHover={true} gradient={false}>
+          <Marquee pauseOnHover={true}
+            gradient={false}>
             {
               imgArr.map(x => {
                 return (
@@ -99,7 +100,9 @@ export default function AboutPhoto(props) {
                     key={x}
                     css={[layout.margin1rem]}>
                     <img
-                      style={(!lessthan768(props.screenSize)) ? { width: `${props.screenSize / 5}px` } : { width: `10rem` }}
+                      style={(!lessthan768(props.screenSize))
+                        ? { width: `${props.screenSize / 5}px` }
+                        : { width: `10rem` }}
                       src={x} alt='QRphoto' />
                   </div>
                 )

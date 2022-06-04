@@ -31,7 +31,7 @@ export default function Projects(props) {
 
   const tarString = "I'm your easy-to-work-with partner that can make your ideas become (digital) reality."
   let startSticky = 0.25;
-  let endSticky = 2.5; //og=4
+  let endSticky = 2.5;
   return (
     <>
       <Parallax pages={4.75}>
@@ -55,7 +55,7 @@ export default function Projects(props) {
         <ParallaxLayer
           speed={0.5}
           factor={1.2}>
-          <Header screenSize={props.screenSize}/>
+          <Header screenSize={props.screenSize} />
           <div css={[layout.flex, layout.rowMobile, layout.alignC, layout.justCent, layout.height100, layout.topMargin]}>
             <div css={col50Cont}>
               <p css={[layout.flex, layout.flex50, layout.justCent, layout.margin0, style.font3rem, style.incon]}>Projects</p>
@@ -75,7 +75,7 @@ export default function Projects(props) {
 
         {
           projects.map((x, index) => {
-            startSticky += 1.05 //og=1.25
+            startSticky += 1.05
             return (
               <ParallaxLayer
                 key={index}
@@ -120,6 +120,7 @@ export default function Projects(props) {
             </div>
           </div>
         </ParallaxLayer>
+
       </Parallax>
 
     </>

@@ -27,7 +27,7 @@ export default function Contact(props) {
         <ParallaxLayer
           factor={1}
           css={[layout.bkg1]}>
-          <Header screenSize={props.screenSize}/>
+          <Header screenSize={props.screenSize} />
         </ParallaxLayer>
 
         <ParallaxLayer

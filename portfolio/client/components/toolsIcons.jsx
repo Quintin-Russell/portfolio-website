@@ -52,8 +52,6 @@ export default function ToolsIcons() {
             alt="SQL" />
         </div>
       </div>
-
     </>
-
   )
 }

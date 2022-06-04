@@ -5,13 +5,7 @@ import $ from 'jquery'
 
 import {
   RiFocusFill,
-  RiCheckboxBlankCircleLine,
-  RiArrowRightCircleLine,
-  RiArrowRightCircleFill,
-  RiPauseCircleFill,
-  RiPauseCircleLine,
-  RiPlayCircleFill,
-  RiPlayCircleLine
+  RiCheckboxBlankCircleLine
 } from "react-icons/ri"
 
 import {

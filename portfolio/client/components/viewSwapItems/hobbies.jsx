@@ -33,7 +33,9 @@ const hobbiesArr = [
   },
   {
     name: 'Surfing',
-    text: `Surfing is fun.`,
+    text: `As a kid, my dad used to take my brother and I surfing every chance he got. When he was too busy, we
+    would pester my mom to drive us to the beach before and after school. Since my grom days, I have kept up with
+    surfing and don't plan on stopping.`,
     img: {
       src: <img src={Surf} alt='QR-Surf' css={[layout.width100]} />
     }

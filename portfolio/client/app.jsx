@@ -1,6 +1,8 @@
 /** @jsx jsx */
-import React, {useState,
-                useEffect} from 'react';
+import React, {
+  useState,
+  useEffect
+} from 'react';
 import { ParallaxLayer, Parallax } from '@react-spring/parallax'
 import { jsx, css } from '@emotion/react'
 import $ from 'jquery'
@@ -31,14 +33,14 @@ export default function App(props) {
     $(window).on('hashchange', () => {
       const newHash = parseRoute(window.location.hash)
       setHash(newHash)
-      })
+    })
   }, [])
 
   const determinePage = (hash) => {
-    if (hash.path === 'about') return <About screenSize={screenSize}/>
-    if (hash.path === 'projects') return <Projects screenSize={screenSize}/>
-    if (hash.path === 'contact') return <Contact screenSize={screenSize}/>
-    return <LandingPage screenHeight={screenHeight} screenSize={screenSize}/>
+    if (hash.path === 'about') return <About screenSize={screenSize} />
+    if (hash.path === 'projects') return <Projects screenSize={screenSize} />
+    if (hash.path === 'contact') return <Contact screenSize={screenSize} />
+    return <LandingPage screenHeight={screenHeight} screenSize={screenSize} />
   }
 
   return (

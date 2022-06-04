@@ -13,15 +13,15 @@ const aCss = [style.hoverA, layout.padding25]
 export default function Footer(props) {
   return (
     <div
-    style={{maxHeight: '3%'}}
-    css={[style.fade, style.incon, layout.flex, layout.row, layout.justSpbw, layout.alignC, layout.footer]}>
+      style={{ maxHeight: '3%' }}
+      css={[style.fade, style.incon, layout.flex, layout.row, layout.justSpbw, layout.alignC, layout.footer]}>
       {
         pageArr.map(x => {
           return (
-           <a
-            key={x.name}
-            css={aCss}
-            href={x.hash}>{x.display}</a>
+            <a
+              key={x.name}
+              css={aCss}
+              href={x.hash}>{x.display}</a>
           )
         })
       }
