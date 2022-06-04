@@ -148,20 +148,23 @@ export default function LandingPage(props) {
 
           </div>
 
-          <Typewriter
-            font='pfDisp'
-            fontSize={(!lessThan768(props.screenSize)) ? 'font3rem' : 'font2halfrem'}
-            tarString="
-            I build intelligent and impactful applications that work.
-            "
-            bold={["I", "build", "intelligent", "and", "impactful", "applications", "that", "work."]}
-            cursorDisappear={true}
-            interval={200}
-          />
+          <div css={[layout.smallSidePadding]}>
+            <Typewriter
+              font='pfDisp'
+              fontSize={(!lessThan768(props.screenSize)) ? 'font3rem' : 'font2halfrem'}
+              tarString="
+              I build intelligent and impactful applications that work.
+              "
+              bold={["I", "build", "intelligent", "and", "impactful", "applications", "that", "work."]}
+              cursorDisappear={true}
+              interval={200}
+            />
 
-          {
-            render2ndTW(firstTWCompleted)
-          }
+            {
+              render2ndTW(firstTWCompleted)
+            }
+          </div>
+
           <div css={(!lessThan768(props.screenSize)) ? [...jobDesc, layout.margin1rem, style.font3rem] : [...jobDesc, layout.margin1rem, style.font2halfrem]}>
             <span css={style.landingPgTxt_or}>{`</`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span><span css={style.landingPgTxt_or}>{`>`}</span>
           </div>

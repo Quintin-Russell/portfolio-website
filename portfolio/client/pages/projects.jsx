@@ -19,7 +19,6 @@ const endText = [layout.flex, layout.justCent, layout.flex50, style.font1rem, st
 const col50Cont = [layout.flex, layout.col, layout.flex50]
 
 export default function Projects(props) {
-  const [firstTWCompleted, setFirstTWCompleted] = useState(null)
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
@@ -29,20 +28,6 @@ export default function Projects(props) {
   setTimeout(() => {
     setFirstTWCompleted(true)
   }, 3000)
-
-
-  const render2ndTW = (firstTWCompleted) => {
-    if (!firstTWCompleted) return <></>
-
-    return (
-      <Typewriter
-        font='monts'
-        fontSize='font2rem'
-        tarString="In all of my projects, I aim to apply new technologies, maintainability, and best practices. Below are samples of some of the projects that I am the most excited about!"
-        bold={[]}
-        interval={200} />
-    )
-  }
 
   const tarString = "I'm your easy-to-work-with partner that can make your ideas become (digital) reality."
   let startSticky = 0.25;
@@ -75,7 +60,7 @@ export default function Projects(props) {
             <div css={col50Cont}>
               <p css={[layout.flex, layout.flex50, layout.justCent, layout.margin0, style.font3rem, style.incon]}>Projects</p>
             </div>
-            <div css={[...col50Cont, layout.marginAuto]}>
+            <div css={[...col50Cont, layout.marginAuto, layout.smallSidePadding]}>
               <Typewriter
                 font='pfDisp'
                 fontSize='font3rem'
@@ -84,7 +69,6 @@ export default function Projects(props) {
                 cursorDisappear={true}
                 interval={200}
               />
-              {/* {render2ndTW(firstTWCompleted)} */}
             </div>
           </div>
         </ParallaxLayer>

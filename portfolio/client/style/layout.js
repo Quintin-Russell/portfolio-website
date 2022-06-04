@@ -144,6 +144,10 @@ leftPadding: css`
 padding-left: 1rem;
 `,
 
+smallSidePadding: css`
+padding: 0 0.25rem;
+`,
+
 marginAuto: css`
 margin: auto;
 `,
