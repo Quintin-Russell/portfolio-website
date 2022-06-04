@@ -1,8 +1,6 @@
 /** @jsx jsx */
 import React, { useState } from 'react'
 import { jsx, css } from '@emotion/react'
-import { VscListSelection } from 'react-icons/vsc'
-import $ from 'jquery'
 
 import Menu from './menu'
 
@@ -13,13 +11,10 @@ const headerCss = [layout.flex, layout.row, layout.justSpbw, style.fade]
 const headerTextCss = [style.incon, style.whiteUnderline, style.headerA, style.hoverA]
 const aCss = [layout.padding25, layout.marginHalfRem, style.hoverA]
 
-export default function Header() {
-  const [screenSize, setScreenSize] = useState(screen.width);
+export default function Header(props) {
   const [menuDisplay, setMenuDisplay] = useState(false);
 
-  $(window).on('resize', () => setScreenSize(screen.width))
-
-  const label = (screenSize > 768)
+  const label = (props.screenSize > 768)
     ? `<QUINTINRUSSELL/>`
     : `<>QR</>`
 
@@ -27,10 +22,12 @@ export default function Header() {
     if (menuDisplay) return (
       <>
         <div css={[layout.flex, layout.justEnd]}>
-          <div css={[layout.flex, layout.col, layout.justSpbw, layout.alignC, layout.fitContent, layout.menuCont, style.incon, style.borderLight, style.fade]}>
+          <div css={[layout.flex, layout.col, layout.justSpbw, layout.alignC, layout.fitContent, layout.menuCont, style.incon, style.borderLight, style.fadeSolid]}>
             <a css={aCss} href="#about">{`-ABOUT-`}</a>
             <a css={aCss} href="#projects">{`-SEE MY WORK-`}</a>
-            <a css={aCss} href="#contact">{`-CONTACT ME-`}</a>
+            <a css={aCss}
+              href="mailto:quinn.j.russell@gmail.com"
+              target="_blank">{`-CONTACT ME-`}</a>
           </div>
         </div>
       </>
@@ -64,7 +61,7 @@ export default function Header() {
           <h1 css={[style.incon, style.fadeTxt]}>{label}</h1>
         </a>
         <div css={[layout.flex, layout.row, layout.alignC]}>
-          {renderHeaderTxt(screenSize)}
+          {renderHeaderTxt(props.screenSize)}
           <Menu setMenuDisplay={setMenuDisplay}
             menuDisplay={menuDisplay} />
         </div>

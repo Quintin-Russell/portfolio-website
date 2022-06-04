@@ -26,6 +26,10 @@ export default {
     background: linear-gradient(to right, #000000, #0c0c0c, rgba(132, 132, 132, .50));
   `,
 
+  fadeSolid: css`
+    background: linear-gradient(to right, #000000, #0c0c0c, rgb(132, 132, 132));
+  `,
+
   font1rem: css`
   font-size: 1rem;
   `,
@@ -141,12 +145,12 @@ list-style: none;
   background-color: #E9E9E960;
   `,
 
-  viewSwapHeader: css`
-  border-top: 0;
-  border-left: 0.05rem solid #fff;
-  border-right: 0.05rem solid #fff;
-  border-bottom: 0.15rem solid #fff;
-  `,
+  // viewSwapHeader: css`
+  // border-top: 0;
+  // border-left: 0.05rem solid #fff;
+  // border-right: 0.05rem solid #fff;
+  // border-bottom: 0.15rem solid #fff;
+  // `,
 
   dots: css`
   font-size: 1rem;

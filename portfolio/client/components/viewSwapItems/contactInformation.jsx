@@ -68,6 +68,7 @@ const contactInfo = [
         target="_blank"><HiOutlineDocumentText /></a>
     </span>
   </div>
+
 ]
 
 export default new ViewSwapItem('Contact Information', 'list', 'contact', contactInfo)

@@ -6,18 +6,16 @@ import $ from 'jquery'
 import TechIconList from "./techIconList";
 
 import style from "../../style/style";
-import layout from "../../style/layout"
+import layout from "../../style/layout";
+import lessThan768 from "../functions/lessthan768";
 
 const cont = [layout.flex, layout.col, layout.alignC, layout.justCent]
 const boldPfDisp = [style.pfDisp, style.bold]
 
 export default function Description(props) {
-  const [screenSize, setScreenSize] = useState(screen.width);
-
-  $(window).on('resize', () => setScreenSize(screen.width))
 
   const renderTechUsed = (screenSize) => {
-    if (screenSize > 768) {
+    if (!lessThan768(screenSize)) {
       return (
         <>
           <section css={cont}>
@@ -35,7 +33,7 @@ export default function Description(props) {
         <p css={[...boldPfDisp, layout.margin0, style.font3rem]}>{props.project.name}</p>
         <p css={[style.font1halfrem, style.monts, style.light]}>{props.project.description}</p>
       </section>
-      {renderTechUsed(screenSize)}
+      {renderTechUsed(props.screenSize)}
     </div>
   )
 }

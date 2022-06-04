@@ -2,6 +2,7 @@
 import React, {
   useState,
   useReducer,
+  useRef,
   useEffect
 } from "react";
 import { jsx, css } from '@emotion/react'
@@ -57,10 +58,15 @@ export default function Typewriter(props) {
     <>
       <p css={[style.textCent]}>
         {dispString.map((x) => <>
-          <span key={x.word} css={(x.bold === 'bold') ? [font, fontSize, style.bold] : [font, fontSize]}>{x.word} </span>
+          <span key={x.word}
+            css={(x.bold === 'bold')
+              ? [font, fontSize, style.bold]
+              : [font, fontSize]}>{x.word} </span>
           <span key={`${x.word}1`}> </span>
         </>)}
-        <span css={[font, fontSize]}>{(cursor) ? "|" : ""}</span>
+        <span css={[font, fontSize]}>{(cursor)
+          ? "|"
+          : ""}</span>
       </p>
     </>
   )
