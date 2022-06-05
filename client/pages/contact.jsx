@@ -6,10 +6,10 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Typewriter from "../components/typewriter";
-import ViewSwap from "../components/viewSwap";
+import ViewSwap from "../components/view-swap";
 
-import contactForm from "../components/viewSwapItems/contactForm";
-import contactInformation from "../components/viewSwapItems/contactInformation";
+import contactForm from "../components/viewSwapItems/contact-form";
+import contactInformation from "../components/viewSwapItems/contact-information";
 import style from "../style/style";
 import layout from "../style/layout"
 

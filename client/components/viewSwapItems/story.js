@@ -1,4 +1,4 @@
-import ViewSwapItem from "./viewSwapConstructor"
+import ViewSwapItem from "./view-swap-constructor"
 
 const storyText = [
 `As human-beings, passions are what drives our decisions.`,

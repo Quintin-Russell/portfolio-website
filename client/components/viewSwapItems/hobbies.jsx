@@ -4,7 +4,7 @@ import { jsx, css } from '@emotion/react'
 
 import layout from '../../style/layout'
 
-import ViewSwapItem from "./viewSwapConstructor"
+import ViewSwapItem from "./view-swap-constructor"
 import BJJ from '../../../server/public/images/hobbies/BJJ.png'
 import MuayThai from '../../../server/public/images/hobbies/MuayThai.png'
 import Travel from '../../../server/public/images/hobbies/Travel.png'

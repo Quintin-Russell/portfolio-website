@@ -3,10 +3,10 @@ import React, { useReducer } from 'react'
 import { jsx, css } from '@emotion/react'
 import $ from 'jquery'
 
-import ViewSwapText from './viewSwapItems/viewSwapText'
-import ViewSwapList from './viewSwapItems/viewSwapList'
+import ViewSwapText from './viewSwapItems/view-swap-text'
+import ViewSwapList from './viewSwapItems/view-swap-list'
 import Carousel from './carousel'
-import ContactForm from './contact/contactForm'
+import ContactForm from './contact/contact-form'
 import Tabs from './viewSwapItems/tabs'
 
 import style from '../style/style'

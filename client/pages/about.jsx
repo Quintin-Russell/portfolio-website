@@ -6,12 +6,12 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Typewriter from "../components/typewriter";
-import ToolsText from "../components/tools/toolsText";
-import ToolsIcons from "../components/tools/toolsIcons";
-import AboutPhoto from "../components/about/aboutPhoto";
-import ViewSwap from "../components/viewSwap";
+import ToolsText from "../components/tools/tools-text";
+import ToolsIcons from "../components/tools/tools-icons";
+import AboutPhoto from "../components/about/about-photo";
+import ViewSwap from "../components/view-swap";
 
-import lessThan768 from "../components/functions/lessthan768";
+import lessThan768 from "../components/functions/less-than-768";
 import story from "../components/viewSwapItems/story";
 import timeline from "../components/viewSwapItems/timeline";
 import hobbies from "../components/viewSwapItems/hobbies";

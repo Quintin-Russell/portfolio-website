@@ -4,7 +4,7 @@ import { jsx, css } from '@emotion/react'
 import $ from 'jquery'
 
 import Description from "./description";
-import ProjectImg from "./projectImg";
+import ProjectImg from "./project-img";
 
 import style from "../../style/style";
 import layout from "../../style/layout"

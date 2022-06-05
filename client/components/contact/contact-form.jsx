@@ -6,11 +6,11 @@ import React, {
 import { useForm } from "react-hook-form"
 import { jsx, css } from '@emotion/react'
 
-import SubmittedModal from "./SubmittedModal";
+import SubmittedModal from "./submitted-modal";
 
 import post from "../functions/post";
-import sendClientEmail from "../functions/sendClientEmail";
-import sendDataEmail from "../functions/sendDataEmail";
+import sendClientEmail from "../functions/send-client-email";
+import sendDataEmail from "../functions/send-data-email";
 
 import style from "../../style/style";
 import layout from "../../style/layout"

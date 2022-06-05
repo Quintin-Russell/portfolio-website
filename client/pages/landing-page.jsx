@@ -8,8 +8,8 @@ import Footer from "../components/footer";
 import Typewriter from "../components/typewriter";
 import Marquee from "react-fast-marquee";
 
-import pageArr from "../pages/pages"
-import lessThan768 from "../components/functions/lessthan768";
+import pageArr from "../pages"
+import lessThan768 from "../components/functions/less-than-768";
 import style from "../style/style";
 import layout from "../style/layout"
 

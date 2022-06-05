@@ -5,7 +5,7 @@ import { jsx, css } from '@emotion/react'
 import style from '../../style/style'
 import layout from '../../style/layout'
 
-import ViewSwapItem from "./viewSwapConstructor"
+import ViewSwapItem from "./view-swap-constructor"
 import {
   AiOutlineLinkedin,
   AiOutlinePhone,

@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import { jsx, css } from '@emotion/react'
 import $ from 'jquery'
 
-import TechIconList from "./techIconList";
+import TechIconList from "./tech-icon-list";
 
 import style from "../../style/style";
 import layout from "../../style/layout";
-import lessThan768 from "../functions/lessthan768";
+import lessThan768 from "../functions/less-than-768";
 
 const cont = [layout.flex, layout.col, layout.alignC, layout.justCent]
 const boldPfDisp = [style.pfDisp, style.bold]

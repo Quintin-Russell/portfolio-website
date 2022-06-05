@@ -5,7 +5,7 @@ import Marquee from 'react-fast-marquee'
 
 import Typewriter from '../typewriter'
 
-import lessthan768 from '../functions/lessthan768'
+
 import QRfrance from '../../../server/public/images/qrPics/QRfrance.png'
 import QRturkey from '../../../server/public/images/qrPics/QRturkey.jpeg'
 import QRwedding from '../../../server/public/images/qrPics/QRwedding.jpeg'
@@ -16,7 +16,7 @@ import QRmountain from '../../../server/public/images/qrPics/QRmountain.jpg'
 
 import style from '../../style/style'
 import layout from '../../style/layout'
-
+import lessthan768 from '../functions/less-than-768'
 
 
 const imgArr = [QRfrance, QRhuay, QRwedding, QRcanyon, QRturkey, QRlakes, QRmountain]
