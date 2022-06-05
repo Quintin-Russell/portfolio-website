@@ -58,6 +58,6 @@
     "dev:client": "webpack serve --mode=development",
     "dev:server": "nodemon server/index.js",
     "db:import": "bash scripts/db-import.bash",
-    "prepare": "husky install"
+    "prepare": "is-ci || husky install"
   }
 }
