@@ -1,4 +1,4 @@
-import ViewSwapItem from "./viewSwapConstructor"
+import ViewSwapItem from "./view-swap-constructor"
 
 const accomplishmentArr = [
   'Jun 2016: graduated from Oregon State University',

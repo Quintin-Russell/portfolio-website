@@ -15,7 +15,7 @@ import {
 
 import style from '../style/style'
 import layout from '../style/layout'
-import lessthan768 from './functions/lessthan768';
+import lessthan768 from './functions/less-than-768';
 
 //props: hobbies (arr of objs)
 

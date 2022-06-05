@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx, css } from '@emotion/react'
-import $ from 'jquery'
 
-import pageArr from '../pages/pages'
+import pageArr from '../pages'
 
 import style from "../style/style";
 import layout from "../style/layout"

@@ -12,7 +12,7 @@ import parseRoute from './parse-route';
 import layout from './style/layout';
 
 import Footer from './components/footer';
-import LandingPage from './pages/landingPage'
+import LandingPage from './pages/landing-page'
 import About from './pages/about';
 import Projects from './pages/projects';
 import Contact from './pages/contact';
