@@ -25,10 +25,6 @@ export default function Projects(props) {
     fetchReq('/api/projects', setProjects)
   }, [])
 
-  setTimeout(() => {
-    setFirstTWCompleted(true)
-  }, 3000)
-
   const tarString = "I'm your easy-to-work-with partner that can make your ideas become (digital) reality."
   let startSticky = 0.25;
   let endSticky = 2.5;
