@@ -105,7 +105,7 @@ export default function Projects(props) {
                 I would love to help out in the design and build process.
 
               </p>
-              <p css={endText}>Click to the right and let's make your idea a reality!</p>
+              <p css={endText}>Click the link and let's make your idea a reality!</p>
             </div>
             <div css={[...col50Cont, layout.marginAuto]}>
               <a
