@@ -26,8 +26,8 @@ export default function Header(props) {
             <a css={aCss} href="#about">{`-ABOUT-`}</a>
             <a css={aCss} href="#projects">{`-SEE MY WORK-`}</a>
             <a css={aCss}
-              href="mailto:quinn.j.russell@gmail.com"
-              target="_blank">{`-CONTACT ME-`}</a>
+              href="#contact"
+            >{`-CONTACT ME-`}</a>
           </div>
         </div>
       </>
@@ -37,7 +37,8 @@ export default function Header(props) {
   const renderHeaderTxt = (screenSize) => {
     if (screenSize > 768) return (
       <>
-        <a href="#contact"
+        <a href="mailto:quinn.j.russell@gmail.com"
+          target="_blank"
           css={headerTextCss}
         >
           Let's Talk
