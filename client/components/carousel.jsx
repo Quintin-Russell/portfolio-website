@@ -107,7 +107,7 @@ export default function Carousel(props) {
         {renderCarousel()}
       </div>
       <div>
-        <p css={[style.textCent, style.monts]}>{props.obj.text[currentImg].text}</p>
+        <p css={[layout.padding25, style.textCent, style.monts]}>{props.obj.text[currentImg].text}</p>
       </div>
     </>
   );

@@ -56,7 +56,7 @@ export default function Typewriter(props) {
 
   return (
     <>
-      <p css={[style.textCent]}>
+      <p css={[layout.padding25, style.textCent]}>
         {dispString.map((x) => <>
           <span key={x.word}
             css={(x.bold === 'bold')
