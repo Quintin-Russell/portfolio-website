@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import React, { useState } from 'react';
+import useScreenSize from '../context/use-screen-size.js'
 import { jsx, css } from '@emotion/react'
 import $ from 'jquery'
 
@@ -24,6 +25,7 @@ const arrow = [layout.flex, layout.justCent, layout.width10]
 const dots = [style.cursor, style.dots]
 
 export default function Carousel(props) {
+  const screenSize = useScreenSize()
   const [currentImg, setCurrentImg] = useState(0);
 
   const nextImg = () => {
@@ -72,7 +74,7 @@ export default function Carousel(props) {
   }
 
   const renderCarousel = () => {
-    if (!lessthan768(props.screenSize)) {
+    if (!lessthan768(screenSize.width)) {
       return (
         <>
           <div css={arrow} onClick={() => prevImg()}>

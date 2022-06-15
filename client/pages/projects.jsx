@@ -3,6 +3,7 @@ import React, {
   useState,
   useEffect
 } from "react";
+import useScreenSize from '../context/use-screen-size.js'
 import { jsx, css } from '@emotion/react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
@@ -18,7 +19,8 @@ import fetchReq from '../components/functions/fetch'
 const endText = [layout.flex, layout.justCent, layout.flex50, style.font1rem, style.monts]
 const col50Cont = [layout.flex, layout.col, layout.flex50]
 
-export default function Projects(props) {
+export default function Projects() {
+  const screenSize = useScreenSize()
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
@@ -51,7 +53,7 @@ export default function Projects(props) {
         <ParallaxLayer
           speed={0.5}
           factor={1.2}>
-          <Header screenSize={props.screenSize} />
+          <Header />
           <div css={[layout.flex, layout.rowMobile, layout.alignC, layout.justCent, layout.height100, layout.topMargin]}>
             <div css={col50Cont}>
               <p css={[layout.flex, layout.flex50, layout.justCent, layout.margin0, style.font3rem, style.incon]}>Projects</p>
@@ -82,7 +84,6 @@ export default function Projects(props) {
                 factor={1}
                 speed={0.75}>
                 <Project
-                  screenSize={props.screenSize}
                   project={x}
                   key={x.name}
                   index={index} />

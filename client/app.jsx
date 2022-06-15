@@ -25,15 +25,12 @@ export default function App(props) {
     {width: window.innerWidth,
     height: window.innerHeight
 });
-  // const [screenHeight, setScreenHeight] = useState(window.innerHeight);
-
 
   $(document).title = '../server/public/images/flavicon/favicn.ico'
   $(window).on('resize', () => {
     const width = window.innerWidth
     const height = window.innerHeight
     setScreenSize({width, height})
-    // setScreenHeight()
   })
 
   useEffect(() => {
@@ -44,10 +41,15 @@ export default function App(props) {
   }, [])
 
   const determinePage = (hash) => {
-    if (hash.path === 'about') return <About screenSize={screenSize} />
-    if (hash.path === 'projects') return <Projects screenSize={screenSize} />
-    if (hash.path === 'contact') return <Contact screenSize={screenSize} />
-    return <LandingPage screenHeight={screenHeight} screenSize={screenSize} />
+    // if (hash.path === 'about') return <About screenSize={screenSize} />
+    // if (hash.path === 'projects') return <Projects screenSize={screenSize} />
+    // if (hash.path === 'contact') return <Contact screenSize={screenSize} />
+    // return <LandingPage screenHeight={screenHeight} screenSize={screenSize} />
+    //using context custom hook
+    if (hash.path === 'about') return <About />
+    if (hash.path === 'projects') return <Projects />
+    if (hash.path === 'contact') return <Contact />
+    return <LandingPage />
   }
 
   return (

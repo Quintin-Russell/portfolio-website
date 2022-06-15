@@ -1,0 +1,14 @@
+-about
+  headerxxxxx
+  typewriterxxxxxx
+  AboutPhotoxxxx
+  viewSwapxxxx
+    carouselxxxxx
+-contactxxxx
+- LandingPagexxx
+  marqueexxxxx
+  render marqueexxxxxx
+-projectsxxxxxx
+  project
+    descriptionxxxxx
+    project imgxxxxxx

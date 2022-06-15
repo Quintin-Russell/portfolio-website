@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import React from 'react'
+import useScreenSize from '../../context/use-screen-size'
 import { jsx, css } from '@emotion/react'
 import Marquee from 'react-fast-marquee'
 
@@ -24,7 +25,9 @@ const imgArr = [QRfrance, QRhuay, QRwedding, QRcanyon, QRturkey, QRlakes, QRmoun
 const pCss = [layout.margin1rem, style.font3rem, style.incon, style.light]
 const smallerImgCss = [layout.width20, layout.padding2rem]
 
-export default function AboutPhoto(props) {
+export default function AboutPhoto() {
+  const screenSize = useScreenSize()
+
   return (
     <>
       <div css={[layout.flex, layout.col]}>
@@ -100,8 +103,8 @@ export default function AboutPhoto(props) {
                     key={x}
                     css={[layout.margin1rem]}>
                     <img
-                      style={(!lessthan768(props.screenSize))
-                        ? { width: `${props.screenSize / 5}px` }
+                      style={(!lessthan768(screenSize.width))
+                        ? { width: `${screenSize.width / 5}px` }
                         : { width: `10rem` }}
                       src={x} alt='QRphoto' />
                   </div>

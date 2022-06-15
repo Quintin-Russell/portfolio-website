@@ -20,7 +20,7 @@ import hobbies from "../components/viewSwapItems/hobbies";
 import style from "../style/style";
 import layout from "../style/layout"
 
-export default function About(props) {
+export default function About() {
   const screenSize = useScreenSize()
 
   const viewSwapItems = [story, timeline, hobbies]
@@ -34,7 +34,7 @@ export default function About(props) {
         <ParallaxLayer
           css={[layout.bkg1]}
           factor={1}>
-          <Header screenSize={props.screenSize} />
+          <Header />
           <div css={[layout.flex, layout.row, layout.justCent]}>
             <Typewriter
               font='incon'
@@ -79,7 +79,7 @@ export default function About(props) {
           offset={1.25}
           factor={1.75}
           speed={0.5}>
-          <AboutPhoto screenSize={screenSize.width} />
+          <AboutPhoto />
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -87,9 +87,7 @@ export default function About(props) {
           speed={0.3}
           factor={2}
           css={[layout.flex, layout.alignC, layout.justCent, layout.bottomPadding]}>
-          <ViewSwap
-            screenSize={screenSize.width}
-            objList={viewSwapItems} />
+          <ViewSwap objList={viewSwapItems} />
         </ParallaxLayer>
 
       </Parallax>

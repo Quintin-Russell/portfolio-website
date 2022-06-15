@@ -27,7 +27,7 @@ export default function ViewSwap(props) {
   const determineItem = (obj) => {
     if (obj.type === 'text' && highlightedTab === obj.name) return <ViewSwapText key={obj.name} obj={obj} />
     if (obj.type === 'list' && highlightedTab === obj.name) return <ViewSwapList key={obj.name} obj={obj} />
-    if (obj.type === 'carousel' && highlightedTab === obj.name) return <Carousel screenSize={props.screenSize} key={obj.name} obj={obj} />
+    if (obj.type === 'carousel' && highlightedTab === obj.name) return <Carousel key={obj.name} obj={obj} />
     if (obj.type === 'contact-form' && highlightedTab === obj.name) return <ContactForm key={obj.name} obj={obj} />
     return <div key={Math.random() * 9999999} css={style.hidden}></div>
   }

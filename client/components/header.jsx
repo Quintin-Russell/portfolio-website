@@ -1,9 +1,11 @@
 /** @jsx jsx */
 import React, { useState } from 'react'
+import useScreenSize from '../context/use-screen-size'
 import { jsx, css } from '@emotion/react'
 
 import Menu from './menu'
 
+import lessThan768 from './functions/less-than-768'
 import style from '../style/style'
 import layout from '../style/layout'
 
@@ -11,10 +13,11 @@ const headerCss = [layout.flex, layout.row, layout.justSpbw, style.fade]
 const headerTextCss = [style.incon, style.whiteUnderline, style.headerA, style.hoverA]
 const aCss = [layout.padding25, layout.marginHalfRem, style.hoverA]
 
-export default function Header(props) {
+export default function Header() {
   const [menuDisplay, setMenuDisplay] = useState(false);
+  const screenSize = useScreenSize()
 
-  const label = (props.screenSize > 768)
+  const label = (!lessThan768(screenSize.width))
     ? `<QUINTINRUSSELL/>`
     : `<>QR</>`
 
@@ -62,7 +65,7 @@ export default function Header(props) {
           <h1 css={[style.incon, style.fadeTxt]}>{label}</h1>
         </a>
         <div css={[layout.flex, layout.row, layout.alignC]}>
-          {renderHeaderTxt(props.screenSize)}
+          {renderHeaderTxt(screenSize)}
           <Menu setMenuDisplay={setMenuDisplay}
             menuDisplay={menuDisplay} />
         </div>
