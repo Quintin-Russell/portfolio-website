@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import React from "react";
+import useScreenSize from '../context/use-screen-size.js'
 import { jsx, css } from '@emotion/react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
@@ -20,6 +21,7 @@ import style from "../style/style";
 import layout from "../style/layout"
 
 export default function About(props) {
+  const screenSize = useScreenSize()
 
   const viewSwapItems = [story, timeline, hobbies]
 
@@ -62,7 +64,7 @@ export default function About(props) {
           offset={0.5} //og = 0.5
           factor={1.5}
           speed={0.75}>
-          <div css={(!lessThan768(props.screenSize)) ? [layout.flex, layout.justEnd] : [layout.flex, layout.justCent]}>
+          <div css={(!lessThan768(screenSize.width)) ? [layout.flex, layout.justEnd] : [layout.flex, layout.justCent]}>
             <p css={[layout.margin0, layout.flex, layout.flex50, layout.justCent, style.incon, style.font3rem]}>Tools</p>
           </div>
           <div css={[layout.flex, layout.alignC, layout.justSpbw, layout.rowMobile]}>
@@ -77,7 +79,7 @@ export default function About(props) {
           offset={1.25}
           factor={1.75}
           speed={0.5}>
-          <AboutPhoto screenSize={props.screenSize} />
+          <AboutPhoto screenSize={screenSize.width} />
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -86,7 +88,7 @@ export default function About(props) {
           factor={2}
           css={[layout.flex, layout.alignC, layout.justCent, layout.bottomPadding]}>
           <ViewSwap
-            screenSize={props.screenSize}
+            screenSize={screenSize.width}
             objList={viewSwapItems} />
         </ParallaxLayer>
 
