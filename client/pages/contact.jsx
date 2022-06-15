@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import React from "react";
+import useScreenSize from '../context/use-screen-size.js'
 import { jsx, css } from '@emotion/react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
@@ -15,7 +16,8 @@ import layout from "../style/layout"
 
 const cont50 = [layout.flex, layout.col, layout.flex50]
 
-export default function Contact(props) {
+export default function Contact() {
+  const screenSize = useScreenSize()
   const tarString = `Let's Talk`
   const viewSwapItems = [contactForm, contactInformation]
   return (
@@ -27,7 +29,7 @@ export default function Contact(props) {
         <ParallaxLayer
           factor={1}
           css={[layout.bkg1]}>
-          <Header screenSize={props.screenSize} />
+          <Header />
         </ParallaxLayer>
 
         <ParallaxLayer

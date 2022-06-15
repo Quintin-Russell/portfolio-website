@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import React, { useState } from "react";
+import useScreenSize from '../context/use-screen-size.js'
 import { jsx, css } from '@emotion/react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
@@ -38,7 +39,8 @@ const settings = {
   }
 }
 
-export default function LandingPage(props) {
+export default function LandingPage() {
+  const screenSize = useScreenSize()
   const [firstTWCompleted, setFirstTWCompleted] = useState(null)
 
   setTimeout(() => {
@@ -51,7 +53,7 @@ export default function LandingPage(props) {
     return (
       <Typewriter
         font='monts'
-        fontSize={(!lessThan768(props.screenSize))
+        fontSize={(!lessThan768(screenSize.width))
           ? 'font3rem'
           : 'font2halfrem'}
         tarString="At my core, I am a constant asker of why? and how did you do that?.
@@ -75,11 +77,11 @@ export default function LandingPage(props) {
                 <div
                   key={x.name}
                   style={{
-                    minWidth: `${props.screenSize / pageArr.length}px`,
+                    minWidth: `${screenSize.width / pageArr.length}px`,
                     borderRadius: '3rem'
                   }}
                   css={[marqueeDiv]}>
-                  <a css={(!lessThan768(props.screenSize)) ? [...marqueeA, style.font2halfrem] : [...marqueeA]} href={x.hash}>
+                  <a css={(!lessThan768(screenSize.width)) ? [...marqueeA, style.font2halfrem] : [...marqueeA]} href={x.hash}>
                     <p>{x.display}</p>
                   </a>
                 </div>
@@ -99,7 +101,7 @@ export default function LandingPage(props) {
         <ParallaxLayer
           css={[layout.bkg1]}
           factor={settings.bkg1.factor}>
-          <Header screenSize={props.screenSize} />
+          <Header />
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -115,22 +117,22 @@ export default function LandingPage(props) {
           factor={settings.parallax1.factor}
         >
           <div css={layout.margin1rem}>
-            <div css={(!lessThan768(props.screenSize))
+            <div css={(!lessThan768(screenSize.width))
               ? [...jobDesc, style.font3rem]
               : [...jobDesc, style.font2halfrem]}>
               <span css={style.landingPgTxt_or}>{`<`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span>
             </div>
-            <div css={(!lessThan768(props.screenSize))
+            <div css={(!lessThan768(screenSize.width))
               ? [...jobDesc, style.font3rem]
               : [...jobDesc, style.font2halfrem]}>
               <span css={style.landingPgTxt_bl}>{`profession =“software-engineer”`}</span>
             </div>
-            <div css={(!lessThan768(props.screenSize))
+            <div css={(!lessThan768(screenSize.width))
               ? [...jobDesc, style.font3rem]
               : [...jobDesc, style.font2halfrem]}>
               <span css={style.landingPgTxt_bl}>{`tools=[“JavaScript”, “Python”, “CSS”, “HTML”]`}</span>
             </div>
-            <div css={(!lessThan768(props.screenSize))
+            <div css={(!lessThan768(screenSize.width))
               ? [...jobDesc, style.font3rem, style.landingPgTxt_or]
               : [...jobDesc, style.font2halfrem, style.landingPgTxt_or]}>
               {`>`}
@@ -141,7 +143,7 @@ export default function LandingPage(props) {
           <div css={[layout.smallSidePadding]}>
             <Typewriter
               font='pfDisp'
-              fontSize={(!lessThan768(props.screenSize))
+              fontSize={(!lessThan768(screenSize.width))
                 ? 'font3rem'
                 : 'font2halfrem'}
               tarString="
@@ -156,7 +158,7 @@ export default function LandingPage(props) {
 
           </div>
 
-          <div css={(!lessThan768(props.screenSize))
+          <div css={(!lessThan768(screenSize.width))
             ? [...jobDesc, layout.margin1rem, style.font3rem]
             : [...jobDesc, layout.margin1rem, style.font2halfrem]}>
             <span css={style.landingPgTxt_or}>{`</`}</span><span css={style.landingPgTxt_bl}>{`QuintinRussell`}</span><span css={style.landingPgTxt_or}>{`>`}</span>
@@ -168,7 +170,7 @@ export default function LandingPage(props) {
           offset={1.15}
           factor={0.5}
           speed={0.75}>
-          {renderMarquee(props.screenHeight, props.screenSize)}
+          {renderMarquee(screenSize.height, screenSize.width)}
         </ParallaxLayer>
 
       </Parallax>
