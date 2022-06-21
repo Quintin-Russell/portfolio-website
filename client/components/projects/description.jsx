@@ -34,6 +34,9 @@ export default function Description(props) {
       <section css={[style.textCent]}>
         <p css={[...boldPfDisp, layout.margin0, style.font3rem]}>{props.project.name}</p>
         <p css={[style.font1halfrem, style.monts, style.light]}>{props.project.description}</p>
+        <a href={props.project.liveLink}
+        target="_blank"
+        css={[style.incon, style.font1halfrem]}>Click Here To Demo!</a>
       </section>
       {renderTechUsed(screenSize.width)}
     </div>

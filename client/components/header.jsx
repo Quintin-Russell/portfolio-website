@@ -38,9 +38,7 @@ export default function Header() {
   }
 
   const renderHeaderTxt = (screenSize) => {
-    if (screenSize > 768) {
-      console.log('screensize:', screenSize)
-      return (
+    if (screenSize > 768) return (
       <>
         <a href="mailto:quinn.j.russell@gmail.com"
           target="_blank"
@@ -54,7 +52,7 @@ export default function Header() {
           Resume
         </a>
       </>
-    )}
+    )
   }
 
 
