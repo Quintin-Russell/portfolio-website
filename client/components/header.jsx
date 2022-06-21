@@ -38,12 +38,13 @@ export default function Header() {
   }
 
   const renderHeaderTxt = (screenSize) => {
-    if (screenSize > 768) return (
+    if (screenSize > 768) {
+      console.log('screensize:', screenSize)
+      return (
       <>
         <a href="mailto:quinn.j.russell@gmail.com"
           target="_blank"
-          css={headerTextCss}
-        >
+          css={headerTextCss}>
           Let's Talk
         </a>
 
@@ -53,7 +54,7 @@ export default function Header() {
           Resume
         </a>
       </>
-    )
+    )}
   }
 
 
@@ -65,7 +66,7 @@ export default function Header() {
           <h1 css={[style.incon, style.fadeTxt]}>{label}</h1>
         </a>
         <div css={[layout.flex, layout.row, layout.alignC]}>
-          {renderHeaderTxt(screenSize)}
+          {renderHeaderTxt(screenSize.width)}
           <Menu setMenuDisplay={setMenuDisplay}
             menuDisplay={menuDisplay} />
         </div>
