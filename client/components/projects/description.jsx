@@ -41,4 +41,3 @@ export default function Description(props) {
       {renderTechUsed(screenSize.width)}
     </div>
   )
-}
