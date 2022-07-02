@@ -1,5 +1,7 @@
 # portfolio-website
+
 ## www.quintinrussell.us
+
 ### A full-stack showcase of my work, skills, and my story
 
 <dl>
@@ -7,7 +9,7 @@
     Why: 
   </dt>
 </dl> 
-I built this project to centralize my contact information and projects in a format that the average person can enjoy. I also wanted to create an easy way for people to directly get in touch with me. 
+I built this project to centralize my contact information and projects in a format that the average person can enjoy. I also wanted to create an easy way for people to directly get in touch with me.
 
 <dl>
   <dt>
@@ -16,13 +18,13 @@ I built this project to centralize my contact information and projects in a form
 </dl>
 
 - React.js
--   react hooks
-  - react-spring/parallax
-  - emotion (CSS-in-JS)
+- react hooks
+- react-spring/parallax
+- emotion (CSS-in-JS)
 - NodeJS
   - Express.js
   - PostgreSQL
-- jQuery 
+- jQuery
 - Webpack
 - HTML5
 - CSS3

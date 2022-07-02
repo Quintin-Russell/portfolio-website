@@ -1,16 +1,16 @@
-require('dotenv/config');
-const path = require('path');
+require("dotenv/config");
+const path = require("path");
 
-const clientPath = path.join(__dirname, 'client');
-const serverPublicPath = path.join(__dirname, 'server/public');
+const clientPath = path.join(__dirname, "client");
+const serverPublicPath = path.join(__dirname, "server/public");
 
 module.exports = {
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: [".js", ".jsx"],
   },
   entry: clientPath,
   output: {
-    path: serverPublicPath
+    path: serverPublicPath,
   },
   module: {
     rules: [
@@ -19,45 +19,45 @@ module.exports = {
         include: clientPath,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
             plugins: [
-            '@emotion/babel-plugin',
-            '@babel/plugin-transform-react-jsx'
-            ]
-          }
-        }
+              "@emotion/babel-plugin",
+              "@babel/plugin-transform-react-jsx",
+            ],
+          },
+        },
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
-          'file-loader',
+          "file-loader",
           {
-            loader: 'image-webpack-loader',
+            loader: "image-webpack-loader",
             options: {
               bypassOnDebug: true,
-              disable: true
+              disable: true,
             },
           },
         ],
-      }
-    ]
+      },
+    ],
   },
-  devtool: 'source-map',
+  devtool: "source-map",
   devServer: {
-    host: '0.0.0.0',
+    host: "0.0.0.0",
     port: process.env.DEV_SERVER_PORT,
     static: {
       directory: serverPublicPath,
-      publicPath: '/',
-      watch: true
+      publicPath: "/",
+      watch: true,
     },
     proxy: {
-      '/api': `http://localhost:${process.env.PORT}`
-    }
+      "/api": `http://localhost:${process.env.PORT}`,
+    },
   },
-  stats: 'summary',
+  stats: "summary",
   performance: {
-    hints: false
-  }
+    hints: false,
+  },
 };

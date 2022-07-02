@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import React from "react";
-import useScreenSize from '../context/use-screen-size.js'
-import { jsx, css } from '@emotion/react'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import useScreenSize from "../context/use-screen-size.js";
+import { jsx, css } from "@emotion/react";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -18,27 +18,22 @@ import timeline from "../components/viewSwapItems/timeline";
 import hobbies from "../components/viewSwapItems/hobbies";
 
 import style from "../style/style";
-import layout from "../style/layout"
+import layout from "../style/layout";
 
 export default function About() {
-  const screenSize = useScreenSize()
+  const screenSize = useScreenSize();
 
-  const viewSwapItems = [story, timeline, hobbies]
+  const viewSwapItems = [story, timeline, hobbies];
 
   return (
     <>
-
-      <Parallax
-        pages={4.25}>
-
-        <ParallaxLayer
-          css={[layout.bkg1]}
-          factor={1}>
+      <Parallax pages={4.25}>
+        <ParallaxLayer css={[layout.bkg1]} factor={1}>
           <Header />
           <div css={[layout.flex, layout.row, layout.justCent]}>
             <Typewriter
-              font='incon'
-              fontSize='font3rem'
+              font="incon"
+              fontSize="font3rem"
               tarString="
               hi, i'm quintin.
               "
@@ -48,26 +43,45 @@ export default function About() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={1}
-          factor={1.5}
-          css={[layout.bkg2]} />
+        <ParallaxLayer offset={1} factor={1.5} css={[layout.bkg2]} />
 
-        <ParallaxLayer
-          offset={2.7}
-          factor={1.55}
-          css={[layout.bkg3]}>
+        <ParallaxLayer offset={2.7} factor={1.55} css={[layout.bkg3]}>
           <Footer />
         </ParallaxLayer>
 
         <ParallaxLayer
           offset={0.5} //og = 0.5
           factor={1.5}
-          speed={0.75}>
-          <div css={(!lessThan768(screenSize.width)) ? [layout.flex, layout.justEnd] : [layout.flex, layout.justCent]}>
-            <p css={[layout.margin0, layout.flex, layout.flex50, layout.justCent, style.incon, style.font3rem]}>Tools</p>
+          speed={0.75}
+        >
+          <div
+            css={
+              !lessThan768(screenSize.width)
+                ? [layout.flex, layout.justEnd]
+                : [layout.flex, layout.justCent]
+            }
+          >
+            <p
+              css={[
+                layout.margin0,
+                layout.flex,
+                layout.flex50,
+                layout.justCent,
+                style.incon,
+                style.font3rem,
+              ]}
+            >
+              Tools
+            </p>
           </div>
-          <div css={[layout.flex, layout.alignC, layout.justSpbw, layout.rowMobile]}>
+          <div
+            css={[
+              layout.flex,
+              layout.alignC,
+              layout.justSpbw,
+              layout.rowMobile,
+            ]}
+          >
             <div css={[layout.flex, layout.flex50, layout.justCent]}>
               <ToolsIcons />
             </div>
@@ -75,10 +89,7 @@ export default function About() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={1.25}
-          factor={1.75}
-          speed={0.5}>
+        <ParallaxLayer offset={1.25} factor={1.75} speed={0.5}>
           <AboutPhoto />
         </ParallaxLayer>
 
@@ -86,11 +97,16 @@ export default function About() {
           offset={2.2}
           speed={0.3}
           factor={2}
-          css={[layout.flex, layout.alignC, layout.justCent, layout.bottomPadding]}>
+          css={[
+            layout.flex,
+            layout.alignC,
+            layout.justCent,
+            layout.bottomPadding,
+          ]}
+        >
           <ViewSwap objList={viewSwapItems} />
         </ParallaxLayer>
-
       </Parallax>
     </>
-  )
+  );
 }

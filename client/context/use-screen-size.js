@@ -1,5 +1,5 @@
-import React, { useContext }from 'react'
+import React, { useContext } from "react";
 
-import ScreenSizeContext from './create-context'
+import ScreenSizeContext from "./create-context";
 
-export default () => useContext(ScreenSizeContext)
+export default () => useContext(ScreenSizeContext);

@@ -1,77 +1,79 @@
 /** @jsx jsx */
-import React, { useState } from 'react';
-import useScreenSize from '../context/use-screen-size.js'
-import { jsx, css } from '@emotion/react'
-import $ from 'jquery'
+import React, { useState } from "react";
+import useScreenSize from "../context/use-screen-size.js";
+import { jsx, css } from "@emotion/react";
+import $ from "jquery";
 
-import {
-  RiFocusFill,
-  RiCheckboxBlankCircleLine
-} from "react-icons/ri"
+import { RiFocusFill, RiCheckboxBlankCircleLine } from "react-icons/ri";
 
 import {
   MdOutlineKeyboardArrowLeft,
-  MdOutlineKeyboardArrowRight
-} from "react-icons/md"
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
 
-import style from '../style/style'
-import layout from '../style/layout'
-import lessthan768 from './functions/less-than-768';
+import style from "../style/style";
+import layout from "../style/layout";
+import lessthan768 from "./functions/less-than-768";
 
 //props: hobbies (arr of objs)
 
-const cont = [layout.flex, layout.justCent, layout.alignC]
-const arrow = [layout.flex, layout.justCent, layout.width10]
-const dots = [style.cursor, style.dots]
+const cont = [layout.flex, layout.justCent, layout.alignC];
+const arrow = [layout.flex, layout.justCent, layout.width10];
+const dots = [style.cursor, style.dots];
 
 export default function Carousel(props) {
-  const screenSize = useScreenSize()
+  const screenSize = useScreenSize();
   const [currentImg, setCurrentImg] = useState(0);
 
   const nextImg = () => {
-    if (currentImg === props.obj.text.length - 1) return setCurrentImg(0)
-    const newState = currentImg + 1
-    setCurrentImg(newState)
-  }
+    if (currentImg === props.obj.text.length - 1) return setCurrentImg(0);
+    const newState = currentImg + 1;
+    setCurrentImg(newState);
+  };
 
   const prevImg = () => {
-    if (currentImg === 0) return setCurrentImg(props.obj.text.length - 1)
-    const newState = currentImg - 1
-    setCurrentImg(newState)
-  }
+    if (currentImg === 0) return setCurrentImg(props.obj.text.length - 1);
+    const newState = currentImg - 1;
+    setCurrentImg(newState);
+  };
 
   const renderDots = () => {
     let index = 0;
-    const dotLiArr = props.obj.text.map(x => {
+    const dotLiArr = props.obj.text.map((x) => {
       index++;
       const currentIndex = index - 1;
       if (currentImg === currentIndex) {
         return (
           <li key={index.toString()}>
             <RiFocusFill css={dots} />
-          </li>)
-      };
+          </li>
+        );
+      }
       return (
         <li onClick={() => setCurrentImg(currentIndex)} key={index.toString()}>
           <RiCheckboxBlankCircleLine css={dots} />
         </li>
-      )
+      );
     });
     return (
-      <ul css={[...cont, layout.row, layout.width100, layout.padding0, style.noListStyle]}>
+      <ul
+        css={[
+          ...cont,
+          layout.row,
+          layout.width100,
+          layout.padding0,
+          style.noListStyle,
+        ]}
+      >
         {dotLiArr}
       </ul>
     );
-  }
+  };
 
   const renderPhoto = () => {
     const hobby = props.obj.text[currentImg];
-    return (
-      <div css={cont}>
-        {hobby.img.src}
-      </div>
-    );
-  }
+    return <div css={cont}>{hobby.img.src}</div>;
+  };
 
   const renderCarousel = () => {
     if (!lessthan768(screenSize.width)) {
@@ -90,7 +92,7 @@ export default function Carousel(props) {
             <MdOutlineKeyboardArrowRight css={[style.arrow]} />
           </div>
         </>
-      )
+      );
     } else {
       return (
         <>
@@ -99,17 +101,27 @@ export default function Carousel(props) {
             {renderDots()}
           </div>
         </>
-      )
+      );
     }
-  }
+  };
 
   return (
     <>
-      <div css={[layout.flex, layout.row, layout.alignC, layout.justSpbw, layout.width100]}>
+      <div
+        css={[
+          layout.flex,
+          layout.row,
+          layout.alignC,
+          layout.justSpbw,
+          layout.width100,
+        ]}
+      >
         {renderCarousel()}
       </div>
       <div>
-        <p css={[layout.padding25, style.textCent, style.monts]}>{props.obj.text[currentImg].text}</p>
+        <p css={[layout.padding25, style.textCent, style.monts]}>
+          {props.obj.text[currentImg].text}
+        </p>
       </div>
     </>
   );
