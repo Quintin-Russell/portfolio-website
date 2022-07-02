@@ -1,8 +1,3 @@
-import ViewSwapItem from "./view-swap-constructor";
+import ViewSwapItem from './view-swap-constructor'
 
-export default new ViewSwapItem(
-  "Direct Message",
-  "contact-form",
-  "contact",
-  ""
-);
+export default new ViewSwapItem('Direct Message', 'contact-form', 'contact', '')

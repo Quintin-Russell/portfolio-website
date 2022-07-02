@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import React from "react";
-import { jsx, css } from "@emotion/react";
+import React from 'react'
+import { jsx, css } from '@emotion/react'
 
-import style from "../../style/style";
-import layout from "../../style/layout";
+import style from '../../style/style'
+import layout from '../../style/layout'
 
 /*
 text object to work with:
@@ -16,17 +16,17 @@ text object to work with:
 */
 
 export default function ViewSwapText(props) {
-  return (
-    <>
-      <div css={[layout.padding25]}>
-        {props.obj.text.map((txt) => {
-          return (
-            <p key={Math.random() * 100000} css={[style.monts]}>
-              {txt}
-            </p>
-          );
-        })}
-      </div>
-    </>
-  );
+    return (
+        <>
+            <div css={[layout.padding25]}>
+                {props.obj.text.map((txt) => {
+                    return (
+                        <p key={Math.random() * 100000} css={[style.monts]}>
+                            {txt}
+                        </p>
+                    )
+                })}
+            </div>
+        </>
+    )
 }
