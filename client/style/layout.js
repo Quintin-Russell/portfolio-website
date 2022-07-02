@@ -1,209 +1,226 @@
-import { css } from "@emotion/react";
-import background1 from "../../server/public/images/background/background1.jpg";
-import background2 from "../../server/public/images/background/background2.jpg";
-import background3 from "../../server/public/images/background/background3.jpeg";
+import { css } from '@emotion/react'
+import background1 from '../../server/public/images/background/background1.jpg'
+import background2 from '../../server/public/images/background/background2.jpg'
+import background3 from '../../server/public/images/background/background3.jpeg'
 
 export default {
-  //over-rides ctrls
-  hidden: css`
-    display: hidden !important;
-  `,
+    //over-rides ctrls
+    hidden: css`
+        display: hidden !important;
+    `,
 
-  //background
-  bkg1: css`
-    background-image: url(${background1});
-    background-size: cover !important;
-    overflow: hidden scroll;
-  `,
+    noVisibility: css`
+        visibility: hidden;
+    `,
 
-  bkg2: css`
-    background-image: url(${background2});
-    background-size: cover !important;
-    overflow: hidden scroll;
-  `,
+    //background
+    bkg1: css`
+        background-image: url(${background1});
+        background-size: cover !important;
+        overflow: hidden scroll;
+    `,
 
-  bkg3: css`
-    background-image: url(${background3});
-    background-size: cover !important;
-    overflow: hidden scroll;
-  `,
+    bkg2: css`
+        background-image: url(${background2});
+        background-size: cover !important;
+        overflow: hidden scroll;
+    `,
 
-  // scroll
-  scroll: css`
-    overflow-y: scroll;
-  `,
+    bkg3: css`
+        background-image: url(${background3});
+        background-size: cover !important;
+        overflow: hidden scroll;
+    `,
 
-  // flexbox ctrls
-  flex: css`
-    display: flex;
-  `,
+    // scroll
+    scroll: css`
+        overflow-y: scroll;
+    `,
 
-  row: css`
-    flex-direction: row;
-  `,
+    // flexbox ctrls
+    flex: css`
+        display: flex;
+    `,
 
-  rowMobile: css`
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
-  `,
+    row: css`
+        flex-direction: row;
+    `,
 
-  col: css`
-    flex-direction: column;
-  `,
+    rowMobile: css`
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    `,
 
-  alignC: css`
-    align-items: center;
-  `,
+    col: css`
+        flex-direction: column;
+    `,
 
-  justSpbw: css`
-    justify-content: space-between;
-  `,
+    alignC: css`
+        align-items: center;
+    `,
 
-  justCent: css`
-    justify-content: center;
-  `,
+    justSpbw: css`
+        justify-content: space-between;
+    `,
 
-  justEnd: css`
-    justify-content: flex-end;
-  `,
+    justCent: css`
+        justify-content: center;
+    `,
 
-  justStart: css`
-    justify-content: flex-start;
-  `,
+    justEnd: css`
+        justify-content: flex-end;
+    `,
 
-  //width/height ctrls
+    justStart: css`
+        justify-content: flex-start;
+    `,
 
-  flex33: css`
-    flex-basis: calc(100% / 3);
-  `,
+    //width/height ctrls
 
-  flex50: css`
-    flex-basis: 50%;
-  `,
+    flex33: css`
+        flex-basis: calc(100% / 3);
+    `,
 
-  flex66: css`
-    flex-basis: calc(200% / 3);
-  `,
+    flex50: css`
+        flex-basis: 50%;
+    `,
 
-  fitContent: css`
-    width: fit-content;
-  `,
+    flex66: css`
+        flex-basis: calc(200% / 3);
+    `,
 
-  width10: css`
-    width: 10%;
-  `,
+    fitContent: css`
+        width: fit-content;
+    `,
 
-  width20: css`
-    width: 20%;
-  `,
+    width10: css`
+        width: 10%;
+    `,
 
-  width50: css`
-    width: 50%;
-  `,
+    width20: css`
+        width: 20%;
+    `,
 
-  width80: css`
-    width: 80%;
-  `,
+    width50: css`
+        width: 50%;
+    `,
 
-  width100: css`
-    width: 100%;
-  `,
+    width80: css`
+        width: 80%;
+    `,
 
-  height80: css`
-    height: 80%;
-  `,
+    width100: css`
+        width: 100%;
+    `,
 
-  height100: css`
-    height: 100%;
-  `,
+    height80: css`
+        height: 80%;
+    `,
 
-  //padding/margin ctrls
+    height100: css`
+        height: 100%;
+    `,
 
-  padding0: css`
-    padding: 0;
-  `,
+    //padding/margin ctrls
 
-  padding25: css`
-    padding: 0.25rem;
-  `,
+    padding0: css`
+        padding: 0;
+    `,
 
-  padding2rem: css`
-    padding: 2rem;
-  `,
+    padding25: css`
+        padding: 0.25rem;
+    `,
 
-  bottomPadding: css`
-    padding-bottom: 5%;
-  `,
+    padding2rem: css`
+        padding: 2rem;
+    `,
 
-  topPadding: css`
-    padding-top: 2rem;
-  `,
+    bottomPadding: css`
+        padding-bottom: 5%;
+    `,
 
-  leftPadding: css`
-    padding-left: 1rem;
-  `,
+    topPadding: css`
+        padding-top: 2rem;
+    `,
 
-  smallSidePadding: css`
-    padding: 0 0.25rem;
-  `,
+    leftPadding: css`
+        padding-left: 1rem;
+    `,
 
-  marginAuto: css`
-    margin: auto;
-  `,
+    headerPadding: css`
+        padding: 0 1rem;
+    `,
 
-  margin0: css`
-    margin: 0;
-  `,
+    smallSidePadding: css`
+        padding: 0 0.25rem;
+    `,
 
-  marginHalfRem: css`
-    margin: 0.5rem;
-  `,
+    marginAuto: css`
+        margin: auto;
+    `,
 
-  margin1rem: css`
-    margin: 1rem;
-  `,
+    margin0: css`
+        margin: 0;
+    `,
 
-  margin2rem: css`
-    margin: 2rem;
-  `,
+    marginHalfRem: css`
+        margin: 0.5rem;
+    `,
 
-  topMargin: css`
-    margin-top: 2rem;
-  `,
+    margin1rem: css`
+        margin: 1rem;
+    `,
 
-  leftMargin: css`
-    padding-left: 0.5rem;
-  `,
+    margin2rem: css`
+        margin: 2rem;
+    `,
 
-  //overflow ctrls
+    topMargin: css`
+        margin-top: 2rem;
+    `,
 
-  overflowScroll: css`
-    overflow: scroll;
-  `,
+    leftMargin: css`
+        padding-left: 0.5rem;
+    `,
 
-  // component specific
+    //overflow ctrls
 
-  footer: css`
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 5%;
-    padding: 0 1rem 0 1rem;
-    font-size: 1rem;
-    background: linear-gradient(to right, #000000, #0c0c0c, rgb(132, 132, 132));
-  `,
+    overflowScroll: css`
+        overflow: scroll;
+    `,
 
-  input: css`
-    background: linear-gradient(to right, #7d7d7d61, rgb(255 255 255 / 63%));
-    border-radius: 0.5rem;
-  `,
+    // component specific
 
-  menuCont: css`
-    margin: 0 1rem;
-  `,
+    footer: css`
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 5%;
+        padding: 0 1rem 0 1rem;
+        font-size: 1rem;
+        background: linear-gradient(
+            to right,
+            #000000,
+            #0c0c0c,
+            rgb(132, 132, 132)
+        );
+    `,
 
-  toolsMargin: css`
-    margin: 1.5rem 0;
-  `,
-};
+    input: css`
+        background: linear-gradient(
+            to right,
+            #7d7d7d61,
+            rgb(255 255 255 / 63%)
+        );
+        border-radius: 0.5rem;
+    `,
+
+    menuCont: css`
+        margin: 0 1rem;
+    `,
+
+    toolsMargin: css`
+        margin: 1.5rem 0;
+    `,
+}
